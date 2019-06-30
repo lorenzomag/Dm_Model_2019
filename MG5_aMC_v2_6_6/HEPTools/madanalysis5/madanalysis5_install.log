@@ -1,0 +1,752 @@
+>> Attempting to start MA5 and check the availability of its dependencies...
+[0mMA5: Platform: Linux 3.10.0-862.14.4.el7.x86_64 [32m[Linux mode][0m[0m
+[0mMA5: Reading user settings ...[0m
+[36mMA5-DEBUG: Opening the file: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/madanalysis/input/installation_options.dat[0m
+[36mMA5-DEBUG: Lines to interpret: [0m
+[36mMA5-DEBUG: Closing the file: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/madanalysis/input/installation_options.dat[0m
+[36mMA5-DEBUG: Web access[0m
+[36mMA5-DEBUG:   enable[0m
+[36mMA5-DEBUG: [0m
+[36mMA5-DEBUG: Temporary folder[0m
+[36mMA5-DEBUG:   Variable $TMPDIR:         [0m
+[36mMA5-DEBUG:   Variable $TMP:            [0m
+[36mMA5-DEBUG:   Variable $TEMP:           [0m
+[36mMA5-DEBUG: Check if the folder /tmp/s1412595 exists ...[0m
+[36mMA5-DEBUG: -> found[0m
+[36mMA5-DEBUG: temporary folder will be used for MA5: /tmp/s1412595[0m
+[36mMA5-DEBUG: [0m
+[36mMA5-DEBUG: Download dir[0m
+[36mMA5-DEBUG: Check if the folder /tmp/s1412595/MA5_downloads exists ...[0m
+[36mMA5-DEBUG: -> found[0m
+[36mMA5-DEBUG: download folder will be used for MA5: /tmp/s1412595/MA5_downloads[0m
+[36mMA5-DEBUG: [0m
+[36mMA5-DEBUG: Text editor[0m
+[36mMA5-DEBUG: Look for the global variable $EDITOR ...[0m
+[36mMA5-DEBUG: -> variable not found. VI editor is set by default.[0m
+[36mMA5-DEBUG: [0m
+[0mMA5: Checking mandatory packages:[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package python[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Python                   [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package gpp[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - GNU GCC g++              [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package make[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - GNU Make                 [32m[OK][0m[0m
+[0mMA5: Checking optional packages devoted to data processing:[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package zlib[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: Detection of the package in the "tools" folder ...[0m
+[36mMA5-DEBUG: Look for zlib folder in path /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/zlib ...[0m
+[36mMA5-DEBUG: -> not found[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Search for header & libraries possible paths...[0m
+[36mMA5-DEBUG: ->header  paths=['.', '/usr/include', '/usr/local/include'][0m
+[36mMA5-DEBUG: ->library paths=['.', '/usr/lib', '/usr/libexec', '/usr/lib64', '/usr/local/libexec', '/usr/local/lib', '/usr/local/lib64'][0m
+[36mMA5-DEBUG: Look for the header file zlib.h ...[0m
+[36mMA5-DEBUG: look for pattern zlib.h ...[0m
+[36mMA5-DEBUG: -> no file found[0m
+[36mMA5-DEBUG: look for pattern /usr/include/zlib.h ...[0m
+[36mMA5-DEBUG: -> found: /usr/include/zlib.h[0m
+[36mMA5-DEBUG: Look for the zlib libraries ...[0m
+[36mMA5-DEBUG: look for pattern libz.so ...[0m
+[36mMA5-DEBUG: look for pattern libz.a ...[0m
+[36mMA5-DEBUG: look for pattern libz.so.* ...[0m
+[36mMA5-DEBUG: -> no file found[0m
+[36mMA5-DEBUG: look for pattern /usr/lib/libz.so ...[0m
+[36mMA5-DEBUG: look for pattern /usr/lib/libz.a ...[0m
+[36mMA5-DEBUG: look for pattern /usr/lib/libz.so.* ...[0m
+[36mMA5-DEBUG: -> no file found[0m
+[36mMA5-DEBUG: look for pattern /usr/libexec/libz.so ...[0m
+[36mMA5-DEBUG: look for pattern /usr/libexec/libz.a ...[0m
+[36mMA5-DEBUG: look for pattern /usr/libexec/libz.so.* ...[0m
+[36mMA5-DEBUG: -> no file found[0m
+[36mMA5-DEBUG: look for pattern /usr/lib64/libz.so ...[0m
+[36mMA5-DEBUG: -> found: /usr/lib64/libz.so[0m
+[36mMA5-DEBUG: look for pattern /usr/lib64/libz.a ...[0m
+[36mMA5-DEBUG: look for pattern /usr/lib64/libz.so.* ...[0m
+[36mMA5-DEBUG: -> found: /usr/lib64/libz.so.1[0m
+[36mMA5-DEBUG: -> found: /usr/lib64/libz.so.1.2.7[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Zlib                     [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package fastjet[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: Detection of the package in the "tools" folder ...[0m
+[36mMA5-DEBUG: Look for FastJet in the folder here:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/bin/fastjet-config ...[0m
+[36mMA5-DEBUG: -> not found[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[0mMA5:      - FastJet                  [35m[DISABLED][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package root[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: Detection of the package in the "tools" folder ...[0m
+[36mMA5-DEBUG: Detecting root-config in the tools folder ...[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Trying to get library and header paths ...[0m
+[36mMA5-DEBUG: -> root-config found[0m
+[36mMA5-DEBUG: -> root version: 6.12.06[0m
+[36mMA5-DEBUG: -> root header  folder: /usr/include/root[0m
+[36mMA5-DEBUG: -> root library folder: /usr/lib64/root[0m
+[36mMA5-DEBUG: Try to find /usr/lib64/root/libCore.so ...[0m
+[36mMA5-DEBUG: Try to find /usr/include/root/TH1F.h ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Root                     [32m[OK][0m[0m
+[36mMA5-DEBUG: Delphes[0m
+[36mMA5-DEBUG: Look for Delphes in the folder /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools ...[0m
+[36mMA5-DEBUG: -> not found[0m
+[0mMA5:      - Delphes                  [35m[DISABLED][0m[0m
+[36mMA5-DEBUG: Delphes-MA5tune[0m
+[36mMA5-DEBUG: Look for DelphesMA5tune in the folder /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools...[0m
+[36mMA5-DEBUG: -> not found[0m
+[0mMA5:      - Delphes-MA5tune          [35m[DISABLED][0m[0m
+[36mMA5-DEBUG: Creating symbolic link from /usr/bin/root-config[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin/root-config ...[0m
+[36mMA5-DEBUG: Creating symbolic link from /usr/lib64/libz.so[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.so ...[0m
+[36mMA5-DEBUG: Creating symbolic link from /usr/lib64/libz.so.1[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.so.1 ...[0m
+[36mMA5-DEBUG: Creating symbolic link from /usr/lib64/libz.so.1.2.7[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.so.1.2.7 ...[0m
+[36mMA5-DEBUG: -------- BEGIN: set environment variables --------[0m
+[36mMA5-DEBUG: before PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: after PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin:[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: before LD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: after LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib:[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: before DYLD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: after DYLD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: -------- END: set environment variables --------[0m
+[0mMA5: Checking optional packages devoted to reinterpretation:[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package scipy[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - SciPy                    [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package pad[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Are dependencies installed on the machine? ...[0m
+[36mMA5-DEBUG: dependency 'Delphes' is not installed[0m
+[0mMA5:      - PAD                      [35m[DISABLED][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package padma5[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Are dependencies installed on the machine? ...[0m
+[36mMA5-DEBUG: dependency 'DelphesMA5tune' is not installed[0m
+[0mMA5:      - PADForMA5tune            [35m[DISABLED][0m[0m
+[0mMA5: Checking optional packages devoted to histogramming:[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package root_graphical[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Are dependencies installed on the machine? ...[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Root                     [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package matplotlib[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Matplotlib               [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package pdflatex[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - pdflatex                 [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package latex[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - latex                    [32m[OK][0m[0m
+[36mMA5-DEBUG: Function AutoSetGraphicalRenderer:[0m
+[36mMA5-DEBUG:    - ROOT is there:       True[0m
+[36mMA5-DEBUG:    - Matplotlib is there: True[0m
+[0mMA5: Package used for graphical rendering: [32mRoot[0m[0m
+[0mMA5: Particle labels exported from madanalysis/input/particles_name_default.txt[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [met] with a PDG-id : 100[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [mht] with a PDG-id : 99[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [d] with a PDG-id : 1[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [d~] with a PDG-id : -1[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [u] with a PDG-id : 2[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [u~] with a PDG-id : -2[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [s] with a PDG-id : 3[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [s~] with a PDG-id : -3[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [c] with a PDG-id : 4[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [c~] with a PDG-id : -4[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [b] with a PDG-id : 5[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [b~] with a PDG-id : -5[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [t] with a PDG-id : 6[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [t~] with a PDG-id : -6[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [e-] with a PDG-id : 11[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [e+] with a PDG-id : -11[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ve] with a PDG-id : 12[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ve~] with a PDG-id : -12[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [mu-] with a PDG-id : 13[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [mu+] with a PDG-id : -13[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [vm] with a PDG-id : 14[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [vm~] with a PDG-id : -14[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ta-] with a PDG-id : 15[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ta+] with a PDG-id : -15[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [vt] with a PDG-id : 16[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [vt~] with a PDG-id : -16[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [g] with a PDG-id : 21[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [a] with a PDG-id : 22[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [z] with a PDG-id : 23[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [w+] with a PDG-id : 24[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [w-] with a PDG-id : -24[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [h1] with a PDG-id : 25[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [h2] with a PDG-id : 35[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [h3] with a PDG-id : 36[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [h+] with a PDG-id : 37[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [h-] with a PDG-id : -37[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [dl] with a PDG-id : 1000001[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [dl~] with a PDG-id : -1000001[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [dr] with a PDG-id : 2000001[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [dr~] with a PDG-id : -2000001[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ul] with a PDG-id : 1000002[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ul~] with a PDG-id : -1000002[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ur] with a PDG-id : 2000002[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ur~] with a PDG-id : -2000002[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [sl] with a PDG-id : 1000003[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [sl~] with a PDG-id : -1000003[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [sr] with a PDG-id : 2000003[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [sr~] with a PDG-id : -2000003[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [cl] with a PDG-id : 1000004[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [cl~] with a PDG-id : -1000004[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [cr] with a PDG-id : 2000004[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [cr~] with a PDG-id : -2000004[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [b1] with a PDG-id : 1000005[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [b1~] with a PDG-id : -1000005[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [b2] with a PDG-id : 2000005[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [b2~] with a PDG-id : -2000005[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [t1] with a PDG-id : 1000006[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [t1~] with a PDG-id : -1000006[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [t2] with a PDG-id : 2000006[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [t2~] with a PDG-id : -2000006[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [el-] with a PDG-id : 1000011[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [el+] with a PDG-id : -1000011[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [er-] with a PDG-id : 2000011[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [er+] with a PDG-id : -2000011[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [sve] with a PDG-id : 1000012[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [sve~] with a PDG-id : -1000012[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [mul-] with a PDG-id : 1000013[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [mul+] with a PDG-id : -1000013[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [mur-] with a PDG-id : 2000013[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [mur+] with a PDG-id : -2000013[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [svm] with a PDG-id : 1000014[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [svm~] with a PDG-id : -1000014[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ta1-] with a PDG-id : 1000015[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ta1+] with a PDG-id : -1000015[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ta2-] with a PDG-id : 2000015[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [ta2+] with a PDG-id : -2000015[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [svt] with a PDG-id : 1000016[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [svt~] with a PDG-id : -1000016[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [go] with a PDG-id : 1000021[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [n1] with a PDG-id : 1000022[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [n2] with a PDG-id : 1000023[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [n3] with a PDG-id : 1000025[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [n4] with a PDG-id : 1000035[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [x1+] with a PDG-id : 1000024[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [x1-] with a PDG-id : -1000024[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [x2+] with a PDG-id : 1000037[0m
+[36mMA5-DEBUG: Extracting a particle labelled by [x2-] with a PDG-id : -1000037[0m
+[0mMA5:   => 87 particles successfully exported.[0m
+[0mMA5: Multiparticle labels exported from madanalysis/input/multiparticles_default.txt[0m
+[36mMA5-DEBUG: Extracting a multiparticle labelled by [p] with a PDG-id : ['g', 'u', 'c', 'd', 's', 'u~', 'c~', 'd~', 's~'][0m
+[36mMA5-DEBUG: Extracting a multiparticle labelled by [j] with a PDG-id : ['g', 'u', 'c', 'd', 's', 'u~', 'c~', 'd~', 's~'][0m
+[36mMA5-DEBUG: Extracting a multiparticle labelled by [l+] with a PDG-id : ['e+', 'mu+'][0m
+[36mMA5-DEBUG: Extracting a multiparticle labelled by [l-] with a PDG-id : ['e-', 'mu-'][0m
+[36mMA5-DEBUG: Extracting a multiparticle labelled by [vl] with a PDG-id : ['ve', 'vm', 'vt'][0m
+[36mMA5-DEBUG: Extracting a multiparticle labelled by [vl~] with a PDG-id : ['ve~', 'vm~', 'vt~'][0m
+[0mMA5:   => Creation of the label 'invisible' (-> missing energy).[0m
+[0mMA5:   => Creation of the label 'hadronic' (-> jet energy).[0m
+[0mMA5:   => 8 multiparticles successfully exported.[0m
+>> Delphes dependency specified but MadAnalysis5 needs to install its own version. Installing it now...
+[35mMA5-WARNING: Unknown value for the further_install key with-delphes. Ignoring.[0m
+[0mMA5: Checking optional packages devoted to data processing:[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package zlib[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: User setting: zlib include path is specified.[0m
+[36mMA5-DEBUG: look for pattern /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/include/zlib.h ...[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/include/zlib.h[0m
+[36mMA5-DEBUG: User setting: zlib lib path is specified.[0m
+[36mMA5-DEBUG: look for pattern /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so ...[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so[0m
+[36mMA5-DEBUG: look for pattern /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.a ...[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.a[0m
+[36mMA5-DEBUG: look for pattern /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.* ...[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.1[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.1.2.10[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Zlib                     [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package fastjet[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: Detection of the package in the "tools" folder ...[0m
+[36mMA5-DEBUG: Look for FastJet in the folder here:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/bin/fastjet-config ...[0m
+[36mMA5-DEBUG: -> not found[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[0mMA5:      - FastJet                  [35m[DISABLED][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package root[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: Detection of the package in the "tools" folder ...[0m
+[36mMA5-DEBUG: Detecting root-config in the tools folder ...[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG:   which:         /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin/root-config [is it a link? True][0m
+[36mMA5-DEBUG:                  -> /usr/bin/root-config[0m
+[36mMA5-DEBUG:   which-all:     [0m
+[36mMA5-DEBUG:     - /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin/root-config[0m
+[36mMA5-DEBUG:     - /usr/bin/root-config[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Trying to get library and header paths ...[0m
+[36mMA5-DEBUG: -> root-config found[0m
+[36mMA5-DEBUG: -> root version: 6.12.06[0m
+[36mMA5-DEBUG: -> root header  folder: /usr/include/root[0m
+[36mMA5-DEBUG: -> root library folder: /usr/lib64/root[0m
+[36mMA5-DEBUG: Try to find /usr/lib64/root/libCore.so ...[0m
+[36mMA5-DEBUG: Try to find /usr/include/root/TH1F.h ...[0m
+[36mMA5-DEBUG:   features:      ['asimage', 'astiff', 'bonjour', 'builtin_llvm', 'cling', 'cxx11', 'davix', 'dcache', 'exceptions', 'explicitlink', 'fftw3', 'fitsio', 'fortran', 'gdml', 'genvector', 'geocad', 'gfal', 'globus', 'gnuinstall', 'gsl_shared', 'gviz', 'http', 'krb5', 'ldap', 'mathmore', 'memstat', 'minuit2', 'mysql', 'odbc', 'opengl', 'pch', 'pgsql', 'pythia8', 'python', 'qt', 'qtgsi', 'r', 'rfio', 'roofit', 'shadowpw', 'shared', 'soversion', 'sqlite', 'ssl', 'table', 'thread', 'tmva', 'unuran', 'x11', 'xft', 'xml', 'xrootd'][0m
+[36mMA5-DEBUG:   C++ compiler:      c++[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Root                     [32m[OK][0m[0m
+[36mMA5-DEBUG: Delphes[0m
+[36mMA5-DEBUG: Look for Delphes in the folder /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools ...[0m
+[36mMA5-DEBUG: -> not found[0m
+[0mMA5:      - Delphes                  [35m[DISABLED][0m[0m
+[36mMA5-DEBUG: Delphes-MA5tune[0m
+[36mMA5-DEBUG: User setting: veto on Delphes-MA5tune[0m
+[0mMA5:      - Delphes-MA5tune          [35m[DISABLED][0m[0m
+[0mMA5: The fastjet package has not been found. Proceeding with its local installation.[0m
+[0mMA5: [0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:                       Installing fastjet                    [0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Detecting a previous installation ...[0m
+[36mMA5-DEBUG: The folder /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet' is not found[0m
+[0mMA5:    => not found. OK[0m
+[0mMA5:    How many cores would you like to use for the compilation ? default = max = 24[0m
+[0mMA5:    => Number of cores used for the compilation = 24[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Creating a devoted folder ...[0m
+[36mMA5-DEBUG:    The installation folder 'tools' is already created.[0m
+[36mMA5-DEBUG:    Creation of the directory 'tools/fastjet'[0m
+[0mMA5:    Creating a temporary folder ...[0m
+[36mMA5-DEBUG: This temporary folder '/tmp/s1412595/MA5_fastjet' is found. Try to remove it ...[0m
+[36mMA5-DEBUG: Creating a temporary folder '/tmp/s1412595/MA5_fastjet' ...[0m
+[36mMA5-DEBUG: Creating a temporary download folder '/tmp/s1412595/MA5_downloads' ...[0m
+[36mMA5-DEBUG: folder '/tmp/s1412595/MA5_downloads' exists.[0m
+[36mMA5-DEBUG: Name of the temporary untar    folder: /tmp/s1412595/MA5_fastjet[0m
+[36mMA5-DEBUG: Name of the temporary download folder: /tmp/s1412595/MA5_downloads[0m
+[0mMA5:    Downloading the package ...[0m
+[36mMA5-DEBUG: Testing the access to MadAnalysis 5 website: http://madanalysis.irmp.ucl.ac.be ...[0m
+[36mMA5-DEBUG: Attempt 1/3 to access the url[0m
+[36mMA5-DEBUG: Info about the url: --------------------------------------------------------[0m
+[36mMA5-DEBUG: Info about the url: Date: Sun, 30 Jun 2019 16:28:10 GMT[0m
+[36mMA5-DEBUG: Info about the url: Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 PHP/7.1.26[0m
+[36mMA5-DEBUG: Info about the url: Cache-Control: max-age=0, no-store[0m
+[36mMA5-DEBUG: Info about the url: Expires: Fri, 01 Jan 1999 00:00:00 GMT[0m
+[36mMA5-DEBUG: Info about the url: Content-Length: 19281[0m
+[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_form_token=fd718743c43d0ecd8af6eae1; httponly; Path=/[0m
+[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_session=c2032031f01c0b4434eb75be; expires=Sat, 28 Sep 2019 16:28:10 GMT; httponly; Path=/[0m
+[36mMA5-DEBUG: Info about the url: Connection: close[0m
+[36mMA5-DEBUG: Info about the url: Content-Type: text/html;charset=utf-8[0m
+[36mMA5-DEBUG: Info about the url: --------------------------------------------------------[0m
+[0mMA5:     - 1/1 http://madanalysis.irmp.ucl.ac.be/raw-attachment/wiki/WikiStart/fastjet-3.3.2.tar.gz ...[0m
+[36mMA5-DEBUG: Attempt 1/3 to access the url[0m
+[36mMA5-DEBUG: Info about the url: --------------------------------------------------------[0m
+[36mMA5-DEBUG: Info about the url: Date: Sun, 30 Jun 2019 16:28:11 GMT[0m
+[36mMA5-DEBUG: Info about the url: Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 PHP/7.1.26[0m
+[36mMA5-DEBUG: Info about the url: ETag: W/"anonymous/Wed, 21 Nov 2018 03:40:04 GMT/False"[0m
+[36mMA5-DEBUG: Info about the url: Content-Disposition: attachment[0m
+[36mMA5-DEBUG: Info about the url: Content-Length: 2913848[0m
+[36mMA5-DEBUG: Info about the url: Last-Modified: Wed, 21 Nov 2018 03:40:04 GMT[0m
+[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_session=298e1514de19ac2bd2ce5a90; expires=Sat, 28 Sep 2019 16:28:11 GMT; httponly; Path=/[0m
+[36mMA5-DEBUG: Info about the url: Cache-Control: max-age=0, no-store[0m
+[36mMA5-DEBUG: Info about the url: Connection: close[0m
+[36mMA5-DEBUG: Info about the url: Content-Type: application/x-tar; charset=utf-8[0m
+[36mMA5-DEBUG: Info about the url: --------------------------------------------------------[0m
+[36mMA5-DEBUG: Decoding the size of the remote file...[0m
+[36mMA5-DEBUG: -> size=2913848[0m
+[36mMA5-DEBUG: A file with the same name '/tmp/s1412595/MA5_downloads/fastjet.tar.gz' has been found on the machine.[0m
+[36mMA5-DEBUG: Decoding the size of the local file...[0m
+[36mMA5-DEBUG: -> size=2913848[0m
+[36mMA5-DEBUG: Comparing the sizes of two files...[0m
+[36mMA5-DEBUG: -> NO difference detected![0m
+[0mMA5:         --> 'fastjet.tar.gz' already exists. Package not downloaded.[0m
+[0mMA5:    Unpacking the package ...[0m
+[36mMA5-DEBUG: shell command: tar xzf fastjet.tar.gz -C /tmp/s1412595/MA5_fastjet[0m
+[36mMA5-DEBUG: exected dir: /tmp/s1412595/MA5_downloads[0m
+[36mMA5-DEBUG: content of /tmp/s1412595/MA5_fastjet: ['/tmp/s1412595/MA5_fastjet/fastjet-3.3.2'][0m
+[0mMA5:    Configuring the package ...[0m
+[36mMA5-DEBUG: shell command: ./configure --prefix=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet[0m
+[0mMA5:    Building the package ...[0m
+[36mMA5-DEBUG: shell command: make -j24[0m
+[0mMA5:    Transfering the data from the temporary to the definitive folder ...[0m
+[36mMA5-DEBUG: shell command: make install[0m
+[0mMA5:    Checking the installation ...[0m
+[0mMA5:    Installation complete.[0m
+[0mMA5:    Elapsed time = 1 minute 11 seconds[0m
+[0mMA5:    => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5: [0m
+[0mMA5: DelphesMA5tune installation has been vetoed. Skipping it.[0m
+[0mMA5: Platform: Linux 3.10.0-862.14.4.el7.x86_64 [32m[Linux mode][0m[0m
+[0mMA5: Reading user settings ...[0m
+[36mMA5-DEBUG: Opening the file: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/madanalysis/input/installation_options.dat[0m
+[36mMA5-DEBUG: Lines to interpret: [0m
+[36mMA5-DEBUG:   - zlib_includes = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/include[0m
+[36mMA5-DEBUG:   - zlib_libs = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib[0m
+[36mMA5-DEBUG: Closing the file: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/madanalysis/input/installation_options.dat[0m
+[36mMA5-DEBUG: Web access[0m
+[36mMA5-DEBUG:   enable[0m
+[36mMA5-DEBUG: [0m
+[36mMA5-DEBUG: Temporary folder[0m
+[36mMA5-DEBUG:   Variable $TMPDIR:         [0m
+[36mMA5-DEBUG:   Variable $TMP:            [0m
+[36mMA5-DEBUG:   Variable $TEMP:           [0m
+[36mMA5-DEBUG: Check if the folder /tmp/s1412595 exists ...[0m
+[36mMA5-DEBUG: -> found[0m
+[36mMA5-DEBUG: temporary folder will be used for MA5: /tmp/s1412595[0m
+[36mMA5-DEBUG: [0m
+[36mMA5-DEBUG: Download dir[0m
+[36mMA5-DEBUG: Check if the folder /tmp/s1412595/MA5_downloads exists ...[0m
+[36mMA5-DEBUG: -> found[0m
+[36mMA5-DEBUG: download folder will be used for MA5: /tmp/s1412595/MA5_downloads[0m
+[36mMA5-DEBUG: [0m
+[36mMA5-DEBUG: Text editor[0m
+[36mMA5-DEBUG: Look for the global variable $EDITOR ...[0m
+[36mMA5-DEBUG: -> variable not found. VI editor is set by default.[0m
+[36mMA5-DEBUG: [0m
+[0mMA5: Checking mandatory packages:[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package python[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Python                   [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package gpp[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - GNU GCC g++              [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package make[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - GNU Make                 [32m[OK][0m[0m
+[0mMA5: Checking optional packages devoted to data processing:[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package zlib[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: User setting: zlib include path is specified.[0m
+[36mMA5-DEBUG: look for pattern /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/include/zlib.h ...[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/include/zlib.h[0m
+[36mMA5-DEBUG: User setting: zlib lib path is specified.[0m
+[36mMA5-DEBUG: look for pattern /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so ...[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so[0m
+[36mMA5-DEBUG: look for pattern /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.a ...[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.a[0m
+[36mMA5-DEBUG: look for pattern /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.* ...[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.1[0m
+[36mMA5-DEBUG: -> found: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.1.2.10[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Zlib                     [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package fastjet[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: Detection of the package in the "tools" folder ...[0m
+[36mMA5-DEBUG: Look for FastJet in the folder here:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/bin/fastjet-config ...[0m
+[36mMA5-DEBUG: -> found[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Trying to get library and header paths ...[0m
+[36mMA5-DEBUG:   Lib flags:     -Wl,-rpath,/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/lib -lm -L/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/lib -lfastjettools -lfastjet -lfastjetplugins -lsiscone_spherical -lsiscone[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - FastJet                  [32m[OK][0m[0m
+[36mMA5-DEBUG: ------------------------------------------------------[0m
+[36mMA5-DEBUG: Detect package root[0m
+[36mMA5-DEBUG: Is there a veto? ...[0m
+[36mMA5-DEBUG: no user veto[0m
+[36mMA5-DEBUG: Detection of the package in the location specified by the user ...[0m
+[36mMA5-DEBUG: Detection of the package in the "tools" folder ...[0m
+[36mMA5-DEBUG: Detecting root-config in the tools folder ...[0m
+[36mMA5-DEBUG: Try to detect automatically the package ...[0m
+[36mMA5-DEBUG: Extract more informations related to the package ...[0m
+[36mMA5-DEBUG: Trying to get library and header paths ...[0m
+[36mMA5-DEBUG: -> root-config found[0m
+[36mMA5-DEBUG: -> root version: 6.12.06[0m
+[36mMA5-DEBUG: -> root header  folder: /usr/include/root[0m
+[36mMA5-DEBUG: -> root library folder: /usr/lib64/root[0m
+[36mMA5-DEBUG: Try to find /usr/lib64/root/libCore.so ...[0m
+[36mMA5-DEBUG: Try to find /usr/include/root/TH1F.h ...[0m
+[36mMA5-DEBUG: Saving informations ...[0m
+[0mMA5:      - Root                     [32m[OK][0m[0m
+[36mMA5-DEBUG: Delphes[0m
+[36mMA5-DEBUG: Look for Delphes in the folder /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools ...[0m
+[36mMA5-DEBUG: -> not found[0m
+[0mMA5:      - Delphes                  [35m[DISABLED][0m[0m
+[36mMA5-DEBUG: Delphes-MA5tune[0m
+[36mMA5-DEBUG: Look for DelphesMA5tune in the folder /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools...[0m
+[36mMA5-DEBUG: -> not found[0m
+[0mMA5:      - Delphes-MA5tune          [35m[DISABLED][0m[0m
+[36mMA5-DEBUG: Creating symbolic link from /usr/bin/root-config[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin/root-config ...[0m
+[36mMA5-DEBUG: Creating symbolic link from /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/bin/fastjet-config[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin/fastjet-config ...[0m
+[36mMA5-DEBUG: Creating symbolic link from /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.so ...[0m
+[36mMA5-DEBUG: Creating symbolic link from /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.a[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.a ...[0m
+[36mMA5-DEBUG: Creating symbolic link from /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.1[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.so.1 ...[0m
+[36mMA5-DEBUG: Creating symbolic link from /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.1.2.10[0m
+[36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.so.1.2.10 ...[0m
+[36mMA5-DEBUG: -------- BEGIN: set environment variables --------[0m
+[36mMA5-DEBUG: before PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin:[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: after PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin::[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: before LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib:[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: after LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib::[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: before DYLD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: after DYLD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: --------[0m
+[36mMA5-DEBUG: -------- END: set environment variables --------[0m
+[0mMA5: Checking the MadAnalysis 5 core library:[0m
+[36mMA5-DEBUG: -> looking for folder: /tools/SampleAnalyzer/Lib[0m
+[36mMA5-DEBUG: -> looking for file: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib/libprocess_for_ma5.so[0m
+[36mMA5-DEBUG: 	-> file /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib/libprocess_for_ma5.so not found.[0m
+[0mMA5:   => First use of MadAnalysis (or the library is missing).[0m
+[0mMA5: [0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:                 Building SampleAnalyzer libraries     [0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    How many cores for the compiling? default = max = 24[0m
+[0mMA5:    => Number of cores used for the compilation = 24[0m
+[0mMA5:    Writing the setup files ...[0m
+[0mMA5:    Writing all the Makefiles ...[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 1/11 - test program: SampleAnalyzer configuration[0m
+[0mMA5:      - Cleaning the project before building the test program ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Configuration/mrproper.log[0m
+[36mMA5-DEBUG: Makefile: Makefile[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the test program ...[0m
+[0mMA5:      - Checking that the test program is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the test program ...[0m
+[0mMA5:      - Running the test program ...[0m
+[36mMA5-DEBUG: Command: ./PortabilityCheckup[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/PortabilityCheckup.log[0m
+[0mMA5:      - Checking the program output...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/PortabilityCheckup.log[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> Begin Stamp found[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> Successful test found[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> Begin Stamp found[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 2/11 - library: SampleAnalyzer commons[0m
+[0mMA5:      - Cleaning the project before building the library ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Commons/mrproper.log[0m
+[36mMA5-DEBUG: Makefile: Makefile[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the library ...[0m
+[0mMA5:      - Checking that the library is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the library ...[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 3/11 - test program: SampleAnalyzer commons[0m
+[0mMA5:      - Cleaning the project before building the test program ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Test//mrproper_commons.log[0m
+[36mMA5-DEBUG: Makefile: Makefile_commons[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile_commons[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the test program ...[0m
+[0mMA5:      - Checking that the test program is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the test program ...[0m
+[0mMA5:      - Running the test program ...[0m
+[36mMA5-DEBUG: Command: ./TestCommons[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestCommons.log[0m
+[0mMA5:      - Checking the program output...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestCommons.log[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> Begin Stamp found[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> End Stamp[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 4/11 - library: interface to zlib[0m
+[0mMA5:      - Cleaning the project before building the library ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Interfaces/mrproper_zlib.log[0m
+[36mMA5-DEBUG: Makefile: Makefile_zlib[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile_zlib[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the library ...[0m
+[0mMA5:      - Checking that the library is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the library ...[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 5/11 - test program: interface to zlib[0m
+[0mMA5:      - Cleaning the project before building the test program ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Test//mrproper_zlib.log[0m
+[36mMA5-DEBUG: Makefile: Makefile_zlib[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile_zlib[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the test program ...[0m
+[0mMA5:      - Checking that the test program is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the test program ...[0m
+[0mMA5:      - Running the test program ...[0m
+[36mMA5-DEBUG: Command: ./TestZlib[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestZlib.log[0m
+[0mMA5:      - Checking the program output...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestZlib.log[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> Begin Stamp found[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> End Stamp[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 6/11 - library: interface to FastJet[0m
+[0mMA5:      - Cleaning the project before building the library ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Interfaces/mrproper_fastjet.log[0m
+[36mMA5-DEBUG: Makefile: Makefile_fastjet[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile_fastjet[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the library ...[0m
+[0mMA5:      - Checking that the library is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the library ...[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 7/11 - test program: interface to Fastjet[0m
+[0mMA5:      - Cleaning the project before building the test program ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Test//mrproper_fastjet.log[0m
+[36mMA5-DEBUG: Makefile: Makefile_fastjet[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile_fastjet[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the test program ...[0m
+[0mMA5:      - Checking that the test program is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the test program ...[0m
+[0mMA5:      - Running the test program ...[0m
+[36mMA5-DEBUG: Command: ./TestFastjet[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestFastjet.log[0m
+[0mMA5:      - Checking the program output...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestFastjet.log[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> Begin Stamp found[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> End Stamp[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 8/11 - library: interface to Root[0m
+[0mMA5:      - Cleaning the project before building the library ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Interfaces/mrproper_root.log[0m
+[36mMA5-DEBUG: Makefile: Makefile_root[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile_root[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the library ...[0m
+[0mMA5:      - Checking that the library is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the library ...[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 9/11 - test program: interface to Root[0m
+[0mMA5:      - Cleaning the project before building the test program ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Test//mrproper_root.log[0m
+[36mMA5-DEBUG: Makefile: Makefile_root[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile_root[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the test program ...[0m
+[0mMA5:      - Checking that the test program is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the test program ...[0m
+[0mMA5:      - Running the test program ...[0m
+[36mMA5-DEBUG: Command: ./TestRoot[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestRoot.log[0m
+[0mMA5:      - Checking the program output...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestRoot.log[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> Begin Stamp found[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> End Stamp[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 10/11 - library: SampleAnalyzer core[0m
+[0mMA5:      - Cleaning the project before building the library ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Process/mrproper.log[0m
+[36mMA5-DEBUG: Makefile: Makefile[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the library ...[0m
+[0mMA5:      - Checking that the library is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the library ...[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Component 11/11 - test program: SampleAnalyzer core[0m
+[0mMA5:      - Cleaning the project before building the test program ...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Test//mrproper_process.log[0m
+[36mMA5-DEBUG: Makefile: Makefile_process[0m
+[36mMA5-DEBUG: Command: make mrproper --file=Makefile_process[0m
+[0mMA5:      - Compiling the source files ...[0m
+[0mMA5:      - Linking the test program ...[0m
+[0mMA5:      - Checking that the test program is properly built ...[0m
+[0mMA5:      - Cleaning the project after building the test program ...[0m
+[0mMA5:      - Running the test program ...[0m
+[36mMA5-DEBUG: Command: ./TestSampleAnalyzer /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Test/Process/dummy_list.txt[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestSampleAnalyzer.log[0m
+[0mMA5:      - Checking the program output...[0m
+[36mMA5-DEBUG: LogFile: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Bin/TestSampleAnalyzer.log[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> Begin Stamp found[0m
+[36mMA5-DEBUG: Analyzing output file: OK -> End Stamp[0m
+[0mMA5:       => Status: [32m[OK][0m[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5:    Elapsed time = 19.33 seconds[0m
+[0mMA5:    **********************************************************[0m
+[0mMA5: [0m
+[0mMA5: Checking the MadAnalysis 5 core library:[0m
+[0mMA5:   => MadAnalysis libraries found.[0m
+[0mMA5:   => MadAnalysis test program works.[0m
+>> Successful installation of MadAnalysis5.
+INSTALLATION STATUS: SUCCESS

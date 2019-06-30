@@ -1,0 +1,1 @@
+c++ Fastjet/Test.o  -L/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib -L/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib -lfastjet_for_ma5 -lcommons_for_ma5 -o ../Bin/TestFastjet

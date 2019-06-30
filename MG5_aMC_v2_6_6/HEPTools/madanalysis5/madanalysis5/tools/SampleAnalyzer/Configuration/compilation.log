@@ -1,0 +1,1 @@
+c++ -Wall -O3 -fPIC -I/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/ -o PortabilityCheckup/PortabilityCheckup.o -c PortabilityCheckup/PortabilityCheckup.cpp

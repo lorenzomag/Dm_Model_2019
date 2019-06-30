@@ -1,0 +1,1286 @@
+ Set environment variables
+ Unpack LHAPDF
+LHAPDF-6.1.6/
+LHAPDF-6.1.6/aclocal.m4
+LHAPDF-6.1.6/NEWS
+LHAPDF-6.1.6/lhapdf-config.in
+LHAPDF-6.1.6/config/
+LHAPDF-6.1.6/config/test-driver
+LHAPDF-6.1.6/config/compile
+LHAPDF-6.1.6/config/depcomp
+LHAPDF-6.1.6/config/config.h.in
+LHAPDF-6.1.6/config/ltmain.sh
+LHAPDF-6.1.6/config/config.guess
+LHAPDF-6.1.6/config/install-sh
+LHAPDF-6.1.6/config/missing
+LHAPDF-6.1.6/config/config.sub
+LHAPDF-6.1.6/tests/
+LHAPDF-6.1.6/tests/testperf.cc
+LHAPDF-6.1.6/tests/Makefile.in
+LHAPDF-6.1.6/tests/testsetperf.cc
+LHAPDF-6.1.6/tests/testpaths.cc
+LHAPDF-6.1.6/tests/testindex.cc
+LHAPDF-6.1.6/tests/Makefile.am
+LHAPDF-6.1.6/tests/testnsetperf.cc
+LHAPDF-6.1.6/tests/testinfo.cc
+LHAPDF-6.1.6/tests/testgrid.cc
+LHAPDF-6.1.6/tests/testalphas.cc
+LHAPDF-6.1.6/Makefile.in
+LHAPDF-6.1.6/configure.ac
+LHAPDF-6.1.6/configure
+LHAPDF-6.1.6/lhapdf.in
+LHAPDF-6.1.6/ChangeLog
+LHAPDF-6.1.6/lhapdf.pc.in
+LHAPDF-6.1.6/lhapdf.pc
+LHAPDF-6.1.6/TODO
+LHAPDF-6.1.6/INSTALL
+LHAPDF-6.1.6/examples/
+LHAPDF-6.1.6/examples/testpdfunc.py
+LHAPDF-6.1.6/examples/Makefile.in
+LHAPDF-6.1.6/examples/fexample1.f
+LHAPDF-6.1.6/examples/testpdfunc.cc
+LHAPDF-6.1.6/examples/analyticpdf.cc
+LHAPDF-6.1.6/examples/Makefile.am
+LHAPDF-6.1.6/examples/compatibility.cc
+LHAPDF-6.1.6/examples/hessian2replicas.cc
+LHAPDF-6.1.6/examples/pythonexample.py
+LHAPDF-6.1.6/examples/reweight.cc
+LHAPDF-6.1.6/examples/testpdf.cc
+LHAPDF-6.1.6/examples/testpdfset.cc
+LHAPDF-6.1.6/AUTHORS
+LHAPDF-6.1.6/Makefile.am
+LHAPDF-6.1.6/pdfsets.index
+LHAPDF-6.1.6/lhapdf.conf
+LHAPDF-6.1.6/src/
+LHAPDF-6.1.6/src/PDF.cc
+LHAPDF-6.1.6/src/AlphaS.cc
+LHAPDF-6.1.6/src/LogBicubicInterpolator.cc
+LHAPDF-6.1.6/src/Makefile.in
+LHAPDF-6.1.6/src/PDFInfo.cc
+LHAPDF-6.1.6/src/ErrExtrapolator.cc
+LHAPDF-6.1.6/src/AlphaS_ODE.cc
+LHAPDF-6.1.6/src/NearestPointExtrapolator.cc
+LHAPDF-6.1.6/src/Paths.cc
+LHAPDF-6.1.6/src/CompositePDF.cc
+LHAPDF-6.1.6/src/ContinuationExtrapolator.cc
+LHAPDF-6.1.6/src/BilinearInterpolator.cc
+LHAPDF-6.1.6/src/Makefile.am
+LHAPDF-6.1.6/src/Info.cc
+LHAPDF-6.1.6/src/GridPDF.cc
+LHAPDF-6.1.6/src/PDFSet.cc
+LHAPDF-6.1.6/src/Config.cc
+LHAPDF-6.1.6/src/AlphaS_Ipol.cc
+LHAPDF-6.1.6/src/BicubicInterpolator.cc
+LHAPDF-6.1.6/src/LogBilinearInterpolator.cc
+LHAPDF-6.1.6/src/LHAGlue.cc
+LHAPDF-6.1.6/src/Factories.cc
+LHAPDF-6.1.6/src/yamlcpp/
+LHAPDF-6.1.6/src/yamlcpp/emitterstate.cpp
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/mark.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/binary.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/yaml.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/emittermanip.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/nodeimpl.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/eventhandler.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/noncopyable.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/parser.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/stlnode.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/node.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/dll.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/contrib/
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/contrib/anchordict.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/contrib/graphbuilder.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/traits.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/null.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/conversion.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/emitter.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/stlemitter.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/aliasmanager.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/nodereadimpl.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/iterator.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/anchor.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/emitfromevents.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/nodeutil.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/ostream.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/ltnode.h
+LHAPDF-6.1.6/src/yamlcpp/yaml-cpp/exceptions.h
+LHAPDF-6.1.6/src/yamlcpp/Makefile.in
+LHAPDF-6.1.6/src/yamlcpp/scanner.h
+LHAPDF-6.1.6/src/yamlcpp/nodeownership.cpp
+LHAPDF-6.1.6/src/yamlcpp/scantag.h
+LHAPDF-6.1.6/src/yamlcpp/iterpriv.h
+LHAPDF-6.1.6/src/yamlcpp/node.cpp
+LHAPDF-6.1.6/src/yamlcpp/directives.h
+LHAPDF-6.1.6/src/yamlcpp/stream.h
+LHAPDF-6.1.6/src/yamlcpp/exp.cpp
+LHAPDF-6.1.6/src/yamlcpp/nodebuilder.cpp
+LHAPDF-6.1.6/src/yamlcpp/collectionstack.h
+LHAPDF-6.1.6/src/yamlcpp/scantag.cpp
+LHAPDF-6.1.6/src/yamlcpp/scanner.cpp
+LHAPDF-6.1.6/src/yamlcpp/token.h
+LHAPDF-6.1.6/src/yamlcpp/scantoken.cpp
+LHAPDF-6.1.6/src/yamlcpp/binary.cpp
+LHAPDF-6.1.6/src/yamlcpp/conversion.cpp
+LHAPDF-6.1.6/src/yamlcpp/parser.cpp
+LHAPDF-6.1.6/src/yamlcpp/emitfromevents.cpp
+LHAPDF-6.1.6/src/yamlcpp/setting.h
+LHAPDF-6.1.6/src/yamlcpp/singledocparser.cpp
+LHAPDF-6.1.6/src/yamlcpp/exp.h
+LHAPDF-6.1.6/src/yamlcpp/Makefile.am
+LHAPDF-6.1.6/src/yamlcpp/tag.h
+LHAPDF-6.1.6/src/yamlcpp/streamcharsource.h
+LHAPDF-6.1.6/src/yamlcpp/regex.cpp
+LHAPDF-6.1.6/src/yamlcpp/stream.cpp
+LHAPDF-6.1.6/src/yamlcpp/regex.h
+LHAPDF-6.1.6/src/yamlcpp/regeximpl.h
+LHAPDF-6.1.6/src/yamlcpp/null.cpp
+LHAPDF-6.1.6/src/yamlcpp/scanscalar.h
+LHAPDF-6.1.6/src/yamlcpp/indentation.h
+LHAPDF-6.1.6/src/yamlcpp/nodeownership.h
+LHAPDF-6.1.6/src/yamlcpp/singledocparser.h
+LHAPDF-6.1.6/src/yamlcpp/ptr_vector.h
+LHAPDF-6.1.6/src/yamlcpp/iterator.cpp
+LHAPDF-6.1.6/src/yamlcpp/simplekey.cpp
+LHAPDF-6.1.6/src/yamlcpp/emitter.cpp
+LHAPDF-6.1.6/src/yamlcpp/emitterutils.cpp
+LHAPDF-6.1.6/src/yamlcpp/ostream.cpp
+LHAPDF-6.1.6/src/yamlcpp/directives.cpp
+LHAPDF-6.1.6/src/yamlcpp/scanscalar.cpp
+LHAPDF-6.1.6/src/yamlcpp/emitterstate.h
+LHAPDF-6.1.6/src/yamlcpp/aliasmanager.cpp
+LHAPDF-6.1.6/src/yamlcpp/tag.cpp
+LHAPDF-6.1.6/src/yamlcpp/ptr_stack.h
+LHAPDF-6.1.6/src/yamlcpp/emitterutils.h
+LHAPDF-6.1.6/src/yamlcpp/nodebuilder.h
+LHAPDF-6.1.6/src/yamlcpp/stringsource.h
+LHAPDF-6.1.6/src/AlphaS_Analytic.cc
+LHAPDF-6.1.6/src/Interpolator.cc
+LHAPDF-6.1.6/README
+LHAPDF-6.1.6/COPYING
+LHAPDF-6.1.6/include/
+LHAPDF-6.1.6/include/Makefile.in
+LHAPDF-6.1.6/include/Makefile.am
+LHAPDF-6.1.6/include/LHAPDF/
+LHAPDF-6.1.6/include/LHAPDF/BilinearInterpolator.h
+LHAPDF-6.1.6/include/LHAPDF/Version.h.in
+LHAPDF-6.1.6/include/LHAPDF/PDFSet.h
+LHAPDF-6.1.6/include/LHAPDF/PDFIndex.h
+LHAPDF-6.1.6/include/LHAPDF/ErrExtrapolator.h
+LHAPDF-6.1.6/include/LHAPDF/LHAPDF.h
+LHAPDF-6.1.6/include/LHAPDF/LogBilinearInterpolator.h
+LHAPDF-6.1.6/include/LHAPDF/Makefile.in
+LHAPDF-6.1.6/include/LHAPDF/Interpolator.h
+LHAPDF-6.1.6/include/LHAPDF/Reweighting.h
+LHAPDF-6.1.6/include/LHAPDF/CompositePDF.h
+LHAPDF-6.1.6/include/LHAPDF/Info.h
+LHAPDF-6.1.6/include/LHAPDF/Extrapolator.h
+LHAPDF-6.1.6/include/LHAPDF/NearestPointExtrapolator.h
+LHAPDF-6.1.6/include/LHAPDF/Makefile.am
+LHAPDF-6.1.6/include/LHAPDF/BicubicInterpolator.h
+LHAPDF-6.1.6/include/LHAPDF/Factories.h
+LHAPDF-6.1.6/include/LHAPDF/KnotArray.h
+LHAPDF-6.1.6/include/LHAPDF/Exceptions.h
+LHAPDF-6.1.6/include/LHAPDF/AlphaS.h
+LHAPDF-6.1.6/include/LHAPDF/Version.h
+LHAPDF-6.1.6/include/LHAPDF/PDFInfo.h
+LHAPDF-6.1.6/include/LHAPDF/Utils.h
+LHAPDF-6.1.6/include/LHAPDF/GridPDF.h
+LHAPDF-6.1.6/include/LHAPDF/PDF.h
+LHAPDF-6.1.6/include/LHAPDF/LogBicubicInterpolator.h
+LHAPDF-6.1.6/include/LHAPDF/Config.h
+LHAPDF-6.1.6/include/LHAPDF/ContinuationExtrapolator.h
+LHAPDF-6.1.6/include/LHAPDF/Paths.h
+LHAPDF-6.1.6/include/LHAPDF/LHAGlue.h
+LHAPDF-6.1.6/doc/
+LHAPDF-6.1.6/doc/pdfsets.dox
+LHAPDF-6.1.6/doc/Makefile.in
+LHAPDF-6.1.6/doc/mkpdflist
+LHAPDF-6.1.6/doc/Makefile.am
+LHAPDF-6.1.6/doc/Doxyfile.in
+LHAPDF-6.1.6/mkindex
+LHAPDF-6.1.6/m4/
+LHAPDF-6.1.6/m4/ax_cxx_compile_stdcxx_11.m4
+LHAPDF-6.1.6/m4/boost.m4
+LHAPDF-6.1.6/m4/cython.m4
+LHAPDF-6.1.6/m4/ltsugar.m4
+LHAPDF-6.1.6/m4/lt~obsolete.m4
+LHAPDF-6.1.6/m4/ltoptions.m4
+LHAPDF-6.1.6/m4/ltversion.m4
+LHAPDF-6.1.6/m4/compilerflags.m4
+LHAPDF-6.1.6/m4/boost_bug.m4
+LHAPDF-6.1.6/m4/libtool.m4
+LHAPDF-6.1.6/wrappers/
+LHAPDF-6.1.6/wrappers/python/
+LHAPDF-6.1.6/wrappers/python/setup.py.in
+LHAPDF-6.1.6/wrappers/python/Makefile.in
+LHAPDF-6.1.6/wrappers/python/Makefile.am
+LHAPDF-6.1.6/wrappers/python/lhapdf.cpp
+LHAPDF-6.1.6/wrappers/python/clhapdf.pxd
+LHAPDF-6.1.6/wrappers/python/lhapdf.pyx
+LHAPDF-6.1.6/wrappers/Makefile.in
+LHAPDF-6.1.6/wrappers/Makefile.am
+ Enter LHAPDF6 directory
+ Configure LHAPDF
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for sw_vers... no
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking whether to include C++11 flag for testing... no
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking whether ln -s works... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... no
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... no
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+configure: Building LHAGLUE Fortran wrappers
+configure: Building LHAGLUE C++ wrappers
+checking for pdflatex... /usr/bin/pdflatex
+checking for doxygen... /usr/bin/doxygen
+checking for python... /usr/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/site-packages
+checking for python extension module directory... ${exec_prefix}/lib64/python2.7/site-packages
+checking for Cython >= 0.19... yes
+configure: Cython >= 0.19 found: Python extension source can be rebuilt (for developers)
+checking if the g++ compiler accepts the -pedantic flag... yes
+checking if the g++ compiler accepts the -Wall flag... yes
+checking if the g++ compiler accepts the -Wno-long-long flag... yes
+checking if the g++ compiler accepts the -Qunused-arguments flag... no
+checking for Boost headers version >= 1.41.0... /usr/include
+checking for Boost's header version... 1_53
+checking boost/foreach.hpp usability... yes
+checking boost/foreach.hpp presence... yes
+checking for boost/foreach.hpp... yes
+checking boost/scoped_ptr.hpp usability... yes
+checking boost/scoped_ptr.hpp presence... yes
+checking for boost/scoped_ptr.hpp... yes
+checking boost/shared_ptr.hpp usability... yes
+checking boost/shared_ptr.hpp presence... yes
+checking for boost/shared_ptr.hpp... yes
+checking boost/algorithm/string.hpp usability... yes
+checking boost/algorithm/string.hpp presence... yes
+checking for boost/algorithm/string.hpp... yes
+checking boost/lexical_cast.hpp usability... yes
+checking boost/lexical_cast.hpp presence... yes
+checking for boost/lexical_cast.hpp... yes
+checking boost/range.hpp usability... yes
+checking boost/range.hpp presence... yes
+checking for boost/range.hpp... yes
+checking boost/bind.hpp usability... yes
+checking boost/bind.hpp presence... yes
+checking for boost/bind.hpp... yes
+checking boost/random.hpp usability... yes
+checking boost/random.hpp presence... yes
+checking for boost/random.hpp... yes
+checking boost/math/distributions/chi_squared.hpp usability... yes
+checking boost/math/distributions/chi_squared.hpp presence... yes
+checking for boost/math/distributions/chi_squared.hpp... yes
+checking boost/math/special_functions/erf.hpp usability... yes
+checking boost/math/special_functions/erf.hpp presence... yes
+checking for boost/math/special_functions/erf.hpp... yes
+checking if boost rvalue bug is present... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/yamlcpp/Makefile
+config.status: creating include/Makefile
+config.status: creating include/LHAPDF/Makefile
+config.status: creating examples/Makefile
+config.status: creating tests/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/Doxyfile
+config.status: creating lhapdf
+config.status: creating lhapdf-config
+config.status: creating lhapdf.pc
+config.status: creating wrappers/Makefile
+config.status: creating wrappers/python/Makefile
+config.status: creating wrappers/python/setup.py
+config.status: creating config/config.h
+config.status: creating include/LHAPDF/Version.h
+config.status: include/LHAPDF/Version.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+****************************************************************
+IMPORTANT INFORMATION ABOUT PDF SETS
+
+LHAPDF no longer bundles PDF set data in the package tarball.
+The sets are instead all stored online at
+  http://www.hepforge.org/archive/lhapdf/pdfsets/6.1/
+and you should install those that you wish to use into
+  /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/share/LHAPDF
+
+The downloadable PDF sets are packaged as tarballs, which
+must be expanded to be used. Here is an example of how to
+retrieve and install a PDF set from the command line:
+
+ wget http://www.hepforge.org/archive/lhapdf/pdfsets/6.1/CT10nlo.tar.gz -O- | tar xz -C /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/share/LHAPDF
+
+****************************************************************
+
+ Compile LHAPDF6
+Making all in src
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+Making all in yamlcpp
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src/yamlcpp'
+  CXX      liblhapdf_yaml_cpp_la-aliasmanager.lo
+  CXX      liblhapdf_yaml_cpp_la-emitterutils.lo
+  CXX      liblhapdf_yaml_cpp_la-ostream.lo
+  CXX      liblhapdf_yaml_cpp_la-simplekey.lo
+  CXX      liblhapdf_yaml_cpp_la-binary.lo
+  CXX      liblhapdf_yaml_cpp_la-exp.lo
+  CXX      liblhapdf_yaml_cpp_la-parser.lo
+  CXX      liblhapdf_yaml_cpp_la-singledocparser.lo
+  CXX      liblhapdf_yaml_cpp_la-conversion.lo
+  CXX      liblhapdf_yaml_cpp_la-iterator.lo
+  CXX      liblhapdf_yaml_cpp_la-regex.lo
+  CXX      liblhapdf_yaml_cpp_la-stream.lo
+  CXX      liblhapdf_yaml_cpp_la-directives.lo
+  CXX      liblhapdf_yaml_cpp_la-nodebuilder.lo
+  CXX      liblhapdf_yaml_cpp_la-scanner.lo
+  CXX      liblhapdf_yaml_cpp_la-tag.lo
+  CXX      liblhapdf_yaml_cpp_la-emitfromevents.lo
+  CXX      liblhapdf_yaml_cpp_la-node.lo
+  CXX      liblhapdf_yaml_cpp_la-scanscalar.lo
+  CXX      liblhapdf_yaml_cpp_la-emitter.lo
+  CXX      liblhapdf_yaml_cpp_la-nodeownership.lo
+  CXX      liblhapdf_yaml_cpp_la-scantag.lo
+  CXX      liblhapdf_yaml_cpp_la-emitterstate.lo
+  CXX      liblhapdf_yaml_cpp_la-null.lo
+  CXX      liblhapdf_yaml_cpp_la-scantoken.lo
+  CXXLD    liblhapdf-yaml-cpp.la
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src/yamlcpp'
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+  CXX      PDF.lo
+  CXX      PDFSet.lo
+  CXX      GridPDF.lo
+  CXX      CompositePDF.lo
+  CXX      PDFInfo.lo
+  CXX      Interpolator.lo
+  CXX      BilinearInterpolator.lo
+  CXX      BicubicInterpolator.lo
+  CXX      LogBilinearInterpolator.lo
+  CXX      LogBicubicInterpolator.lo
+  CXX      ErrExtrapolator.lo
+  CXX      NearestPointExtrapolator.lo
+  CXX      ContinuationExtrapolator.lo
+  CXX      AlphaS.lo
+  CXX      AlphaS_Analytic.lo
+  CXX      AlphaS_ODE.lo
+  CXX      AlphaS_Ipol.lo
+  CXX      Config.lo
+  CXX      Factories.lo
+  CXX      libLHAPDFInfo_la-Info.lo
+  CXXLD    libLHAPDFInfo.la
+  CXX      libLHAPDFPaths_la-Paths.lo
+  CXXLD    libLHAPDFPaths.la
+  CXX      libLHAPDFGlue_la-LHAGlue.lo
+  CXXLD    libLHAPDFGlue.la
+  CXXLD    libLHAPDF.la
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+Making all in include
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+Making all in LHAPDF
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include/LHAPDF'
+make  all-am
+make[3]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include/LHAPDF'
+make[3]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include/LHAPDF'
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include/LHAPDF'
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+Making all in wrappers
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+Making all in python
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers/python'
+for i in lhapdf.cpp lhapdf.pyx clhapdf.pxd; do \
+  orig="$i"; \
+  build="$(basename $i)"; \
+  if [ ! -e ${build} ]; then cp ${orig} ${build}; \
+  echo ${build} >> fix-out-of-source; fi; \
+done
+touch fix-out-of-source
+CC=gcc CXX=g++ /usr/bin/python setup.py install --install-lib=build/ --force
+running install
+running build
+running build_ext
+building 'lhapdf' extension
+creating build
+creating build/temp.linux-x86_64-2.7
+gcc -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I/tmp/tmp7EMIUG/LHAPDF-6.1.6/include -I/tmp/tmp7EMIUG/LHAPDF-6.1.6/include -I/usr/include/python2.7 -c lhapdf.cpp -o build/temp.linux-x86_64-2.7/lhapdf.o -I/usr/include -I/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/include
+creating build/lib.linux-x86_64-2.7
+gcc -pthread -shared -Wl,-z,relro build/temp.linux-x86_64-2.7/lhapdf.o -L/tmp/tmp7EMIUG/LHAPDF-6.1.6/src/.libs -L/usr/lib64 -lstdc++ -lLHAPDF -lpython2.7 -o build/lib.linux-x86_64-2.7/lhapdf.so
+running install_lib
+copying build/lib.linux-x86_64-2.7/lhapdf.so -> build
+running install_egg_info
+Writing build/LHAPDF-6.1.6-py2.7.egg-info
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers/python'
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+make[2]: Nothing to be done for `all-am'.
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+Making all in tests
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/tests'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/tests'
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6'
+make[1]: Nothing to be done for `all-am'.
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6'
+ Install LHAPDF6
+Making install in src
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+Making install in yamlcpp
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src/yamlcpp'
+make[3]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src/yamlcpp'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src/yamlcpp'
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src/yamlcpp'
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+make[3]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+ /usr/bin/mkdir -p '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libLHAPDF.la '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib'
+libtool: install: /usr/bin/install -c .libs/libLHAPDF.so /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib/libLHAPDF.so
+libtool: install: /usr/bin/install -c .libs/libLHAPDF.lai /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib/libLHAPDF.la
+libtool: install: /usr/bin/install -c .libs/libLHAPDF.a /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib/libLHAPDF.a
+libtool: install: chmod 644 /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib/libLHAPDF.a
+libtool: install: ranlib /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib/libLHAPDF.a
+libtool: finish: PATH="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin:/sbin" ldconfig -n /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/src'
+Making install in include
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+Making install in LHAPDF
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include/LHAPDF'
+make[3]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include/LHAPDF'
+make[3]: Nothing to be done for `install-exec-am'.
+ /usr/bin/mkdir -p '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/include/LHAPDF'
+ /usr/bin/install -c -m 644 LHAPDF.h Version.h Info.h Config.h PDFSet.h PDFInfo.h PDF.h GridPDF.h CompositePDF.h KnotArray.h Utils.h Paths.h Exceptions.h Factories.h PDFIndex.h Reweighting.h Interpolator.h BilinearInterpolator.h BicubicInterpolator.h LogBilinearInterpolator.h LogBicubicInterpolator.h Extrapolator.h ErrExtrapolator.h NearestPointExtrapolator.h ContinuationExtrapolator.h AlphaS.h LHAGlue.h '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/include/LHAPDF'
+make[3]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include/LHAPDF'
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include/LHAPDF'
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+make[3]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/include'
+Making install in wrappers
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+Making install in python
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers/python'
+CC=gcc CXX=g++ /usr/bin/python setup.py install --install-lib=build/ --force
+running install
+running build
+running build_ext
+running install_lib
+copying build/lib.linux-x86_64-2.7/lhapdf.so -> build
+running install_egg_info
+Removing build/LHAPDF-6.1.6-py2.7.egg-info
+Writing build/LHAPDF-6.1.6-py2.7.egg-info
+make[3]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers/python'
+CC=gcc CXX=g++ /usr/bin/python setup.py install --prefix=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6 --force
+running install
+running build
+running build_ext
+running install_lib
+creating /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib64
+creating /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib64/python2.7
+creating /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib64/python2.7/site-packages
+copying build/lib.linux-x86_64-2.7/lhapdf.so -> /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib64/python2.7/site-packages
+running install_egg_info
+Writing /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib64/python2.7/site-packages/LHAPDF-6.1.6-py2.7.egg-info
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers/python'
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers/python'
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+make[3]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/wrappers'
+Making install in tests
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/tests'
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/tests'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/tests'
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6/tests'
+make[1]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6'
+make[2]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6'
+ /usr/bin/mkdir -p '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//bin'
+ /usr/bin/install -c lhapdf-config lhapdf '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//bin'
+ /usr/bin/mkdir -p '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib/pkgconfig'
+ /usr/bin/install -c -m 644 lhapdf.pc '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//lib/pkgconfig'
+ /usr/bin/mkdir -p '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//share/LHAPDF'
+ /usr/bin/install -c -m 644 lhapdf.conf pdfsets.index '/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//share/LHAPDF'
+make  install-data-hook
+make[3]: Entering directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6'
+test -e /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//share/LHAPDF/sets && rmdir /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//share/LHAPDF/sets || true
+make[3]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6'
+make[2]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6'
+make[1]: Leaving directory `/tmp/tmp7EMIUG/LHAPDF-6.1.6'
+copy index and conf file
+cp: ‘./share/LHAPDF/pdfsets.index’ and ‘/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//share/LHAPDF/pdfsets.index’ are the same file
+cp: ‘./share/LHAPDF/lhapdf.conf’ and ‘/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf6//share/LHAPDF/lhapdf.conf’ are the same file
+--2019-06-30 17:19:55--  https://lhapdf.hepforge.org/downloads?f=pdfsets/6.1/NNPDF23_lo_as_0130_qed.tar.gz
+Resolving lhapdf.hepforge.org (lhapdf.hepforge.org)... 129.234.186.186
+Connecting to lhapdf.hepforge.org (lhapdf.hepforge.org)|129.234.186.186|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: ‘NNPDF23_lo_as_0130_qed.tar.gz’
+
+     0K .......... .......... .......... .......... ..........  842K
+    50K .......... .......... .......... .......... .......... 4.99M
+   100K .......... .......... .......... .......... .......... 72.0M
+   150K .......... .......... .......... .......... .......... 5.02M
+   200K .......... .......... .......... .......... .......... 70.3M
+   250K .......... .......... .......... .......... .......... 82.7M
+   300K .......... .......... .......... .......... .......... 4.44M
+   350K .......... .......... .......... .......... ..........  120M
+   400K .......... .......... .......... .......... .......... 96.1M
+   450K .......... .......... .......... .......... ..........  120M
+   500K .......... .......... .......... .......... ..........  118M
+   550K .......... .......... .......... .......... .......... 5.23M
+   600K .......... .......... .......... .......... .......... 74.7M
+   650K .......... .......... .......... .......... .......... 7.31M
+   700K .......... .......... .......... .......... .......... 97.4M
+   750K .......... .......... .......... .......... .......... 5.18M
+   800K .......... .......... .......... .......... .......... 17.3M
+   850K .......... .......... .......... .......... .......... 88.8M
+   900K .......... .......... .......... .......... ..........  104M
+   950K .......... .......... .......... .......... .......... 92.8M
+  1000K .......... .......... .......... .......... .......... 84.3M
+  1050K .......... .......... .......... .......... ..........  102M
+  1100K .......... .......... .......... .......... .......... 12.4M
+  1150K .......... .......... .......... .......... .......... 33.2M
+  1200K .......... .......... .......... .......... .......... 13.9M
+  1250K .......... .......... .......... .......... .......... 10.1M
+  1300K .......... .......... .......... .......... .......... 23.5M
+  1350K .......... .......... .......... .......... .......... 16.8M
+  1400K .......... .......... .......... .......... .......... 10.2M
+  1450K .......... .......... .......... .......... .......... 25.5M
+  1500K .......... .......... .......... .......... .......... 16.0M
+  1550K .......... .......... .......... .......... .......... 34.8M
+  1600K .......... .......... .......... .......... .......... 8.53M
+  1650K .......... .......... .......... .......... .......... 19.3M
+  1700K .......... .......... .......... .......... .......... 24.7M
+  1750K .......... .......... .......... .......... .......... 8.74M
+  1800K .......... .......... .......... .......... .......... 53.9M
+  1850K .......... .......... .......... .......... .......... 13.6M
+  1900K .......... .......... .......... .......... .......... 9.52M
+  1950K .......... .......... .......... .......... .......... 39.3M
+  2000K .......... .......... .......... .......... .......... 13.2M
+  2050K .......... .......... .......... .......... .......... 13.2M
+  2100K .......... .......... .......... .......... .......... 18.7M
+  2150K .......... .......... .......... .......... .......... 20.7M
+  2200K .......... .......... .......... .......... .......... 10.4M
+  2250K .......... .......... .......... .......... .......... 22.3M
+  2300K .......... .......... .......... .......... .......... 17.0M
+  2350K .......... .......... .......... .......... .......... 9.92M
+  2400K .......... .......... .......... .......... .......... 15.5M
+  2450K .......... .......... .......... .......... .......... 26.1M
+  2500K .......... .......... .......... .......... .......... 21.4M
+  2550K .......... .......... .......... .......... .......... 10.5M
+  2600K .......... .......... .......... .......... .......... 25.1M
+  2650K .......... .......... .......... .......... .......... 14.9M
+  2700K .......... .......... .......... .......... .......... 10.6M
+  2750K .......... .......... .......... .......... .......... 23.9M
+  2800K .......... .......... .......... .......... .......... 15.0M
+  2850K .......... .......... .......... .......... .......... 14.5M
+  2900K .......... .......... .......... .......... .......... 14.1M
+  2950K .......... .......... .......... .......... .......... 15.2M
+  3000K .......... .......... .......... .......... .......... 17.4M
+  3050K .......... .......... .......... .......... .......... 12.6M
+  3100K .......... .......... .......... .......... .......... 34.5M
+  3150K .......... .......... .......... .......... .......... 11.4M
+  3200K .......... .......... .......... .......... .......... 11.3M
+  3250K .......... .......... .......... .......... .......... 31.6M
+  3300K .......... .......... .......... .......... .......... 12.3M
+  3350K .......... .......... .......... .......... .......... 31.2M
+  3400K .......... .......... .......... .......... .......... 11.4M
+  3450K .......... .......... .......... .......... .......... 26.2M
+  3500K .......... .......... .......... .......... .......... 13.0M
+  3550K .......... .......... .......... .......... .......... 16.3M
+  3600K .......... .......... .......... .......... .......... 14.6M
+  3650K .......... .......... .......... .......... .......... 13.2M
+  3700K .......... .......... .......... .......... .......... 17.3M
+  3750K .......... .......... .......... .......... .......... 15.1M
+  3800K .......... .......... .......... .......... .......... 19.9M
+  3850K .......... .......... .......... .......... .......... 11.1M
+  3900K .......... .......... .......... .......... .......... 30.5M
+  3950K .......... .......... .......... .......... .......... 12.6M
+  4000K .......... .......... .......... .......... .......... 11.5M
+  4050K .......... .......... .......... .......... .......... 25.0M
+  4100K .......... .......... .......... .......... .......... 13.1M
+  4150K .......... .......... .......... .......... .......... 23.6M
+  4200K .......... .......... .......... .......... .......... 12.1M
+  4250K .......... .......... .......... .......... .......... 90.0M
+  4300K .......... .......... .......... .......... .......... 9.29M
+  4350K .......... .......... .......... .......... .......... 16.3M
+  4400K .......... .......... .......... .......... .......... 27.0M
+  4450K .......... .......... .......... .......... .......... 14.7M
+  4500K .......... .......... .......... .......... .......... 8.15M
+  4550K .......... .......... .......... .......... .......... 80.9M
+  4600K .......... .......... .......... .......... .......... 34.7M
+  4650K .......... .......... .......... .......... .......... 12.7M
+  4700K .......... .......... .......... .......... .......... 10.2M
+  4750K .......... .......... .......... .......... .......... 37.5M
+  4800K .......... .......... .......... .......... .......... 12.6M
+  4850K .......... .......... .......... .......... .......... 10.2M
+  4900K .......... .......... .......... .......... .......... 24.7M
+  4950K .......... .......... .......... .......... .......... 29.7M
+  5000K .......... .......... .......... .......... .......... 11.2M
+  5050K .......... .......... .......... .......... .......... 16.4M
+  5100K .......... .......... .......... .......... .......... 20.1M
+  5150K .......... .......... .......... .......... .......... 12.1M
+  5200K .......... .......... .......... .......... .......... 14.4M
+  5250K .......... .......... .......... .......... .......... 20.0M
+  5300K .......... .......... .......... .......... .......... 12.1M
+  5350K .......... .......... .......... .......... .......... 27.2M
+  5400K .......... .......... .......... .......... .......... 12.9M
+  5450K .......... .......... .......... .......... .......... 23.9M
+  5500K .......... .......... .......... .......... .......... 12.2M
+  5550K .......... .......... .......... .......... .......... 23.6M
+  5600K .......... .......... .......... .......... .......... 12.6M
+  5650K .......... .......... .......... .......... .......... 12.4M
+  5700K .......... .......... .......... .......... .......... 23.1M
+  5750K .......... .......... .......... .......... .......... 13.2M
+  5800K .......... .......... .......... .......... .......... 16.5M
+  5850K .......... .......... .......... .......... .......... 16.4M
+  5900K .......... .......... .......... .......... .......... 19.3M
+  5950K .......... .......... .......... .......... .......... 11.0M
+  6000K .......... .......... .......... .......... .......... 16.7M
+  6050K .......... .......... .......... .......... .......... 20.6M
+  6100K .......... .......... .......... .......... .......... 10.8M
+  6150K .......... .......... .......... .......... .......... 30.6M
+  6200K .......... .......... .......... .......... .......... 25.3M
+  6250K .......... .......... .......... .......... .......... 20.9M
+  6300K .......... .......... .......... .......... .......... 10.2M
+  6350K .......... .......... .......... .......... .......... 19.8M
+  6400K .......... .......... .......... .......... .......... 48.2M
+  6450K .......... .......... .......... .......... .......... 7.65M
+  6500K .......... .......... .......... .......... .......... 82.3M
+  6550K .......... .......... .......... .......... .......... 17.6M
+  6600K .......... .......... .......... .......... .......... 75.4M
+  6650K .......... .......... .......... .......... .......... 7.32M
+  6700K .......... .......... .......... .......... .......... 87.9M
+  6750K .......... .......... .......... .......... .......... 18.8M
+  6800K .......... .......... .......... .......... .......... 7.82M
+  6850K .......... .......... .......... .......... .......... 40.8M
+  6900K .......... .......... .......... .......... .......... 17.9M
+  6950K .......... .......... .......... .......... .......... 78.9M
+  7000K .......... .......... .......... .......... .......... 8.62M
+  7050K .......... .......... .......... .......... .......... 34.2M
+  7100K .......... .......... .......... .......... .......... 16.6M
+  7150K .......... .......... .......... .......... .......... 64.6M
+  7200K .......... .......... .......... .......... .......... 7.97M
+  7250K .......... .......... .......... .......... .......... 68.3M
+  7300K .......... .......... .......... .......... .......... 16.8M
+  7350K .......... .......... .......... .......... .......... 85.4M
+  7400K .......... .......... .......... .......... .......... 7.76M
+  7450K .......... .......... .......... .......... .......... 66.4M
+  7500K .......... .......... .......... .......... .......... 17.6M
+  7550K .......... .......... .......... .......... .......... 84.4M
+  7600K .......... .......... .......... .......... .......... 7.54M
+  7650K .......... .......... .......... .......... .......... 23.7M
+  7700K .......... .......... .......... .......... .......... 35.7M
+  7750K .......... .......... .......... .......... .......... 10.8M
+  7800K .......... .......... .......... .......... .......... 17.9M
+  7850K .......... .......... .......... .......... .......... 22.6M
+  7900K .......... .......... .......... .......... .......... 48.9M
+  7950K .......... .......... .......... .......... .......... 12.1M
+  8000K .......... .......... .......... .......... .......... 14.6M
+  8050K .......... .......... .......... .......... .......... 19.5M
+  8100K .......... .......... .......... .......... .......... 61.9M
+  8150K .......... .......... .......... .......... .......... 12.5M
+  8200K .......... .......... .......... .......... .......... 15.1M
+  8250K .......... .......... .......... .......... .......... 17.8M
+  8300K .......... .......... .......... .......... .......... 76.7M
+  8350K .......... .......... .......... .......... .......... 13.9M
+  8400K .......... .......... .......... .......... .......... 13.3M
+  8450K .......... .......... .......... .......... .......... 19.2M
+  8500K .......... .......... .......... .......... .......... 59.6M
+  8550K .......... .......... .......... .......... .......... 8.29M
+  8600K .......... .......... .......... .......... .......... 48.1M
+  8650K .......... .......... .......... .......... .......... 18.0M
+  8700K .......... .......... .......... .......... .......... 69.1M
+  8750K .......... .......... .......... .......... .......... 8.48M
+  8800K .......... .......... .......... .......... .......... 14.8M
+  8850K .......... .......... .......... .......... .......... 65.3M
+  8900K .......... .......... .......... .......... .......... 23.8M
+  8950K .......... .......... .......... .......... .......... 10.9M
+  9000K .......... .......... .......... .......... .......... 15.7M
+  9050K .......... .......... .......... .......... .......... 63.8M
+  9100K .......... .......... .......... .......... .......... 26.8M
+  9150K .......... .......... .......... .......... .......... 12.2M
+  9200K .......... .......... .......... .......... .......... 12.0M
+  9250K .......... .......... .......... .......... .......... 44.5M
+  9300K .......... .......... .......... .......... .......... 18.6M
+  9350K .......... .......... .......... .......... .......... 14.7M
+  9400K .......... .......... .......... .......... .......... 14.3M
+  9450K .......... .......... .......... .......... .......... 49.0M
+  9500K .......... .......... .......... .......... .......... 18.8M
+  9550K .......... .......... .......... .......... .......... 15.6M
+  9600K .......... .......... .......... .......... .......... 12.9M
+  9650K .......... .......... .......... .......... .......... 61.4M
+  9700K .......... .......... .......... .......... .......... 12.8M
+  9750K .......... .......... .......... .......... .......... 15.4M
+  9800K .......... .......... .......... .......... .......... 20.6M
+  9850K .......... .......... .......... .......... .......... 38.4M
+  9900K .......... .......... .......... .......... .......... 14.2M
+  9950K .......... .......... .......... .......... .......... 16.7M
+ 10000K .......... .......... .......... .......... .......... 15.6M
+ 10050K .......... .......... .......... .......... .......... 71.4M
+ 10100K .......... .......... .......... .......... .......... 10.8M
+ 10150K .......... .......... .......... .......... .......... 24.7M
+ 10200K .......... .......... .......... .......... .......... 15.1M
+ 10250K .......... .......... .......... .......... .......... 88.2M
+ 10300K .......... .......... .......... .......... .......... 15.4M
+ 10350K .......... .......... .......... .......... .......... 9.89M
+ 10400K .......... .......... .......... .......... .......... 28.1M
+ 10450K .......... .......... .......... .......... .......... 28.5M
+ 10500K .......... .......... .......... .......... .......... 15.7M
+ 10550K .......... .......... .......... .......... .......... 14.3M
+ 10600K .......... .......... .......... .......... .......... 23.2M
+ 10650K .......... .......... .......... .......... .......... 29.2M
+ 10700K .......... .......... .......... .......... .......... 37.5M
+ 10750K .......... .......... .......... .......... .......... 9.20M
+ 10800K .......... .......... .......... .......... .......... 22.7M
+ 10850K .......... .......... .......... .......... .......... 29.5M
+ 10900K .......... .......... .......... .......... .......... 13.5M
+ 10950K .......... .......... .......... .......... .......... 19.4M
+ 11000K .......... .......... .......... .......... .......... 20.5M
+ 11050K .......... .......... .......... .......... .......... 22.1M
+ 11100K .......... .......... .......... .......... .......... 17.2M
+ 11150K .......... .......... .......... .......... .......... 12.0M
+ 11200K .......... .......... .......... .......... .......... 24.3M
+ 11250K .......... .......... .......... .......... .......... 33.0M
+ 11300K .......... .......... .......... .......... .......... 11.0M
+ 11350K .......... .......... .......... .......... .......... 20.7M
+ 11400K .......... .......... .......... .......... .......... 23.8M
+ 11450K .......... .......... .......... .......... .......... 37.7M
+ 11500K .......... .......... .......... .......... .......... 11.3M
+ 11550K .......... .......... .......... .......... .......... 20.8M
+ 11600K .......... .......... .......... .......... .......... 18.3M
+ 11650K .......... .......... .......... .......... .......... 22.8M
+ 11700K .......... .......... .......... .......... .......... 16.6M
+ 11750K .......... .......... .......... .......... .......... 14.9M
+ 11800K .......... .......... .......... .......... .......... 25.2M
+ 11850K .......... .......... .......... .......... .......... 24.4M
+ 11900K .......... .......... .......... .......... .......... 14.7M
+ 11950K .......... .......... .......... .......... .......... 16.2M
+ 12000K .......... .......... .......... .......... .......... 25.2M
+ 12050K .......... .......... .......... .......... .......... 26.9M
+ 12100K .......... .......... .......... .......... .......... 10.3M
+ 12150K .......... .......... .......... .......... .......... 27.9M
+ 12200K .......... .......... .......... .......... .......... 25.2M
+ 12250K .......... .......... .......... .......... .......... 15.0M
+ 12300K .......... .......... .......... .......... .......... 16.1M
+ 12350K .......... .......... .......... .......... .......... 25.9M
+ 12400K .......... .......... .......... .......... .......... 24.0M
+ 12450K .......... .......... .......... .......... .......... 16.7M
+ 12500K .......... .......... .......... .......... .......... 15.4M
+ 12550K .......... .......... .......... .......... .......... 15.1M
+ 12600K .......... .......... .......... .......... .......... 76.0M
+ 12650K .......... .......... .......... .......... .......... 15.6M
+ 12700K .......... .......... .......... .......... .......... 16.7M
+ 12750K .......... .......... .......... .......... .......... 14.5M
+ 12800K .......... .......... .......... .......... .......... 28.2M
+ 12850K .......... .......... .......... .......... .......... 22.6M
+ 12900K .......... .......... .......... .......... .......... 11.1M
+ 12950K .......... .......... .......... .......... .......... 25.3M
+ 13000K .......... .......... .......... .......... .......... 30.7M
+ 13050K .......... .......... .......... .......... .......... 25.3M
+ 13100K .......... .......... .......... .......... .......... 10.4M
+ 13150K .......... .......... .......... .......... .......... 26.3M
+ 13200K .......... .......... .......... .......... .......... 31.2M
+ 13250K .......... .......... .......... .......... .......... 11.6M
+ 13300K .......... .......... .......... .......... .......... 14.6M
+ 13350K .......... .......... .......... .......... .......... 41.7M
+ 13400K .......... .......... .......... .......... .......... 34.6M
+ 13450K .......... .......... .......... .......... .......... 11.9M
+ 13500K .......... .......... .......... .......... .......... 13.3M
+ 13550K .......... .......... .......... .......... .......... 70.0M
+ 13600K .......... .......... .......... .......... .......... 18.8M
+ 13650K .......... .......... .......... .......... .......... 10.2M
+ 13700K .......... .......... .......... .......... .......... 24.3M
+ 13750K .......... .......... .......... .......... .......... 30.4M
+ 13800K .......... .......... .......... .......... .......... 52.4M
+ 13850K .......... .......... .......... .......... .......... 8.83M
+ 13900K .......... .......... .......... .......... .......... 25.2M
+ 13950K .......... .......... .......... .......... .......... 29.7M
+ 14000K .......... .......... .......... .......... .......... 12.6M
+ 14050K .......... .......... .......... .......... .......... 17.6M
+ 14100K .......... .......... .......... .......... .......... 23.8M
+ 14150K .......... .......... .......... .......... .......... 33.3M
+ 14200K .......... .......... .......... .......... .......... 12.6M
+ 14250K .......... .......... .......... .......... .......... 20.1M
+ 14300K .......... .......... .......... .......... .......... 23.2M
+ 14350K .......... .......... .......... .......... .......... 26.2M
+ 14400K .......... .......... .......... .......... .......... 12.7M
+ 14450K .......... .......... .......... .......... .......... 13.2M
+ 14500K .......... .......... .......... .......... .......... 55.1M
+ 14550K .......... .......... .......... .......... .......... 25.9M
+ 14600K .......... .......... .......... .......... .......... 14.1M
+ 14650K .......... .......... .......... .......... .......... 24.1M
+ 14700K .......... .......... .......... .......... .......... 20.9M
+ 14750K .......... .......... .......... .......... .......... 22.0M
+ 14800K .......... .......... .......... .......... .......... 13.6M
+ 14850K .......... .......... .......... .......... .......... 22.2M
+ 14900K .......... .......... .......... .......... .......... 12.9M
+ 14950K .......... .......... .......... .......... .......... 84.2M
+ 15000K .......... .......... .......... .......... .......... 14.4M
+ 15050K .......... .......... .......... .......... .......... 19.3M
+ 15100K .......... .......... .......... .......... .......... 35.5M
+ 15150K .......... .......... .......... .......... .......... 18.6M
+ 15200K .......... .......... .......... .......... .......... 13.2M
+ 15250K .......... .......... .......... .......... .......... 21.0M
+ 15300K .......... .......... .......... .......... .......... 27.4M
+ 15350K .......... .......... .......... .......... .......... 10.4M
+ 15400K .......... .......... .......... .......... .......... 19.0M
+ 15450K .......... .......... .......... .......... .......... 31.8M
+ 15500K .......... .......... .......... .......... .......... 39.1M
+ 15550K .......... .......... .......... .......... .......... 24.4M
+ 15600K .......... .......... .......... .......... .......... 8.75M
+ 15650K .......... .......... .......... .......... .......... 30.7M
+ 15700K .......... .......... .......... .......... .......... 66.8M
+ 15750K .......... .......... .......... .......... .......... 23.2M
+ 15800K .......... .......... .......... .......... .......... 8.87M
+ 15850K .......... .......... .......... .......... .......... 25.0M
+ 15900K .......... .......... .......... .......... .......... 68.6M
+ 15950K .......... .......... .......... .......... .......... 25.7M
+ 16000K .......... .......... .......... .......... .......... 16.5M
+ 16050K .......... .......... .......... .......... .......... 10.3M
+ 16100K .......... .......... .......... .......... .......... 28.7M
+ 16150K .......... .......... .......... .......... .......... 55.9M
+ 16200K .......... .......... .......... .......... .......... 17.3M
+ 16250K .......... .......... .......... .......... .......... 11.9M
+ 16300K .......... .......... .......... .......... .......... 20.0M
+ 16350K .......... .......... .......... .......... .......... 82.1M
+ 16400K .......... .......... .......... .......... .......... 16.7M
+ 16450K .......... .......... .......... .......... .......... 21.2M
+ 16500K .......... .......... .......... .......... .......... 12.0M
+ 16550K .......... .......... .......... .......... .......... 17.4M
+ 16600K .......... .......... .......... .......... .......... 71.8M
+ 16650K .......... .......... .......... .......... .......... 20.6M
+ 16700K .......... .......... .......... .......... .......... 22.5M
+ 16750K .......... .......... .......... .......... .......... 9.88M
+ 16800K .......... .......... .......... .......... .......... 21.1M
+ 16850K .......... .......... .......... .......... .......... 84.1M
+ 16900K .......... .......... .......... .......... .......... 22.0M
+ 16950K .......... .......... .......... .......... .......... 10.2M
+ 17000K .......... .......... .......... .......... .......... 21.7M
+ 17050K .......... .......... .......... .......... .......... 88.3M
+ 17100K .......... .......... .......... .......... .......... 20.9M
+ 17150K .......... .......... .......... .......... .......... 23.5M
+ 17200K .......... .......... .......... .......... .......... 9.05M
+ 17250K .......... .......... .......... .......... .......... 24.9M
+ 17300K .......... .......... .......... .......... .......... 83.8M
+ 17350K .......... .......... .......... .......... .......... 22.3M
+ 17400K .......... .......... .......... .......... .......... 9.41M
+ 17450K .......... .......... .......... .......... .......... 25.4M
+ 17500K .......... .......... .......... .......... .......... 21.3M
+ 17550K .......... .......... .......... .......... .......... 82.5M
+ 17600K .......... .......... .......... .......... .......... 10.1M
+ 17650K .......... .......... .......... .......... .......... 20.6M
+ 17700K .......... .......... .......... .......... .......... 20.2M
+ 17750K .......... .......... .......... .......... .......... 18.7M
+ 17800K .......... .......... .......... .......... .......... 73.6M
+ 17850K .......... .......... .......... .......... .......... 12.2M
+ 17900K .......... .......... .......... .......... .......... 18.3M
+ 17950K .......... .......... .......... .......... .......... 18.5M
+ 18000K .......... .......... .......... .......... .......... 20.0M
+ 18050K .......... .......... .......... .......... .......... 22.8M
+ 18100K .......... .......... .......... .......... .......... 17.7M
+ 18150K .......... .......... .......... .......... .......... 17.3M
+ 18200K .......... .......... .......... .......... .......... 19.7M
+ 18250K .......... .......... .......... .......... .......... 82.6M
+ 18300K .......... .......... .......... .......... .......... 13.0M
+ 18350K .......... .......... .......... .......... .......... 14.5M
+ 18400K .......... .......... .......... .......... .......... 19.3M
+ 18450K .......... .......... .......... .......... .......... 28.3M
+ 18500K .......... .......... .......... .......... .......... 81.4M
+ 18550K .......... .......... .......... .......... .......... 10.3M
+ 18600K .......... .......... .......... .......... .......... 15.7M
+ 18650K .......... .......... .......... .......... .......... 85.6M
+ 18700K .......... .......... .......... .......... .......... 37.2M
+ 18750K .......... .......... .......... .......... .......... 22.5M
+ 18800K .......... .......... .......... .......... .......... 7.90M
+ 18850K .......... .......... .......... .......... .......... 79.4M
+ 18900K .......... .......... .......... .......... .......... 37.7M
+ 18950K .......... .......... .......... .......... .......... 27.5M
+ 19000K .......... .......... .......... .......... .......... 8.38M
+ 19050K .......... .......... .......... .......... .......... 55.1M
+ 19100K .......... .......... .......... .......... .......... 79.3M
+ 19150K .......... .......... .......... .......... .......... 44.7M
+ 19200K .......... .......... .......... .......... .......... 11.3M
+ 19250K .......... .......... .......... .......... .......... 12.3M
+ 19300K .......... .......... .......... .......... .......... 73.9M
+ 19350K .......... .......... .......... .......... .......... 44.4M
+ 19400K .......... .......... .......... .......... .......... 22.4M
+ 19450K .......... .......... .......... .......... .......... 9.46M
+ 19500K .......... .......... .......... .......... .......... 31.6M
+ 19550K .......... .......... .......... .......... .......... 80.7M
+ 19600K .......... .......... .......... .......... .......... 19.3M
+ 19650K .......... .......... .......... .......... .......... 9.61M
+ 19700K .......... .......... .......... .......... .......... 26.5M
+ 19750K .......... .......... .......... .......... .......... 72.9M
+ 19800K .......... .......... .......... .......... .......... 60.9M
+ 19850K .......... .......... .......... .......... .......... 13.8M
+ 19900K .......... .......... .......... .......... .......... 13.2M
+ 19950K .......... .......... .......... .......... .......... 21.9M
+ 20000K .......... .......... .......... .......... .......... 65.5M
+ 20050K .......... .......... .......... .......... .......... 30.9M
+ 20100K .......... .......... .......... .......... .......... 10.5M
+ 20150K .......... .......... .......... .......... .......... 18.2M
+ 20200K .......... .......... .......... .......... .......... 52.6M
+ 20250K .......... .......... .......... .......... .......... 81.8M
+ 20300K .......... .......... .......... .......... .......... 17.7M
+ 20350K .......... .......... .......... .......... .......... 9.96M
+ 20400K .......... .......... .......... .......... .......... 34.3M
+ 20450K .......... .......... .......... .......... .......... 51.3M
+ 20500K .......... .......... .......... .......... .......... 40.0M
+ 20550K .......... .......... .......... .......... .......... 11.1M
+ 20600K .......... .......... .......... .......... .......... 15.8M
+ 20650K .......... .......... .......... .......... .......... 50.1M
+ 20700K .......... .......... .......... .......... .......... 57.0M
+ 20750K .......... .......... .......... .......... .......... 21.3M
+ 20800K .......... .......... .......... .......... .......... 9.74M
+ 20850K .......... .......... .......... .......... .......... 24.3M
+ 20900K .......... .......... .......... .......... .......... 81.3M
+ 20950K .......... .......... .......... .......... .......... 49.2M
+ 21000K .......... .......... .......... .......... .......... 12.2M
+ 21050K .......... .......... .......... .......... .......... 18.6M
+ 21100K .......... .......... .......... .......... .......... 22.4M
+ 21150K .......... .......... .......... .......... .......... 80.3M
+ 21200K .......... .......... .......... .......... .......... 23.4M
+ 21250K .......... .......... .......... .......... .......... 10.2M
+ 21300K .......... .......... .......... .......... .......... 19.7M
+ 21350K .......... .......... .......... .......... .......... 77.5M
+ 21400K .......... .......... .......... .......... .......... 55.4M
+ 21450K .......... .......... .......... .......... .......... 13.0M
+ 21500K .......... .......... .......... .......... .......... 18.8M
+ 21550K .......... .......... .......... .......... .......... 17.9M
+ 21600K .......... .......... .......... .......... .......... 65.1M
+ 21650K .......... .......... .......... .......... .......... 32.5M
+ 21700K .......... .......... .......... .......... .......... 10.6M
+ 21750K .......... .......... .......... .......... .......... 14.9M
+ 21800K .......... .......... .......... .......... .......... 66.5M
+ 21850K .......... .......... .......... .......... .......... 94.1M
+ 21900K .......... .......... .......... .......... .......... 16.4M
+ 21950K .......... .......... .......... .......... .......... 11.2M
+ 22000K .......... .......... .......... .......... .......... 23.8M
+ 22050K .......... .......... .......... .......... .......... 78.0M
+ 22100K .......... .......... .......... .......... .......... 45.9M
+ 22150K .......... .......... .......... .......... .......... 11.6M
+ 22200K .......... .......... .......... .......... .......... 12.1M
+ 22250K .......... .......... .......... .......... .......... 75.4M
+ 22300K .......... .......... .......... .......... .......... 90.8M
+ 22350K .......... .......... .......... .......... .......... 22.3M
+ 22400K .......... .......... .......... .......... .......... 10.7M
+ 22450K .......... .......... .......... .......... .......... 17.6M
+ 22500K .......... .......... .......... .......... .......... 79.7M
+ 22550K .......... .......... .......... .......... .......... 82.9M
+ 22600K .......... .......... .......... .......... .......... 12.4M
+ 22650K .......... .......... .......... .......... .......... 12.2M
+ 22700K .......... .......... .......... .......... .......... 38.2M
+ 22750K .......... .......... .......... .......... .......... 78.1M
+ 22800K .......... .......... .......... .......... .......... 25.7M
+ 22850K .......... .......... .......... .......... .......... 11.1M
+ 22900K .......... .......... .......... .......... .......... 15.8M
+ 22950K .......... .......... .......... .......... .......... 75.9M
+ 23000K .......... .......... .......... .......... .......... 78.0M
+ 23050K .......... .......... .......... .......... .......... 14.0M
+ 23100K .......... .......... .......... .......... .......... 12.7M
+ 23150K .......... .......... .......... .......... .......... 33.3M
+ 23200K .......... .......... .......... .......... .......... 44.9M
+ 23250K .......... .......... .......... .......... .......... 37.2M
+ 23300K .......... .......... .......... .......... .......... 10.8M
+ 23350K .......... .......... .......... .......... .......... 15.4M
+ 23400K .......... .......... .......... .......... .......... 78.0M
+ 23450K .......... .......... .......... .......... .......... 47.6M
+ 23500K .......... .......... .......... .......... .......... 17.7M
+ 23550K .......... .......... .......... .......... .......... 12.5M
+ 23600K .......... .......... .......... .......... .......... 22.3M
+ 23650K .......... .......... .......... .......... .......... 52.9M
+ 23700K .......... .......... .......... .......... .......... 21.2M
+ 23750K .......... .......... .......... .......... .......... 17.5M
+ 23800K .......... .......... .......... .......... .......... 14.4M
+ 23850K .......... .......... .......... .......... .......... 39.0M
+ 23900K .......... .......... .......... .......... .......... 73.8M
+ 23950K .......... .......... .......... .......... .......... 20.3M
+ 24000K .......... .......... .......... .......... .......... 11.9M
+ 24050K .......... .......... .......... .......... .......... 21.2M
+ 24100K .......... .......... .......... .......... .......... 45.1M
+ 24150K .......... .......... .......... .......... .......... 23.7M
+ 24200K .......... .......... .......... .......... .......... 17.2M
+ 24250K .......... .......... .......... .......... .......... 14.8M
+ 24300K .......... .......... .......... .......... .......... 44.9M
+ 24350K .......... .......... .......... .......... .......... 67.4M
+ 24400K .......... .......... .......... .......... .......... 11.2M
+ 24450K .......... .......... .......... .......... .......... 24.0M
+ 24500K .......... .......... .......... .......... .......... 19.1M
+ 24550K .......... .......... .......... .......... .......... 54.9M
+ 24600K .......... .......... .......... .......... .......... 21.4M
+ 24650K .......... .......... .......... .......... .......... 18.4M
+ 24700K .......... .......... .......... .......... .......... 15.2M
+ 24750K .......... .......... .......... .......... .......... 31.1M
+ 24800K .......... .......... .......... .......... .......... 21.4M
+ 24850K .......... .......... .......... .......... .......... 19.1M
+ 24900K .......... .......... .......... .......... .......... 57.7M
+ 24950K .......... .......... .......... .......... .......... 11.2M
+ 25000K .......... .......... .......... .......... .......... 72.1M
+ 25050K .......... .......... .......... .......... .......... 29.8M
+ 25100K .......... .......... .......... .......... .......... 53.2M
+ 25150K .......... .......... .......... .......... .......... 9.94M
+ 25200K .......... .......... .......... .......... .......... 20.7M
+ 25250K .......... .......... .......... .......... .......... 26.8M
+ 25300K .......... .......... .......... .......... .......... 76.6M
+ 25350K .......... .......... .......... .......... .......... 75.6M
+ 25400K .......... .......... .......... .......... .......... 8.99M
+ 25450K .......... .......... .......... .......... .......... 31.5M
+ 25500K .......... .......... .......... .......... .......... 64.3M
+ 25550K .......... .......... .......... .......... .......... 24.0M
+ 25600K .......... .......... .......... .......... .......... 58.6M
+ 25650K .......... .......... .......... .......... .......... 8.95M
+ 25700K .......... .......... .......... .......... .......... 32.1M
+ 25750K .......... .......... .......... .......... .......... 81.4M
+ 25800K .......... .......... .......... .......... .......... 23.7M
+ 25850K .......... .......... .......... .......... .......... 63.6M
+ 25900K .......... .......... .......... .......... .......... 8.92M
+ 25950K .......... .......... .......... .......... .......... 43.0M
+ 26000K .......... .......... .......... .......... .......... 25.1M
+ 26050K .......... .......... .......... .......... .......... 43.6M
+ 26100K .......... .......... .......... .......... .......... 38.3M
+ 26150K .......... .......... .......... .......... .......... 9.87M
+ 26200K .......... .......... .......... .......... .......... 31.9M
+ 26250K .......... .......... .......... .......... .......... 77.9M
+ 26300K .......... .......... .......... .......... .......... 25.1M
+ 26350K .......... .......... .......... .......... .......... 38.1M
+ 26400K .......... .......... .......... .......... .......... 9.44M
+ 26450K .......... .......... .......... .......... .......... 37.1M
+ 26500K .......... .......... .......... .......... .......... 62.6M
+ 26550K .......... .......... .......... .......... .......... 28.5M
+ 26600K .......... .......... .......... .......... .......... 33.4M
+ 26650K .......... .......... .......... .......... .......... 18.3M
+ 26700K .......... .......... .......... .......... .......... 14.8M
+ 26750K .......... .......... .......... .......... .......... 38.4M
+ 26800K .......... .......... .......... .......... .......... 27.1M
+ 26850K .......... .......... .......... .......... .......... 35.9M
+ 26900K .......... .......... .......... .......... .......... 24.0M
+ 26950K .......... .......... ........                         6.69M=1.5s
+
+2019-06-30 17:19:57 (18.0 MB/s) - ‘NNPDF23_lo_as_0130_qed.tar.gz’ saved [27625668]
+
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0000.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0001.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0002.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0003.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0004.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0005.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0006.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0007.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0008.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0009.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0010.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0011.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0012.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0013.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0014.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0015.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0016.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0017.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0018.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0019.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0020.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0021.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0022.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0023.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0024.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0025.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0026.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0027.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0028.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0029.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0030.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0031.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0032.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0033.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0034.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0035.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0036.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0037.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0038.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0039.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0040.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0041.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0042.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0043.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0044.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0045.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0046.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0047.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0048.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0049.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0050.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0051.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0052.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0053.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0054.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0055.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0056.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0057.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0058.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0059.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0060.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0061.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0062.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0063.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0064.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0065.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0066.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0067.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0068.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0069.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0070.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0071.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0072.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0073.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0074.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0075.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0076.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0077.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0078.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0079.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0080.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0081.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0082.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0083.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0084.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0085.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0086.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0087.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0088.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0089.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0090.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0091.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0092.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0093.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0094.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0095.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0096.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0097.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0098.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0099.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed_0100.dat
+NNPDF23_lo_as_0130_qed/NNPDF23_lo_as_0130_qed.info
+ Finished LHAPDF6 installation

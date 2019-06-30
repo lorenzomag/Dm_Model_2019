@@ -1,4 +1,0 @@
-P1_gg_ttx
-P1_qq_ttx
-P2_gq_wpq_wp_lvl
-P2_qq_wpg_wp_lvl

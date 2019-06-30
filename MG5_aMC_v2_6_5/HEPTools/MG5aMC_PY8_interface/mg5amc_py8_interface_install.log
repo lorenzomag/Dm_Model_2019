@@ -1,7 +1,0 @@
-------------------------------------------------
-MG5aMC_PY8_interface compilation output log:
-g++ MG5aMC_PY8_interface.cc ../lib/libpythia8.a -o MG5aMC_PY8_interface -I/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_5/HEPTools/hepmc/include\
- /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_5/HEPTools/MG5aMC_PY8_interface/static_library_dependencies/libHepMC.a -I../include -ldl -fPIC -lstdc++ -DHEPMC2HACK -L../lib -Wl,-rpath,../lib -lpythia8 -ldl   -DGZIPSUPPORT -I/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_5/HEPTools/zlib/include  -L/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_5/HEPTools/zlib/lib -Wl,-rpath,/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_5/HEPTools/zlib/lib -lz
-
-------------------------------------------------
-Successful compilation of the MG5aMC_PY8_interface.
