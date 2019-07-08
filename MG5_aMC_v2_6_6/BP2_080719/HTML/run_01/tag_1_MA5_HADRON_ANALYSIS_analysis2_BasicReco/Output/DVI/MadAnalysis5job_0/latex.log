@@ -1,0 +1,742 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo)) (./jheppub.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def))))
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+
+Package hyperref Warning: Option `pagecolor' is not available anymore.
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty))
+
+Package hyperref Message: Driver (default): hdvips.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+No file main.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd) <logo.eps>
+
+Package JHEP Warning: E-mails are missing.
+(JHEP)                Plese use \emailAdd macro to provide e-mails..
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+[0] [1] (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd)
+Overfull \hbox (21.18338pt too wide) in paragraph at lines 50--159
+\T1/cmtt/m/n/10 ma5>import /-home/-s1412595/-Desktop/-SummerProject2019/-MG5_aM
+C_v2_6_6/-BP2_080719/-Events/-
+
+Overfull \hbox (168.14749pt too wide) in paragraph at lines 50--159
+\T1/cmtt/m/n/10 ma5>submit /-home/-s1412595/-Desktop/-SummerProject2019/-MG5_aM
+C_v2_6_6/-BP2_080719/-MA5_HADRON_ANALYSIS_reco_BasicReco_1 
+
+Overfull \hbox (21.18338pt too wide) in paragraph at lines 50--159
+\T1/cmtt/m/n/10 ma5>import /-home/-s1412595/-Desktop/-SummerProject2019/-MG5_aM
+C_v2_6_6/-BP2_080719/-Events/-
+
+Overfull \hbox (183.89365pt too wide) in paragraph at lines 50--159
+\T1/cmtt/m/n/10 ma5>submit /-home/-s1412595/-Desktop/-SummerProject2019/-MG5_aM
+C_v2_6_6/-BP2_080719/-MA5_HADRON_ANALYSIS_analysis2_BasicReco 
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--159
+
+[2] (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd) [3]
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+[]|\T1/cmr/m/n/10 Events/-run_01/-
+
+Overfull \hbox (18.13213pt too wide) in paragraph at lines 183--190
+ [] 
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 232--232
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 228--235
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--236
+
+<selection_0.eps> [5] [6]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 254--254
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 250--257
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--258
+
+<selection_1.eps> [7]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 276--276
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 272--279
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--280
+
+<selection_2.eps> [8]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 298--298
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 294--301
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--302
+
+<selection_3.eps> [9]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 320--320
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 316--323
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--324
+
+<selection_4.eps> [10]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 338--345
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--346
+
+<selection_5.eps> [11]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 364--364
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 360--367
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--368
+
+<selection_6.eps> [12]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 386--386
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 382--389
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--390
+
+<selection_7.eps> [13]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 408--408
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 404--411
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--412
+
+<selection_8.eps> [14]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 430--430
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 426--433
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--434
+
+<selection_9.eps> [15]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 452--452
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 448--455
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--456
+
+<selection_10.eps> [16]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 474--474
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 470--477
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--478
+
+<selection_11.eps> [17]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 496--496
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 492--499
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--500
+
+<selection_12.eps> [18]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 518--518
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 514--521
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--522
+
+<selection_13.eps> [19]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 540--540
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 536--543
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--544
+
+<selection_14.eps> [20]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 562--562
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 558--565
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--566
+
+<selection_15.eps> [21]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 584--584
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 580--587
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--588
+
+<selection_16.eps> [22]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 606--606
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 602--609
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 599--610
+
+<selection_17.eps> [23]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 628--628
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 624--631
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--632
+
+<selection_18.eps> [24]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 650--650
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 646--653
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--654
+
+<selection_19.eps> [25]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 672--672
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 668--675
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--676
+
+<selection_20.eps> [26]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 694--694
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 690--697
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--698
+
+<selection_21.eps> [27]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 716--716
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 712--719
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--720
+
+<selection_22.eps> [28]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 738--738
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 734--741
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--742
+
+<selection_23.eps> [29]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 760--760
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 756--763
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 753--764
+
+<selection_24.eps> [30]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 782--782
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 778--785
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 775--786
+
+<selection_25.eps> [31]
+Overfull \hbox (20.97742pt too wide) in paragraph at lines 808--815
+ [] 
+[32] (./main.aux)
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+Output written on main.dvi (33 pages, 90724 bytes).
+Transcript written on main.log.
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo)) (./jheppub.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def))))
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+
+Package hyperref Warning: Option `pagecolor' is not available anymore.
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty))
+
+Package hyperref Message: Driver (default): hdvips.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty) (./main.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./main.out) (./main.out)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd) <logo.eps>
+
+Package JHEP Warning: E-mails are missing.
+(JHEP)                Plese use \emailAdd macro to provide e-mails..
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+[0] (./main.toc) [1] [2]
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd)
+Overfull \hbox (21.18338pt too wide) in paragraph at lines 50--159
+\T1/cmtt/m/n/10 ma5>import /-home/-s1412595/-Desktop/-SummerProject2019/-MG5_aM
+C_v2_6_6/-BP2_080719/-Events/-
+
+Overfull \hbox (168.14749pt too wide) in paragraph at lines 50--159
+\T1/cmtt/m/n/10 ma5>submit /-home/-s1412595/-Desktop/-SummerProject2019/-MG5_aM
+C_v2_6_6/-BP2_080719/-MA5_HADRON_ANALYSIS_reco_BasicReco_1 
+
+Overfull \hbox (21.18338pt too wide) in paragraph at lines 50--159
+\T1/cmtt/m/n/10 ma5>import /-home/-s1412595/-Desktop/-SummerProject2019/-MG5_aM
+C_v2_6_6/-BP2_080719/-Events/-
+
+Overfull \hbox (183.89365pt too wide) in paragraph at lines 50--159
+\T1/cmtt/m/n/10 ma5>submit /-home/-s1412595/-Desktop/-SummerProject2019/-MG5_aM
+C_v2_6_6/-BP2_080719/-MA5_HADRON_ANALYSIS_analysis2_BasicReco 
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--159
+
+[3] (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd) [4]
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+[]|\T1/cmr/m/n/10 Events/-run_01/-
+
+Overfull \hbox (18.13213pt too wide) in paragraph at lines 183--190
+ [] 
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 232--232
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 228--235
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--236
+
+<selection_0.eps> [6] [7]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 254--254
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 250--257
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--258
+
+<selection_1.eps> [8]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 276--276
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 272--279
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--280
+
+<selection_2.eps> [9]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 298--298
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 294--301
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--302
+
+<selection_3.eps> [10]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 320--320
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 316--323
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--324
+
+<selection_4.eps> [11]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 338--345
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--346
+
+<selection_5.eps> [12]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 364--364
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 360--367
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--368
+
+<selection_6.eps> [13]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 386--386
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 382--389
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--390
+
+<selection_7.eps> [14]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 408--408
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 404--411
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--412
+
+<selection_8.eps> [15]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 430--430
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 426--433
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--434
+
+<selection_9.eps> [16]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 452--452
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 448--455
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--456
+
+<selection_10.eps> [17]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 474--474
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 470--477
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--478
+
+<selection_11.eps> [18]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 496--496
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 492--499
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--500
+
+<selection_12.eps> [19]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 518--518
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 514--521
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--522
+
+<selection_13.eps> [20]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 540--540
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 536--543
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 533--544
+
+<selection_14.eps> [21]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 562--562
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 558--565
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--566
+
+<selection_15.eps> [22]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 584--584
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 580--587
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--588
+
+<selection_16.eps> [23]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 606--606
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 602--609
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 599--610
+
+<selection_17.eps> [24]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 628--628
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 624--631
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--632
+
+<selection_18.eps> [25]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 650--650
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 646--653
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--654
+
+<selection_19.eps> [26]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 672--672
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 668--675
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--676
+
+<selection_20.eps> [27]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 694--694
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 690--697
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--698
+
+<selection_21.eps> [28]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 716--716
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 712--719
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 709--720
+
+<selection_22.eps> [29]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 738--738
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 734--741
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--742
+
+<selection_23.eps> [30]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 760--760
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 756--763
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 753--764
+
+<selection_24.eps> [31]
+Overfull \hbox (49.05849pt too wide) in paragraph at lines 782--782
+[]|\T1/cmr/m/n/10 tag_1_pythia8_basicreco| 
+
+Overfull \hbox (55.33208pt too wide) in paragraph at lines 778--785
+ [] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 775--786
+
+<selection_25.eps> [32]
+Overfull \hbox (20.97742pt too wide) in paragraph at lines 808--815
+ [] 
+[33] (./main.aux) )
+(see the transcript file for additional information)
+Output written on main.dvi (34 pages, 107732 bytes).
+Transcript written on main.log.

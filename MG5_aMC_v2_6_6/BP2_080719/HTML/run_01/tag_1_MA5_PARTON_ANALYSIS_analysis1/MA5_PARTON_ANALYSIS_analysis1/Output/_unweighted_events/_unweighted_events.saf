@@ -1,0 +1,19 @@
+<SAFheader>
+</SAFheader>
+
+<SampleGlobalInfo>
+# xsection     xsection_error nevents        sum_weight+    sum_weight-    
+4.932558e-49   3.621130e-51   1000           0.000000e+00   0.000000e+00   
+</SampleGlobalInfo>
+
+<FileInfo>
+"/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/Events/run_01/unweighted_events.lhe.gz" # file 1 / 1
+</FileInfo>
+
+<SampleDetailedInfo>
+# xsection     xsection_error nevents        sum_weight+    sum_weight-    
+4.932558e-49   3.621130e-51   1000           0.000000e+00   0.000000e+00    # file 1 / 1
+</SampleDetailedInfo>
+
+<SAFfooter>
+</SAFfooter>

@@ -1,0 +1,1 @@
+../SubProcesses/P1_xchip_phipxpsi/maxamps.inc

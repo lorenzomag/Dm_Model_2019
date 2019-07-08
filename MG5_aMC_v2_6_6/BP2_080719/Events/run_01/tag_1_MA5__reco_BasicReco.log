@@ -1,0 +1,80 @@
+*************************************************************
+*        W E L C O M E  to  M A D A N A L Y S I S  5        *
+*                                                           *
+*   MA5 release : 1.8.5                        2019/04/04   *
+*                                                           *
+*         Comput. Phys. Commun. 184 (2013) 222-256          *
+*             Eur. Phys. J. C74 (2014) 3103                 *
+*************************************************************
+Executing the commands from the script
+...
+ma5>define invisible = 12 14 16 -12 -14 -16
+ma5>set main.fastsim.package = fastjet
+ma5>set main.fastsim.algorithm = antikt
+ma5>set main.fastsim.radius = 0.4
+ma5>set main.fastsim.ptmin = 5.0
+ma5>set main.fastsim.bjet_id.matching_dr = 0.4
+ma5>set main.fastsim.bjet_id.efficiency = 1.0
+ma5>set main.fastsim.bjet_id.misid_cjet = 0.0
+ma5>set main.fastsim.bjet_id.misid_ljet = 0.0
+ma5>set main.fastsim.tau_id.efficiency = 1.0
+ma5>set main.fastsim.tau_id.misid_ljet = 0.0
+ma5>import /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/Events/run_01/tag_1_pythia8_events.hepmc.gz as reco_events
+   -> Storing the file 'tag_1_pythia8_events.hepmc.gz' in the dataset 'reco_events'.
+ma5>set main.outputfile=tag_1_pythia8_BasicReco.lhe.gz
+ma5>submit /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/MA5_HADRON_ANALYSIS_reco_BasicReco_1
+   Creating folder 'MA5_HADRON_ANALYSIS_reco_BasicReco_1'...
+   Copying 'SampleAnalyzer' source files...
+   Inserting your selection into 'SampleAnalyzer'...
+   Writing the list of datasets...
+   Writing the command line history...
+   Creating Makefiles...
+   Compiling 'SampleAnalyzer'...
+   Linking 'SampleAnalyzer'...
+   Running 'SampleAnalyzer' over dataset 'reco_events'...
+    *******************************************************
+    * SampleAnalyzer for MadAnalysis 5 - Welcome.
+    * Initializing all components
+    - version: 1.8.5 (2019/04/04)
+    - general: everything is default.
+    - extracting the list of event samples...
+    - analyzer 'MadAnalysis5job'
+    - writer corresponding to output file 'tag_1_pythia8_BasicReco.lhe.gz'
+    - jet clusterer 'anti kt'
+    with algo: R=0.4 ; p=-1 ; PTmin=5
+    with bjet: dR=0.4 ; Exclusive ; IDeff=1 ; MisID(c)=0 ; MisID(q)=0
+    with tau:  IDeff=1 ; MisID(q)=0
+    * Running over files ...
+    * 1/1  /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/Events/run_01/tag_1_pythia8_events.hepmc.gz
+    => file size: 67.94 Mo
+    => sample format: HEPMC file produced by an unknown generator (cross section assumed in pb).
+    #--------------------------------------------------------------------------
+    #                         FastJet release 3.3.2
+    #                 M. Cacciari, G.P. Salam and G. Soyez
+    #     A software package for jet finding and analysis at colliders
+    #                           http://fastjet.fr
+    #
+    # Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+    # for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].
+    #
+    # FastJet is provided without warranty under the terms of the GNU GPLv2.
+    # It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code
+    # and 3rd party plugin jet algorithms. See COPYING file for details.
+    #--------------------------------------------------------------------------
+    
+    => total number of events: 1000 ( analyzed: 1000 ; skipped: 0 )
+    * Finalizing all components ...
+    * Total number of processed events: 1000.
+    * Goodbye.
+    *******************************************************
+   Checking SampleAnalyzer output...
+   Extracting data from the output files...
+   Preparing data for the reports ...
+   Generating all plots ...
+   Generating the HMTL report ...
+     -> To open this HTML report, please type 'open'.
+   Generating the PDF report ...
+     -> To open this PDF report, please type 'open MA5_HADRON_ANALYSIS_reco_BasicReco_1/Output/PDF/MadAnalysis5job_0'.
+   Generating the DVI report ...
+   Well done! Elapsed time = 34.47 seconds
+ma5>remove reco_events

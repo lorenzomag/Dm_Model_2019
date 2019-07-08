@@ -1,0 +1,192 @@
+*************************************************************
+*        W E L C O M E  to  M A D A N A L Y S I S  5        *
+*                                                           *
+*   MA5 release : 1.8.5                        2019/04/04   *
+*                                                           *
+*         Comput. Phys. Commun. 184 (2013) 222-256          *
+*             Eur. Phys. J. C74 (2014) 3103                 *
+*************************************************************
+Executing the commands from the script
+...
+ma5>import /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/bin/internal/ufomodel
+UFO model folder is detected
+Import all particles defined in the model ...
+55 particles have been successfully exported.
+syntax error with the name '~chi+'.
+A correct name contains only characters being letters, digits or the '+', '-', '~' and '_' symbols.
+Moreover, a correct name  starts with a letter or the '_' symbol.
+syntax error with the name '~chi-'.
+A correct name contains only characters being letters, digits or the '+', '-', '~' and '_' symbols.
+Moreover, a correct name  starts with a letter or the '_' symbol.
+syntax error with the name '~psi'.
+A correct name contains only characters being letters, digits or the '+', '-', '~' and '_' symbols.
+Moreover, a correct name  starts with a letter or the '_' symbol.
+syntax error with the name '~psi~'.
+A correct name contains only characters being letters, digits or the '+', '-', '~' and '_' symbols.
+Moreover, a correct name  starts with a letter or the '_' symbol.
+Adding 'gha' 'gha~' 've' 've~' 'vm' 'vm~' 'vt' 'vt~' to 'invisible' multiparticle
+ma5>import /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/Events/run_01/unweighted_events.lhe.gz as unweighted_events
+   -> Storing the file 'unweighted_events.lhe.gz' in the dataset 'unweighted_events'.
+ma5>define vl = 12 14 16
+ma5>define vl~ = -16 -14 -12
+ma5>define invisible = ve ve~ vm vm~ vt vt~ vl vl~
+ma5>set main.graphic_render = root
+ma5>plot THT   40 0 500 [logY]
+ma5>plot MET   40 0 500 [logY]
+ma5>plot SQRTS 40 0 500 [logY]
+ma5>plot  PT(~chi+[1]) 40 0  500 [logY interstate]
+'~chi+' is not a defined (multi)particle.
+ma5>plot ETA(~chi+[1]) 40 -10 10 [logY interstate]
+'~chi+' is not a defined (multi)particle.
+ma5>plot  PT(~chi-[1]) 40 0  500 [logY]
+'~chi-' is not a defined (multi)particle.
+ma5>plot ETA(~chi-[1]) 40 -10 10 [logY]
+'~chi-' is not a defined (multi)particle.
+ma5>plot M(~chi+[1] ~chi-[1]) 40 0  500 [logY allstate]
+'~chi+' is not a defined (multi)particle.
+ma5>plot DELTAR(~chi+[1],~chi-[1]) 40 0 10 [logY allstate]
+'~chi+' is not a defined (multi)particle.
+ma5>plot  PT(~chi-[1]) 40 0  500 [logY]
+'~chi-' is not a defined (multi)particle.
+ma5>plot ETA(~chi-[1]) 40 -10 10 [logY]
+'~chi-' is not a defined (multi)particle.
+ma5>plot  PT(~psi[1]) 40 0  500 [logY]
+'~psi' is not a defined (multi)particle.
+ma5>plot ETA(~psi[1]) 40 -10 10 [logY]
+'~psi' is not a defined (multi)particle.
+ma5>plot  PT(l+[1]) 40 0  500 [logY]
+ma5>plot ETA(l+[1]) 40 -10 10 [logY]
+ma5>plot  PT(nn[1]) 40 0  500 [logY]
+'nn' is not a defined (multi)particle.
+ma5>plot ETA(nn[1]) 40 -10 10 [logY]
+'nn' is not a defined (multi)particle.
+ma5>plot M(l+[1] nn[1]) 40 0  500 [logY ]
+'nn' is not a defined (multi)particle.
+ma5>plot M(~chi-[1] l+[1]) 40 0  500 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot M(~chi-[1] l+[1] nn[1]) 40 0  500 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot M(~chi-[1] nn[1]) 40 0  500 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot M(~chi-[1] ~psi[1]) 40 0  500 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot M(~chi-[1] ~psi[1] l+[1]) 40 0  500 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot M(~chi-[1] ~psi[1] l+[1] nn[1]) 40 0  500 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot M(~chi-[1] ~psi[1] nn[1]) 40 0  500 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot M(~psi[1] l+[1]) 40 0  500 [logY ]
+'~psi' is not a defined (multi)particle.
+ma5>plot M(~psi[1] l+[1] nn[1]) 40 0  500 [logY ]
+'~psi' is not a defined (multi)particle.
+ma5>plot M(~psi[1] nn[1]) 40 0  500 [logY ]
+'~psi' is not a defined (multi)particle.
+ma5>plot DELTAR(l+[1],nn[1]) 40 0 10 [logY ]
+'nn' is not a defined (multi)particle.
+ma5>plot DELTAR(~chi-[1],l+[1]) 40 0 10 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot DELTAR(~chi-[1],nn[1]) 40 0 10 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot DELTAR(~chi-[1],~psi[1]) 40 0 10 [logY ]
+'~chi-' is not a defined (multi)particle.
+ma5>plot DELTAR(~psi[1],l+[1]) 40 0 10 [logY ]
+'~psi' is not a defined (multi)particle.
+ma5>plot DELTAR(~psi[1],nn[1]) 40 0 10 [logY ]
+'~psi' is not a defined (multi)particle.
+ma5>plot  PT(~chi-[1]) 40 0  500 [logY interstate]
+'~chi-' is not a defined (multi)particle.
+ma5>plot ETA(~chi-[1]) 40 -10 10 [logY interstate]
+'~chi-' is not a defined (multi)particle.
+ma5>plot  PT(~chi+[1]) 40 0  500 [logY]
+'~chi+' is not a defined (multi)particle.
+ma5>plot ETA(~chi+[1]) 40 -10 10 [logY]
+'~chi+' is not a defined (multi)particle.
+ma5>plot M(~chi-[1] ~chi+[1]) 40 0  500 [logY allstate]
+'~chi-' is not a defined (multi)particle.
+ma5>plot DELTAR(~chi-[1],~chi+[1]) 40 0 10 [logY allstate]
+'~chi-' is not a defined (multi)particle.
+ma5>plot  PT(~psi~[1]) 40 0  500 [logY]
+'~psi~' is not a defined (multi)particle.
+ma5>plot ETA(~psi~[1]) 40 -10 10 [logY]
+'~psi~' is not a defined (multi)particle.
+ma5>plot  PT(l-[1]) 40 0  500 [logY]
+ma5>plot ETA(l-[1]) 40 -10 10 [logY]
+ma5>plot  PT(~chi+[1]) 40 0  500 [logY]
+'~chi+' is not a defined (multi)particle.
+ma5>plot ETA(~chi+[1]) 40 -10 10 [logY]
+'~chi+' is not a defined (multi)particle.
+ma5>plot  PT(nn~[1]) 40 0  500 [logY]
+'nn~' is not a defined (multi)particle.
+ma5>plot ETA(nn~[1]) 40 -10 10 [logY]
+'nn~' is not a defined (multi)particle.
+ma5>plot M(l-[1] nn~[1]) 40 0  500 [logY ]
+'nn~' is not a defined (multi)particle.
+ma5>plot M(l-[1] ~chi+[1]) 40 0  500 [logY ]
+'~chi+' is not a defined (multi)particle.
+ma5>plot M(l-[1] ~chi+[1] nn~[1]) 40 0  500 [logY ]
+'~chi+' is not a defined (multi)particle.
+ma5>plot M(~chi+[1] nn~[1]) 40 0  500 [logY ]
+'~chi+' is not a defined (multi)particle.
+ma5>plot M(~psi~[1] l-[1]) 40 0  500 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot M(~psi~[1] l-[1] nn~[1]) 40 0  500 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot M(~psi~[1] l-[1] ~chi+[1]) 40 0  500 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot M(~psi~[1] l-[1] ~chi+[1] nn~[1]) 40 0  500 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot M(~psi~[1] nn~[1]) 40 0  500 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot M(~psi~[1] ~chi+[1]) 40 0  500 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot M(~psi~[1] ~chi+[1] nn~[1]) 40 0  500 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot DELTAR(l-[1],nn~[1]) 40 0 10 [logY ]
+'nn~' is not a defined (multi)particle.
+ma5>plot DELTAR(l-[1],~chi+[1]) 40 0 10 [logY ]
+'~chi+' is not a defined (multi)particle.
+ma5>plot DELTAR(~chi+[1],nn~[1]) 40 0 10 [logY ]
+'~chi+' is not a defined (multi)particle.
+ma5>plot DELTAR(~psi~[1],l-[1]) 40 0 10 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot DELTAR(~psi~[1],nn~[1]) 40 0 10 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>plot DELTAR(~psi~[1],~chi+[1]) 40 0 10 [logY ]
+'~psi~' is not a defined (multi)particle.
+ma5>submit /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/MA5_PARTON_ANALYSIS_analysis1
+   Creating folder 'MA5_PARTON_ANALYSIS_analysis1'...
+   Copying 'SampleAnalyzer' source files...
+   Inserting your selection into 'SampleAnalyzer'...
+   Writing the list of datasets...
+   Writing the command line history...
+   Creating Makefiles...
+   Compiling 'SampleAnalyzer'...
+   Linking 'SampleAnalyzer'...
+   Running 'SampleAnalyzer' over dataset 'unweighted_events'...
+    *******************************************************
+    * SampleAnalyzer for MadAnalysis 5 - Welcome.
+    * Initializing all components
+    - version: 1.8.5 (2019/04/04)
+    - general: everything is default.
+    - extracting the list of event samples...
+    - analyzer 'MadAnalysis5job'
+    * Running over files ...
+    * 1/1  /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/Events/run_01/unweighted_events.lhe.gz
+    => file size: 283.82 ko
+    => sample format: LHE file produced by MadGraph5.
+    => total number of events: 1000 ( analyzed: 1000 ; skipped: 0 )
+    * Finalizing all components ...
+    * Total number of processed events: 1000.
+    * Goodbye.
+    *******************************************************
+   Checking SampleAnalyzer output...
+   Extracting data from the output files...
+   Preparing data for the reports ...
+   Generating all plots ...
+   Generating the HMTL report ...
+     -> To open this HTML report, please type 'open'.
+   Generating the PDF report ...
+     -> To open this PDF report, please type 'open MA5_PARTON_ANALYSIS_analysis1/Output/PDF/MadAnalysis5job_0'.
+   Generating the DVI report ...
+   Well done! Elapsed time = 12.69 seconds

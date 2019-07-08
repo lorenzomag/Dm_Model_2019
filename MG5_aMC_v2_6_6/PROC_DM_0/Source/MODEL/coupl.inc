@@ -1,0 +1,38 @@
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+c      written by the UFO converter
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+      DOUBLE PRECISION G
+      COMMON/STRONG/ G
+
+      DOUBLE COMPLEX GAL(2)
+      COMMON/WEAK/ GAL
+
+      DOUBLE PRECISION MU_R
+      COMMON/RSCALE/ MU_R
+
+      DOUBLE PRECISION NF
+      PARAMETER(NF=0)
+
+      DOUBLE PRECISION MDL_MS,MDL_MPSI,MDL_MU,MDL_MT,MDL_MW,MDL_MZ
+     $ ,MDL_MTA,MDL_MC,MDL_MB,MDL_ME,MDL_MD,MDL_MNN1,MDL_MH,MDL_MPHI
+     $ ,MDL_MNN3,MDL_MMU,MDL_MCHI,MDL_MNN2
+
+      COMMON/MASSES/ MDL_MS,MDL_MPSI,MDL_MU,MDL_MT,MDL_MW,MDL_MZ
+     $ ,MDL_MTA,MDL_MC,MDL_MB,MDL_ME,MDL_MD,MDL_MNN1,MDL_MH,MDL_MPHI
+     $ ,MDL_MNN3,MDL_MMU,MDL_MCHI,MDL_MNN2
+
+
+      DOUBLE PRECISION MDL_WNN1,MDL_WNN3,MDL_WT,MDL_WZ,MDL_WNN2
+     $ ,MDL_WPHI,MDL_WPSI,MDL_WW,MDL_WH,MDL_WCHI
+
+      COMMON/WIDTHS/ MDL_WNN1,MDL_WNN3,MDL_WT,MDL_WZ,MDL_WNN2,MDL_WPHI
+     $ ,MDL_WPSI,MDL_WW,MDL_WH,MDL_WCHI
+
+
+      DOUBLE COMPLEX GC_1, GC_2, GC_4, GC_76, GC_77, GC_78, GC_83,
+     $  GC_84
+
+      COMMON/COUPLINGS/ GC_1, GC_2, GC_4, GC_76, GC_77, GC_78, GC_83,
+     $  GC_84
+

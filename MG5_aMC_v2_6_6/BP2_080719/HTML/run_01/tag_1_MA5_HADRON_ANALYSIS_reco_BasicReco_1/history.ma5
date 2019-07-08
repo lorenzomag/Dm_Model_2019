@@ -1,0 +1,14 @@
+set main.currentdir = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719
+define invisible = 12 14 16 -12 -14 -16
+set main.fastsim.package = fastjet
+set main.fastsim.algorithm = antikt
+set main.fastsim.radius = 0.4
+set main.fastsim.ptmin = 5.0
+set main.fastsim.bjet_id.matching_dr = 0.4
+set main.fastsim.bjet_id.efficiency = 1.0
+set main.fastsim.bjet_id.misid_cjet = 0.0
+set main.fastsim.bjet_id.misid_ljet = 0.0
+set main.fastsim.tau_id.efficiency = 1.0
+set main.fastsim.tau_id.misid_ljet = 0.0
+import /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP2_080719/Events/run_01/tag_1_pythia8_events.hepmc.gz as reco_events
+set main.outputfile=tag_1_pythia8_BasicReco.lhe.gz

@@ -8,43 +8,43 @@ BEGIN-SAMPLEANALYZER-TEST
 List of available analyzers:
 ------------------------------------------
 Number of items: 1
- -         mergingplots : PN3MA512AnalyzerBaseE @ 0x11d6db0
+ -         mergingplots : PN3MA512AnalyzerBaseE @ 0x1592e00
 ------------------------------------------
 
 List of available readers:
 ------------------------------------------
 Number of items: 9
- -                  hep : PN3MA510ReaderBaseE @ 0x11d68a0
- -               hep.gz : PN3MA510ReaderBaseE @ 0x11d68a0
- -                hepmc : PN3MA510ReaderBaseE @ 0x11d6ae0
- -             hepmc.gz : PN3MA510ReaderBaseE @ 0x11d6ae0
- -                 lhco : PN3MA510ReaderBaseE @ 0x11d6720
- -              lhco.gz : PN3MA510ReaderBaseE @ 0x11d6720
- -                  lhe : PN3MA510ReaderBaseE @ 0x11d65b0
- -               lhe.gz : PN3MA510ReaderBaseE @ 0x11d65b0
- -                 root : PN3MA510ReaderBaseE @ 0x11d6ca0
+ -                  hep : PN3MA510ReaderBaseE @ 0x15928f0
+ -               hep.gz : PN3MA510ReaderBaseE @ 0x15928f0
+ -                hepmc : PN3MA510ReaderBaseE @ 0x1592b30
+ -             hepmc.gz : PN3MA510ReaderBaseE @ 0x1592b30
+ -                 lhco : PN3MA510ReaderBaseE @ 0x1592770
+ -              lhco.gz : PN3MA510ReaderBaseE @ 0x1592770
+ -                  lhe : PN3MA510ReaderBaseE @ 0x1592600
+ -               lhe.gz : PN3MA510ReaderBaseE @ 0x1592600
+ -                 root : PN3MA510ReaderBaseE @ 0x1592cf0
 ------------------------------------------
 
 List of available writers:
 ------------------------------------------
 Number of items: 4
- -                 lhco : PN3MA510WriterBaseE @ 0x11d5fa0
- -              lhco.gz : PN3MA510WriterBaseE @ 0x11d5fa0
- -                  lhe : PN3MA510WriterBaseE @ 0x11d5f70
- -               lhe.gz : PN3MA510WriterBaseE @ 0x11d5f70
+ -                 lhco : PN3MA510WriterBaseE @ 0x1591ff0
+ -              lhco.gz : PN3MA510WriterBaseE @ 0x1591ff0
+ -                  lhe : PN3MA510WriterBaseE @ 0x1591fc0
+ -               lhe.gz : PN3MA510WriterBaseE @ 0x1591fc0
 ------------------------------------------
 
 List of available JetClusterer:
 ------------------------------------------
 Number of items: 8
- -               antikt : PN3MA512JetClustererE @ 0x11d7060
- -            cambridge : PN3MA512JetClustererE @ 0x11d7310
- -            cdfjetclu : PN3MA512JetClustererE @ 0x11d76f0
- -          cdfmidpoint : PN3MA512JetClustererE @ 0x11d75e0
- -                genkt : PN3MA512JetClustererE @ 0x11d71b0
- -              gridjet : PN3MA512JetClustererE @ 0x11d7820
- -                   kt : PN3MA512JetClustererE @ 0x11d6f30
- -              siscone : PN3MA512JetClustererE @ 0x11d7450
+ -               antikt : PN3MA512JetClustererE @ 0x15930b0
+ -            cambridge : PN3MA512JetClustererE @ 0x1593360
+ -            cdfjetclu : PN3MA512JetClustererE @ 0x1593740
+ -          cdfmidpoint : PN3MA512JetClustererE @ 0x1593630
+ -                genkt : PN3MA512JetClustererE @ 0x1593200
+ -              gridjet : PN3MA512JetClustererE @ 0x1593870
+ -                   kt : PN3MA512JetClustererE @ 0x1592f80
+ -              siscone : PN3MA512JetClustererE @ 0x15934a0
 ------------------------------------------
 
 List of available DetectorSimList:
