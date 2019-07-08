@@ -62,6 +62,9 @@ private:
   TObjArray *fElectronOutputArray; //!
   TObjArray *fMuonOutputArray; //!
   TObjArray *fPhiDMOutputArray; //!
+  TObjArray *fChiDMOutputArray; //!
+  TObjArray *fPsiDMOutputArray; //!
+  TObjArray *fNNDMOutputArray; //!
 
   ClassDef(ParticlePropagator, 1)
 };

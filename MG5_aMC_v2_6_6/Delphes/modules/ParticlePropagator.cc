@@ -110,6 +110,9 @@ void ParticlePropagator::Init()
   fElectronOutputArray = ExportArray(GetString("ElectronOutputArray", "electrons"));
   fMuonOutputArray = ExportArray(GetString("MuonOutputArray", "muons"));
   fPhiDMOutputArray = ExportArray(GetString("PhiDMOutputArray","phis"));
+  fChiDMOutputArray = ExportArray(GetString("ChiDMOutputArray","chis"));
+  fPsiDMOutputArray = ExportArray(GetString("PsiDMOutputArray","psis"));
+  fNNDMOutputArray = ExportArray(GetString("NNDMOutputArray","NNs"));
 }
 
 //------------------------------------------------------------------------------
@@ -257,6 +260,15 @@ void ParticlePropagator::Process()
           case 5000001:
             fPhiDMOutputArray->Add(candidate);
             break;
+          case 200000:
+            fPsiDMOutputArray->Add(candidate);
+            break;
+          case 200001:
+            fChiDMOutputArray->Add(candidate);
+            break;
+          case 200002 ... 200004:
+            fNNDMOutputArray->Add(candidate);
+            break;
           default:
             fChargedHadronOutputArray->Add(candidate);
         }
@@ -402,6 +414,15 @@ void ParticlePropagator::Process()
             break;
           case 5000001:
             fPhiDMOutputArray->Add(candidate);
+            break;
+          case 200000:
+            fPsiDMOutputArray->Add(candidate);
+            break;
+          case 200001:
+            fChiDMOutputArray->Add(candidate);
+            break;
+          case 200002 ... 200004:
+            fNNDMOutputArray->Add(candidate);
             break;
           default:
             fChargedHadronOutputArray->Add(candidate);

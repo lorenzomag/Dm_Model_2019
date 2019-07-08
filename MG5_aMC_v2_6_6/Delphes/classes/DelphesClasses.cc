@@ -37,6 +37,9 @@ CompBase *Photon::fgCompare = CompPT<Photon>::Instance();
 CompBase *Electron::fgCompare = CompPT<Electron>::Instance();
 CompBase *Muon::fgCompare = CompPT<Muon>::Instance();
 CompBase *PhiDM::fgCompare = CompPT<PhiDM>::Instance();
+CompBase *ChiDM::fgCompare = CompPT<ChiDM>::Instance();
+CompBase *PsiDM::fgCompare = CompPT<PsiDM>::Instance();
+CompBase *NNDM::fgCompare = CompPT<NNDM>::Instance();
 CompBase *Jet::fgCompare = CompPT<Jet>::Instance();
 CompBase *Track::fgCompare = CompPT<Track>::Instance();
 CompBase *Tower::fgCompare = CompE<Tower>::Instance();
@@ -92,6 +95,30 @@ TLorentzVector Muon::P4() const
 //------------------------------------------------------------------------------
 
 TLorentzVector PhiDM::P4() const
+{
+  TLorentzVector vec;
+  vec.SetPtEtaPhiM(PT, Eta, Phi, 0.0);
+  return vec;
+}
+//------------------------------------------------------------------------------
+
+TLorentzVector PsiDM::P4() const
+{
+  TLorentzVector vec;
+  vec.SetPtEtaPhiM(PT, Eta, Phi, 0.0);
+  return vec;
+}
+//------------------------------------------------------------------------------
+
+TLorentzVector ChiDM::P4() const
+{
+  TLorentzVector vec;
+  vec.SetPtEtaPhiM(PT, Eta, Phi, 0.0);
+  return vec;
+}
+//------------------------------------------------------------------------------
+
+TLorentzVector NNDM::P4() const
 {
   TLorentzVector vec;
   vec.SetPtEtaPhiM(PT, Eta, Phi, 0.0);

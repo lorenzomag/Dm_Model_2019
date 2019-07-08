@@ -9,12 +9,13 @@ set ExecutionPath {
   ChargedHadronTrackingEfficiency
   ElectronTrackingEfficiency
   MuonTrackingEfficiency
-  PhiDMTrackingEfficiency
+
+
 
   ChargedHadronMomentumSmearing
   ElectronMomentumSmearing
   MuonMomentumSmearing
-  PhiDMMomentumSmearing
+
 
   TrackMerger
 
@@ -31,6 +32,11 @@ set ExecutionPath {
   ElectronFilter
   ElectronEfficiency
   ElectronIsolation
+
+  PhisFilter
+  ChisFilter
+  PsisFilter
+  NNsFilter
 
   ChargedHadronFilter
 
@@ -72,6 +78,9 @@ module ParticlePropagator ParticlePropagator {
   set MuonOutputArray muons
   # LP
   set PhiDMOutputArray phis
+  set ChiDMOutputArray chis
+  set PsiDMOutputArray psis
+  set NNDMOutputArray NNs
 
   # radius of the magnetic field coverage, in m
   set Radius 1.15
@@ -141,24 +150,7 @@ module Efficiency MuonTrackingEfficiency {
                          (abs(eta) > 2.5)                                                  * (0.00)}
 }
 
-##########################
-# PhiDM tracking efficiency (LP)
-##########################
 
-module Efficiency PhiDMTrackingEfficiency {
-  set InputArray ParticlePropagator/phis
-  set OutputArray phis
-
-  # set EfficiencyFormula {efficiency formula as a function of eta and pt}
-
-  # tracking efficiency formula for phis
-  set EfficiencyFormula {                                                    (pt <= 0.1)   * (0.00) +
-                                           (abs(eta) <= 1.5) * (pt > 0.1   && pt <= 1.0)   * (0.75) +
-                                           (abs(eta) <= 1.5) * (pt > 1.0)                  * (0.99) +
-                         (abs(eta) > 1.5 && abs(eta) <= 2.5) * (pt > 0.1   && pt <= 1.0)   * (0.70) +
-                         (abs(eta) > 1.5 && abs(eta) <= 2.5) * (pt > 1.0)                  * (0.98) +
-                         (abs(eta) > 2.5)                                                  * (0.00)}
-}
 
 ########################################
 # Momentum resolution for charged tracks
@@ -207,20 +199,7 @@ module MomentumSmearing MuonMomentumSmearing {
                          (abs(eta) > 1.5 && abs(eta) <= 2.5) * (pt > 0.1) * sqrt(0.025^2 + pt^2*3.5e-4^2)}
 }
 
-###############################
-# Momentum resolution for phis (LP)
-###############################
 
-module MomentumSmearing PhiDMMomentumSmearing {
-  set InputArray PhiDMTrackingEfficiency/phis
-  set OutputArray phis
-
-  # set ResolutionFormula {resolution formula as a function of eta and pt}
-  # resolution formula for phis
-  set ResolutionFormula {                  (abs(eta) <= 0.5) * (pt > 0.1) * sqrt(0.01^2 + pt^2*1.0e-4^2) +
-                         (abs(eta) > 0.5 && abs(eta) <= 1.5) * (pt > 0.1) * sqrt(0.015^2 + pt^2*1.5e-4^2) +
-                         (abs(eta) > 1.5 && abs(eta) <= 2.5) * (pt > 0.1) * sqrt(0.025^2 + pt^2*3.5e-4^2)}
-}
 
 
 ##############
@@ -232,7 +211,11 @@ module Merger TrackMerger {
   add InputArray ChargedHadronMomentumSmearing/chargedHadrons
   add InputArray ElectronMomentumSmearing/electrons
   add InputArray MuonMomentumSmearing/muons
-  add InputArray PhiDMMomentumSmearing/phis
+  add InputArray ParticlePropagator/phis
+  add InputArray ParticlePropagator/psis
+  add InputArray ParticlePropagator/chis
+  add InputArray ParticlePropagator/NNs
+
   set OutputArray tracks
 }
 
@@ -325,6 +308,11 @@ module SimpleCalorimeter ECal {
   add EnergyFraction {3122} {0.3}
   # energy fraction for DM model (LP)
   add EnergyFraction {5000001} {0.0}
+  add EnergyFraction {200000} {0.0}
+  add EnergyFraction {200001} {0.3}
+  add EnergyFraction {200002} {0.0}
+  add EnergyFraction {200003} {0.0}
+  add EnergyFraction {200004} {0.0}
 
   # set ResolutionFormula {resolution formula as a function of eta and energy}
 
@@ -403,7 +391,12 @@ module SimpleCalorimeter HCal {
   add EnergyFraction {310} {0.7}
   add EnergyFraction {3122} {0.7}
   # energy fraction for DM model (LP)
-  add EnergyFraction {5000001} {0.0}
+  add EnergyFraction {5000001} {0.3}
+  add EnergyFraction {200000} {0.0}
+  add EnergyFraction {200001} {0.3}
+  add EnergyFraction {200002} {0.0}
+  add EnergyFraction {200003} {0.0}
+  add EnergyFraction {200004} {0.0}
 
   # http://arxiv.org/pdf/hep-ex/0004009v1
   # http://villaolmo.mib.infn.it/ICATPP9th_2005/Calorimetry/Schram.p.pdf
@@ -412,6 +405,7 @@ module SimpleCalorimeter HCal {
                              (abs(eta) > 1.7 && abs(eta) <= 3.2) * sqrt(energy^2*0.0500^2 + energy*0.706^2) +
                              (abs(eta) > 3.2 && abs(eta) <= 4.9) * sqrt(energy^2*0.09420^2 + energy*1.00^2)}
 }
+
 
 
 #################
@@ -424,6 +418,47 @@ module PdgCodeFilter ElectronFilter {
   set Invert true
   add PdgCode {11}
   add PdgCode {-11}
+}
+
+#################
+# Dark Matter model particle filter
+#################
+
+
+module PdgCodeFilter PhisFilter {
+  set InputArray HCal/eflowTracks
+  set OutputArray phis
+  set Invert true
+  add PdgCode {5000001}
+  add PdgCode {-5000001}
+}
+
+module PdgCodeFilter PsisFilter {
+  set InputArray HCal/eflowTracks
+  set OutputArray psis
+  set Invert true
+  add PdgCode {200000}
+  add PdgCode {-200000}
+}
+
+module PdgCodeFilter ChisFilter {
+  set InputArray HCal/eflowTracks
+  set OutputArray chis
+  set Invert true
+  add PdgCode {200001}
+  add PdgCode {-200001}
+}
+
+module PdgCodeFilter NNsFilter {
+  set InputArray HCal/eflowTracks
+  set OutputArray NNs
+  set Invert true
+  add PdgCode {200002}
+  add PdgCode {-200002}
+  add PdgCode {200003}
+  add PdgCode {-200003}
+  add PdgCode {200004}
+  add PdgCode {-200004}
 }
 
 ######################
@@ -604,7 +639,6 @@ module Merger ScalarHT {
   add InputArray UniqueObjectFinder/electrons
   add InputArray UniqueObjectFinder/photons
   add InputArray UniqueObjectFinder/muons
-  add InputArray UniqueObjectFinder/phis
   set EnergyOutputArray energy
 }
 
@@ -775,7 +809,10 @@ module UniqueObjectFinder UniqueObjectFinder {
   add InputArray ElectronIsolation/electrons electrons
   add InputArray MuonIsolation/muons muons
   add InputArray JetEnergyScale/jets jets
-  add InputArray PhiDMMomentumSmearing/phis phis
+  add InputArray PhisFilter/phis phis
+  add InputArray ChisFilter/chis chis
+  add InputArray PsisFilter/psis psis
+  add InputArray NNsFilter/NNs NNs
 }
 
 ##################
@@ -804,7 +841,10 @@ module TreeWriter TreeWriter {
   add Branch UniqueObjectFinder/electrons Electron Electron
   add Branch UniqueObjectFinder/photons Photon Photon
   add Branch UniqueObjectFinder/muons Muon Muon
-  add Branch UniqueObjectFinder/phis PhiDM PhiDM
+  add Branch UniqueObjectFinder/chis  Chis ChiDM
+  add Branch UniqueObjectFinder/psis  Psis PsiDM
+  add Branch UniqueObjectFinder/phis  Phis PhiDM
+  add Branch UniqueObjectFinder/NNs   NNs  NNDM
   add Branch MissingET/momentum MissingET MissingET
   add Branch ScalarHT/energy ScalarHT ScalarHT
 }

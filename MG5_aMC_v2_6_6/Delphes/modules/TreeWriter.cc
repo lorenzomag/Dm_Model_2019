@@ -76,6 +76,9 @@ void TreeWriter::Init()
   fClassMap[Electron::Class()] = &TreeWriter::ProcessElectrons;
   fClassMap[Muon::Class()] = &TreeWriter::ProcessMuons;
   fClassMap[PhiDM::Class()] = &TreeWriter::ProcessPhis;
+  fClassMap[ChiDM::Class()] = &TreeWriter::ProcessChis;
+  fClassMap[PsiDM::Class()] = &TreeWriter::ProcessPsis;
+  fClassMap[NNDM::Class()] = &TreeWriter::ProcessNNs;
   fClassMap[Jet::Class()] = &TreeWriter::ProcessJets;
   fClassMap[MissingET::Class()] = &TreeWriter::ProcessMissingET;
   fClassMap[ScalarHT::Class()] = &TreeWriter::ProcessScalarHT;
@@ -572,6 +575,156 @@ void TreeWriter::ProcessPhis(ExRootTreeBranch *branch, TObjArray *array) // LP
     rapidity = (cosTheta == 1.0 ? signPz*999.9 : momentum.Rapidity());
 
     entry = static_cast<PhiDM*>(branch->NewEntry());
+
+    entry->SetBit(kIsReferenced);
+    entry->SetUniqueID(candidate->GetUniqueID());
+
+    entry->Eta = eta;
+    entry->Phi = momentum.Phi();
+    entry->PT = pt;
+
+    entry->T = position.T()*1.0E-3/c_light;
+
+    // Isolation variables
+
+    entry->IsolationVar = candidate->IsolationVar;
+    entry->IsolationVarRhoCorr = candidate->IsolationVarRhoCorr ;
+    entry->SumPtCharged = candidate->SumPtCharged ;
+    entry->SumPtNeutral = candidate->SumPtNeutral ;
+    entry->SumPtChargedPU = candidate->SumPtChargedPU ;
+    entry->SumPt = candidate->SumPt ;
+
+    entry->Charge = candidate->Charge;
+
+    entry->Particle = candidate->GetCandidates()->At(0);
+  }
+}
+
+void TreeWriter::ProcessChis(ExRootTreeBranch *branch, TObjArray *array) // LP
+{
+  TIter iterator(array);
+  Candidate *candidate = 0;
+  ChiDM *entry = 0;
+  Double_t pt, signPz, cosTheta, eta, rapidity;
+
+  const Double_t c_light = 2.99792458E8;
+
+  array->Sort();
+
+  // loop over all chis
+  iterator.Reset();
+  while((candidate = static_cast<Candidate*>(iterator.Next())))
+  {
+    const TLorentzVector &momentum = candidate->Momentum;
+    const TLorentzVector &position = candidate->Position;
+
+    pt = momentum.Pt();
+    cosTheta = TMath::Abs(momentum.CosTheta());
+    signPz = (momentum.Pz() >= 0.0) ? 1.0 : -1.0;
+    eta = (cosTheta == 1.0 ? signPz*999.9 : momentum.Eta());
+    rapidity = (cosTheta == 1.0 ? signPz*999.9 : momentum.Rapidity());
+
+    entry = static_cast<ChiDM*>(branch->NewEntry());
+
+    entry->SetBit(kIsReferenced);
+    entry->SetUniqueID(candidate->GetUniqueID());
+
+    entry->Eta = eta;
+    entry->Phi = momentum.Phi();
+    entry->PT = pt;
+
+    entry->T = position.T()*1.0E-3/c_light;
+
+    // Isolation variables
+
+    entry->IsolationVar = candidate->IsolationVar;
+    entry->IsolationVarRhoCorr = candidate->IsolationVarRhoCorr ;
+    entry->SumPtCharged = candidate->SumPtCharged ;
+    entry->SumPtNeutral = candidate->SumPtNeutral ;
+    entry->SumPtChargedPU = candidate->SumPtChargedPU ;
+    entry->SumPt = candidate->SumPt ;
+
+    entry->Charge = candidate->Charge;
+
+    entry->Particle = candidate->GetCandidates()->At(0);
+  }
+}
+
+void TreeWriter::ProcessPsis(ExRootTreeBranch *branch, TObjArray *array) // LP
+{
+  TIter iterator(array);
+  Candidate *candidate = 0;
+  PsiDM *entry = 0;
+  Double_t pt, signPz, cosTheta, eta, rapidity;
+
+  const Double_t c_light = 2.99792458E8;
+
+  array->Sort();
+
+  // loop over all psis
+  iterator.Reset();
+  while((candidate = static_cast<Candidate*>(iterator.Next())))
+  {
+    const TLorentzVector &momentum = candidate->Momentum;
+    const TLorentzVector &position = candidate->Position;
+
+    pt = momentum.Pt();
+    cosTheta = TMath::Abs(momentum.CosTheta());
+    signPz = (momentum.Pz() >= 0.0) ? 1.0 : -1.0;
+    eta = (cosTheta == 1.0 ? signPz*999.9 : momentum.Eta());
+    rapidity = (cosTheta == 1.0 ? signPz*999.9 : momentum.Rapidity());
+
+    entry = static_cast<PsiDM*>(branch->NewEntry());
+
+    entry->SetBit(kIsReferenced);
+    entry->SetUniqueID(candidate->GetUniqueID());
+
+    entry->Eta = eta;
+    entry->Phi = momentum.Phi();
+    entry->PT = pt;
+
+    entry->T = position.T()*1.0E-3/c_light;
+
+    // Isolation variables
+
+    entry->IsolationVar = candidate->IsolationVar;
+    entry->IsolationVarRhoCorr = candidate->IsolationVarRhoCorr ;
+    entry->SumPtCharged = candidate->SumPtCharged ;
+    entry->SumPtNeutral = candidate->SumPtNeutral ;
+    entry->SumPtChargedPU = candidate->SumPtChargedPU ;
+    entry->SumPt = candidate->SumPt ;
+
+    entry->Charge = candidate->Charge;
+
+    entry->Particle = candidate->GetCandidates()->At(0);
+  }
+}
+
+void TreeWriter::ProcessNNs(ExRootTreeBranch *branch, TObjArray *array) // LP
+{
+  TIter iterator(array);
+  Candidate *candidate = 0;
+  NNDM *entry = 0;
+  Double_t pt, signPz, cosTheta, eta, rapidity;
+
+  const Double_t c_light = 2.99792458E8;
+
+  array->Sort();
+
+  // loop over all NNs
+  iterator.Reset();
+  while((candidate = static_cast<Candidate*>(iterator.Next())))
+  {
+    const TLorentzVector &momentum = candidate->Momentum;
+    const TLorentzVector &position = candidate->Position;
+
+    pt = momentum.Pt();
+    cosTheta = TMath::Abs(momentum.CosTheta());
+    signPz = (momentum.Pz() >= 0.0) ? 1.0 : -1.0;
+    eta = (cosTheta == 1.0 ? signPz*999.9 : momentum.Eta());
+    rapidity = (cosTheta == 1.0 ? signPz*999.9 : momentum.Rapidity());
+
+    entry = static_cast<NNDM*>(branch->NewEntry());
 
     entry->SetBit(kIsReferenced);
     entry->SetUniqueID(candidate->GetUniqueID());

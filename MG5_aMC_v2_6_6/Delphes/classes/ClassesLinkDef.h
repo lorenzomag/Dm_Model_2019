@@ -57,6 +57,9 @@
 #pragma link C++ class Electron+;
 #pragma link C++ class Muon+;
 #pragma link C++ class PhiDM+;
+#pragma link C++ class ChiDM+;
+#pragma link C++ class PsiDM+;
+#pragma link C++ class NNDM+;
 #pragma link C++ class Jet+;
 #pragma link C++ class Track+;
 #pragma link C++ class Tower+;

@@ -379,6 +379,99 @@ public:
 
 //---------------------------------------------------------------------------
 
+class ChiDM: public SortableObject
+{
+public:
+
+  Float_t PT; // phi transverse momentum
+  Float_t Eta; // phi pseudorapidity
+  Float_t Phi; // phi azimuthal angle
+
+  Float_t T; // particle arrival time of flight
+
+  Int_t Charge; // phi charge
+
+  TRef Particle; // reference to generated particle
+
+  Float_t IsolationVar; // isolation variable
+  Float_t IsolationVarRhoCorr; // isolation variable
+  Float_t SumPtCharged; // isolation variable
+  Float_t SumPtNeutral; // isolation variable
+  Float_t SumPtChargedPU; // isolation variable
+  Float_t SumPt; // isolation variable
+
+  static CompBase *fgCompare; //!
+  const CompBase *GetCompare() const { return fgCompare; }
+
+  TLorentzVector P4() const;
+
+  ClassDef(ChiDM, 3)
+};
+
+//---------------------------------------------------------------------------
+
+class PsiDM: public SortableObject
+{
+public:
+
+  Float_t PT; // phi transverse momentum
+  Float_t Eta; // phi pseudorapidity
+  Float_t Phi; // phi azimuthal angle
+
+  Float_t T; // particle arrival time of flight
+
+  Int_t Charge; // phi charge
+
+  TRef Particle; // reference to generated particle
+
+  Float_t IsolationVar; // isolation variable
+  Float_t IsolationVarRhoCorr; // isolation variable
+  Float_t SumPtCharged; // isolation variable
+  Float_t SumPtNeutral; // isolation variable
+  Float_t SumPtChargedPU; // isolation variable
+  Float_t SumPt; // isolation variable
+
+  static CompBase *fgCompare; //!
+  const CompBase *GetCompare() const { return fgCompare; }
+
+  TLorentzVector P4() const;
+
+  ClassDef(PsiDM, 3)
+};
+
+//---------------------------------------------------------------------------
+
+class NNDM: public SortableObject
+{
+public:
+
+  Float_t PT; // phi transverse momentum
+  Float_t Eta; // phi pseudorapidity
+  Float_t Phi; // phi azimuthal angle
+
+  Float_t T; // particle arrival time of flight
+
+  Int_t Charge; // phi charge
+
+  TRef Particle; // reference to generated particle
+
+  Float_t IsolationVar; // isolation variable
+  Float_t IsolationVarRhoCorr; // isolation variable
+  Float_t SumPtCharged; // isolation variable
+  Float_t SumPtNeutral; // isolation variable
+  Float_t SumPtChargedPU; // isolation variable
+  Float_t SumPt; // isolation variable
+
+  static CompBase *fgCompare; //!
+  const CompBase *GetCompare() const { return fgCompare; }
+
+  TLorentzVector P4() const;
+
+  ClassDef(NNDM, 3)
+};
+
+//---------------------------------------------------------------------------
+
 class Jet: public SortableObject
 {
 public:

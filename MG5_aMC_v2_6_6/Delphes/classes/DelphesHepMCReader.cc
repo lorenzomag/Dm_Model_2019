@@ -1,3 +1,4 @@
+
 /*
  *  Delphes: a framework for fast simulation of a generic collider experiment
  *  Copyright (C) 2012-2014  Universite catholique de Louvain (UCL), Belgium
@@ -65,6 +66,8 @@ DelphesHepMCReader::DelphesHepMCReader() :
 
 
   // LP: Adding Dark Matter model candidate particles phi/S, psi, and NNs
+  // masses will be modified later in AnalyzeParticle method
+  // to be checked: stable boolean and width value for all 
   fPDG->AddParticle("~phi+","~phi+",
                     0,        // mass
                     1,        // stable (bool)
