@@ -36,6 +36,7 @@ CompBase *GenParticle::fgCompare = 0;
 CompBase *Photon::fgCompare = CompPT<Photon>::Instance();
 CompBase *Electron::fgCompare = CompPT<Electron>::Instance();
 CompBase *Muon::fgCompare = CompPT<Muon>::Instance();
+CompBase *PhiDM::fgCompare = CompPT<PhiDM>::Instance();
 CompBase *Jet::fgCompare = CompPT<Jet>::Instance();
 CompBase *Track::fgCompare = CompPT<Track>::Instance();
 CompBase *Tower::fgCompare = CompE<Tower>::Instance();
@@ -90,6 +91,15 @@ TLorentzVector Muon::P4() const
 
 //------------------------------------------------------------------------------
 
+TLorentzVector PhiDM::P4() const
+{
+  TLorentzVector vec;
+  vec.SetPtEtaPhiM(PT, Eta, Phi, 0.0);
+  return vec;
+}
+
+//------------------------------------------------------------------------------
+
 TLorentzVector Jet::P4() const
 {
   TLorentzVector vec;
@@ -132,13 +142,13 @@ Candidate::Candidate() :
   InitialPosition(0.0, 0.0, 0.0, 0.0),
   Area(0.0, 0.0, 0.0, 0.0),
   L(0),
-  D0(0), ErrorD0(0), 
-  DZ(0), ErrorDZ(0), 
-  P(0),  ErrorP(0), 
-  PT(0), ErrorPT(0), 
-  CtgTheta(0), ErrorCtgTheta(0), 
-  Phi(0), ErrorPhi(0),  
-  Xd(0), Yd(0), Zd(0), 
+  D0(0), ErrorD0(0),
+  DZ(0), ErrorDZ(0),
+  P(0),  ErrorP(0),
+  PT(0), ErrorPT(0),
+  CtgTheta(0), ErrorCtgTheta(0),
+  Phi(0), ErrorPhi(0),
+  Xd(0), Yd(0), Zd(0),
   TrackResolution(0),
   NCharged(0),
   NNeutrals(0),
@@ -296,7 +306,7 @@ void Candidate::Copy(TObject &obj) const
   object.CtgTheta = CtgTheta ;
   object.ErrorCtgTheta = ErrorCtgTheta;
   object.Phi = Phi;
-  object.ErrorPhi = ErrorPhi;  
+  object.ErrorPhi = ErrorPhi;
   object.Xd = Xd;
   object.Yd = Yd;
   object.Zd = Zd;
@@ -316,9 +326,9 @@ void Candidate::Copy(TObject &obj) const
   object.SumPt = SumPt;
   object.ClusterIndex = ClusterIndex;
   object.ClusterNDF = ClusterNDF;
-  object.ClusterSigma = ClusterSigma; 
+  object.ClusterSigma = ClusterSigma;
   object.SumPT2 = SumPT2;
-  
+
   object.FracPt[0] = FracPt[0];
   object.FracPt[1] = FracPt[1];
   object.FracPt[2] = FracPt[2];
@@ -404,7 +414,7 @@ void Candidate::Clear(Option_t* option)
   Area.SetXYZT(0.0, 0.0, 0.0, 0.0);
   L = 0.0;
   ErrorT = 0.0;
-  D0 = 0.0;  
+  D0 = 0.0;
   ErrorD0 = 0.0;
   DZ = 0.0;
   ErrorDZ = 0.0;
@@ -439,12 +449,12 @@ void Candidate::Clear(Option_t* option)
 
   ClusterIndex = -1;
   ClusterNDF = -99;
-  ClusterSigma = 0.0; 
+  ClusterSigma = 0.0;
   SumPT2 = 0.0;
   BTVSumPT2 = 0.0;
   GenDeltaZ = 0.0;
-  GenSumPT2 = 0.0; 
-  
+  GenSumPT2 = 0.0;
+
   FracPt[0] = 0.0;
   FracPt[1] = 0.0;
   FracPt[2] = 0.0;

@@ -1,0 +1,4 @@
+P1_uux_xchipxchim_xchip_phipxpsi_phip_epnn1
+P1_ccx_xchipxchim_xchip_phipxpsi_phip_epnn1
+P1_ddx_xchipxchim_xchip_phipxpsi_phip_epnn1
+P1_ssx_xchipxchim_xchip_phipxpsi_phip_epnn1

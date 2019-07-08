@@ -68,6 +68,8 @@ private:
   void ProcessWeight(ExRootTreeBranch *branch, TObjArray *array);
   void ProcessHectorHit(ExRootTreeBranch *branch, TObjArray *array);
 
+  void ProcessPhis(ExRootTreeBranch *branch, TObjArray *array); // LP
+
 #if !defined(__CINT__) && !defined(__CLING__)
   typedef void (TreeWriter::*TProcessMethod)(ExRootTreeBranch *, TObjArray *); //!
 

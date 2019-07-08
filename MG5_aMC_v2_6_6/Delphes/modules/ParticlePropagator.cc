@@ -109,6 +109,7 @@ void ParticlePropagator::Init()
   fChargedHadronOutputArray = ExportArray(GetString("ChargedHadronOutputArray", "chargedHadrons"));
   fElectronOutputArray = ExportArray(GetString("ElectronOutputArray", "electrons"));
   fMuonOutputArray = ExportArray(GetString("MuonOutputArray", "muons"));
+  fPhiDMOutputArray = ExportArray(GetString("PhiDMOutputArray","phis"));
 }
 
 //------------------------------------------------------------------------------
@@ -160,6 +161,13 @@ void ParticlePropagator::Process()
     bsz = beamSpotPosition.Z()*1.0E-3;
 
     q = candidate->Charge;
+
+    // LP: To check model particle parameters
+  // if(TMath::Abs(candidate->PID) == 5000001)
+    //{
+      cout<<"NOTICE MEEEEEEEEEEEEEEEEEEEEEEEE: Particle PID: "
+      <<candidate->PID<<" Charge: "<<candidate->Charge<<endl;
+    //}
 
     // check that particle position is inside the cylinder
     if(TMath::Hypot(x, y) > fRadiusMax || TMath::Abs(z) > fHalfLengthMax)
@@ -245,6 +253,9 @@ void ParticlePropagator::Process()
             break;
           case 13:
             fMuonOutputArray->Add(candidate);
+            break;
+          case 5000001:
+            fPhiDMOutputArray->Add(candidate);
             break;
           default:
             fChargedHadronOutputArray->Add(candidate);
@@ -389,6 +400,9 @@ void ParticlePropagator::Process()
           case 13:
             fMuonOutputArray->Add(candidate);
             break;
+          case 5000001:
+            fPhiDMOutputArray->Add(candidate);
+            break;
           default:
             fChargedHadronOutputArray->Add(candidate);
         }
@@ -398,4 +412,3 @@ void ParticlePropagator::Process()
 }
 
 //------------------------------------------------------------------------------
-

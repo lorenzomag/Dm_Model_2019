@@ -262,7 +262,7 @@ S'c++'
 p131
 sS'ncores'
 p132
-I24
+I4
 sS'ma5dir'
 p133
 S'/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5'
@@ -309,7 +309,7 @@ p153
 I01
 sS'release'
 p154
-S'3.10.0-862.14.4.el7.x86_64'
+S'3.10.0-957.5.1.el7.x86_64'
 p155
 sS'isMac'
 p156

@@ -35,7 +35,7 @@ define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
-help install
-install ExRootAnalysis
-generate p p > t t~
+import model
+import model DM
+generate p p > phi+ phi-
 output test

@@ -75,12 +75,14 @@ void TreeWriter::Init()
   fClassMap[Photon::Class()] = &TreeWriter::ProcessPhotons;
   fClassMap[Electron::Class()] = &TreeWriter::ProcessElectrons;
   fClassMap[Muon::Class()] = &TreeWriter::ProcessMuons;
+  fClassMap[PhiDM::Class()] = &TreeWriter::ProcessPhis;
   fClassMap[Jet::Class()] = &TreeWriter::ProcessJets;
   fClassMap[MissingET::Class()] = &TreeWriter::ProcessMissingET;
   fClassMap[ScalarHT::Class()] = &TreeWriter::ProcessScalarHT;
   fClassMap[Rho::Class()] = &TreeWriter::ProcessRho;
   fClassMap[Weight::Class()] = &TreeWriter::ProcessWeight;
   fClassMap[HectorHit::Class()] = &TreeWriter::ProcessHectorHit;
+
 
   TBranchMap::iterator itBranchMap;
   map< TClass *, TProcessMethod >::iterator itClassMap;
@@ -544,6 +546,56 @@ void TreeWriter::ProcessElectrons(ExRootTreeBranch *branch, TObjArray *array)
 }
 
 //------------------------------------------------------------------------------
+
+void TreeWriter::ProcessPhis(ExRootTreeBranch *branch, TObjArray *array) // LP
+{
+  TIter iterator(array);
+  Candidate *candidate = 0;
+  PhiDM *entry = 0;
+  Double_t pt, signPz, cosTheta, eta, rapidity;
+
+  const Double_t c_light = 2.99792458E8;
+
+  array->Sort();
+
+  // loop over all phis
+  iterator.Reset();
+  while((candidate = static_cast<Candidate*>(iterator.Next())))
+  {
+    const TLorentzVector &momentum = candidate->Momentum;
+    const TLorentzVector &position = candidate->Position;
+
+    pt = momentum.Pt();
+    cosTheta = TMath::Abs(momentum.CosTheta());
+    signPz = (momentum.Pz() >= 0.0) ? 1.0 : -1.0;
+    eta = (cosTheta == 1.0 ? signPz*999.9 : momentum.Eta());
+    rapidity = (cosTheta == 1.0 ? signPz*999.9 : momentum.Rapidity());
+
+    entry = static_cast<PhiDM*>(branch->NewEntry());
+
+    entry->SetBit(kIsReferenced);
+    entry->SetUniqueID(candidate->GetUniqueID());
+
+    entry->Eta = eta;
+    entry->Phi = momentum.Phi();
+    entry->PT = pt;
+
+    entry->T = position.T()*1.0E-3/c_light;
+
+    // Isolation variables
+
+    entry->IsolationVar = candidate->IsolationVar;
+    entry->IsolationVarRhoCorr = candidate->IsolationVarRhoCorr ;
+    entry->SumPtCharged = candidate->SumPtCharged ;
+    entry->SumPtNeutral = candidate->SumPtNeutral ;
+    entry->SumPtChargedPU = candidate->SumPtChargedPU ;
+    entry->SumPt = candidate->SumPt ;
+
+    entry->Charge = candidate->Charge;
+
+    entry->Particle = candidate->GetCandidates()->At(0);
+  }
+}
 
 void TreeWriter::ProcessMuons(ExRootTreeBranch *branch, TObjArray *array)
 {

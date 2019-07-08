@@ -56,6 +56,7 @@
 #pragma link C++ class Photon+;
 #pragma link C++ class Electron+;
 #pragma link C++ class Muon+;
+#pragma link C++ class PhiDM+;
 #pragma link C++ class Jet+;
 #pragma link C++ class Track+;
 #pragma link C++ class Tower+;
@@ -64,7 +65,6 @@
 #pragma link C++ class Candidate+;
 
 #endif
-
 // Do NOT change. Changes will be lost next time file is generated
 
 #define R__DICTIONARY_FILENAME tmpdIclassesdIClassesDict
@@ -652,6 +652,38 @@ namespace ROOT {
 } // end of namespace ROOT
 
 namespace ROOT {
+   static void *new_PhiDM(void *p = 0);
+   static void *newArray_PhiDM(Long_t size, void *p);
+   static void delete_PhiDM(void *p);
+   static void deleteArray_PhiDM(void *p);
+   static void destruct_PhiDM(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::PhiDM*)
+   {
+      ::PhiDM *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::PhiDM >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("PhiDM", ::PhiDM::Class_Version(), "classes/DelphesClasses.h", 351,
+                  typeid(::PhiDM), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::PhiDM::Dictionary, isa_proxy, 4,
+                  sizeof(::PhiDM) );
+      instance.SetNew(&new_PhiDM);
+      instance.SetNewArray(&newArray_PhiDM);
+      instance.SetDelete(&delete_PhiDM);
+      instance.SetDeleteArray(&deleteArray_PhiDM);
+      instance.SetDestructor(&destruct_PhiDM);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::PhiDM*)
+   {
+      return GenerateInitInstanceLocal((::PhiDM*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::PhiDM*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
    static void *new_Jet(void *p = 0);
    static void *newArray_Jet(Long_t size, void *p);
    static void delete_Jet(void *p);
@@ -664,7 +696,7 @@ namespace ROOT {
       ::Jet *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::Jet >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("Jet", ::Jet::Class_Version(), "classes/DelphesClasses.h", 351,
+         instance("Jet", ::Jet::Class_Version(), "classes/DelphesClasses.h", 382,
                   typeid(::Jet), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::Jet::Dictionary, isa_proxy, 4,
                   sizeof(::Jet) );
@@ -696,7 +728,7 @@ namespace ROOT {
       ::Track *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::Track >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("Track", ::Track::Class_Version(), "classes/DelphesClasses.h", 412,
+         instance("Track", ::Track::Class_Version(), "classes/DelphesClasses.h", 443,
                   typeid(::Track), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::Track::Dictionary, isa_proxy, 4,
                   sizeof(::Track) );
@@ -728,7 +760,7 @@ namespace ROOT {
       ::Tower *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::Tower >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("Tower", ::Tower::Class_Version(), "classes/DelphesClasses.h", 469,
+         instance("Tower", ::Tower::Class_Version(), "classes/DelphesClasses.h", 500,
                   typeid(::Tower), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::Tower::Dictionary, isa_proxy, 4,
                   sizeof(::Tower) );
@@ -760,7 +792,7 @@ namespace ROOT {
       ::HectorHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::HectorHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("HectorHit", ::HectorHit::Class_Version(), "classes/DelphesClasses.h", 498,
+         instance("HectorHit", ::HectorHit::Class_Version(), "classes/DelphesClasses.h", 529,
                   typeid(::HectorHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::HectorHit::Dictionary, isa_proxy, 4,
                   sizeof(::HectorHit) );
@@ -792,7 +824,7 @@ namespace ROOT {
       ::Candidate *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::Candidate >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("Candidate", ::Candidate::Class_Version(), "classes/DelphesClasses.h", 522,
+         instance("Candidate", ::Candidate::Class_Version(), "classes/DelphesClasses.h", 553,
                   typeid(::Candidate), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::Candidate::Dictionary, isa_proxy, 4,
                   sizeof(::Candidate) );
@@ -1403,6 +1435,41 @@ TClass *Muon::Dictionary()
 TClass *Muon::Class()
 {
    if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::Muon*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr PhiDM::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *PhiDM::Class_Name()
+{
+   return "PhiDM";
+}
+
+//______________________________________________________________________________
+const char *PhiDM::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::PhiDM*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int PhiDM::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::PhiDM*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *PhiDM::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PhiDM*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *PhiDM::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PhiDM*)0x0)->GetClass(); }
    return fgIsA;
 }
 
@@ -2136,6 +2203,39 @@ namespace ROOT {
 } // end of namespace ROOT for class ::Muon
 
 //______________________________________________________________________________
+void PhiDM::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class PhiDM.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(PhiDM::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(PhiDM::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_PhiDM(void *p) {
+      return  p ? new(p) ::PhiDM : new ::PhiDM;
+   }
+   static void *newArray_PhiDM(Long_t nElements, void *p) {
+      return p ? new(p) ::PhiDM[nElements] : new ::PhiDM[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_PhiDM(void *p) {
+      delete ((::PhiDM*)p);
+   }
+   static void deleteArray_PhiDM(void *p) {
+      delete [] ((::PhiDM*)p);
+   }
+   static void destruct_PhiDM(void *p) {
+      typedef ::PhiDM current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::PhiDM
+
+//______________________________________________________________________________
 void Jet::Streamer(TBuffer &R__b)
 {
    // Stream an object of class Jet.
@@ -2397,6 +2497,7 @@ class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Weig
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Photon;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Electron;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Muon;
+class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  PhiDM;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Jet;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Track;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Tower;
@@ -2469,6 +2570,7 @@ class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Cand
 #pragma link C++ class Photon+;
 #pragma link C++ class Electron+;
 #pragma link C++ class Muon+;
+#pragma link C++ class PhiDM+;
 #pragma link C++ class Jet+;
 #pragma link C++ class Track+;
 #pragma link C++ class Tower+;
@@ -2477,7 +2579,6 @@ class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Cand
 #pragma link C++ class Candidate+;
 
 #endif
-
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
@@ -2496,6 +2597,7 @@ class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Cand
 "LHEFWeight", payloadCode, "@",
 "MissingET", payloadCode, "@",
 "Muon", payloadCode, "@",
+"PhiDM", payloadCode, "@",
 "Photon", payloadCode, "@",
 "Rho", payloadCode, "@",
 "ScalarHT", payloadCode, "@",

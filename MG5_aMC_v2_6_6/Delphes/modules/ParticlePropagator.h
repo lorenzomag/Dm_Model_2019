@@ -22,7 +22,7 @@
 /** \class ParticlePropagator
  *
  *  Propagates charged and neutral particles
- *  from a given vertex to a cylinder defined by its radius, 
+ *  from a given vertex to a cylinder defined by its radius,
  *  its half-length, centered at (0,0,0) and with its axis
  *  oriented along the z-axis.
  *
@@ -61,6 +61,7 @@ private:
   TObjArray *fChargedHadronOutputArray; //!
   TObjArray *fElectronOutputArray; //!
   TObjArray *fMuonOutputArray; //!
+  TObjArray *fPhiDMOutputArray; //!
 
   ClassDef(ParticlePropagator, 1)
 };

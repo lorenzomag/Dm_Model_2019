@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
   DelphesHepMCReader *reader = 0;
   Int_t i, maxEvents, skipEvents;
   Long64_t length, eventCounter;
-
+  
   if(argc < 3)
   {
     cout << " Usage: " << appName << " config_file" << " output_file" << " [input_file(s)]" << endl;
