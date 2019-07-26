@@ -13,7 +13,7 @@ selection=
 
 until [ "$selection" = "0" ]; do
   echo "
-  PROGRAM MENU
+  PROGRAM MENUasdasd
   1 - Display free disk space
   2 - Display free memory
 
