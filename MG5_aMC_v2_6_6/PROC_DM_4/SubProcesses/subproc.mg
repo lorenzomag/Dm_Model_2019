@@ -1,2 +1,0 @@
-P1_uux_xchipxchim_xchip_phipxpsi
-P1_ccx_xchipxchim_xchip_phipxpsi

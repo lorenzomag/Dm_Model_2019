@@ -1,1 +1,0 @@
-DIRNAME=P2_ddx_xchipxchim_xchim_xpsixphim

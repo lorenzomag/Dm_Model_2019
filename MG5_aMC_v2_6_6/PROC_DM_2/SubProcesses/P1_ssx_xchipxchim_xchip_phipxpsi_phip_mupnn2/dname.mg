@@ -1,1 +1,0 @@
-DIRNAME=P1_ssx_xchipxchim_xchip_phipxpsi_phip_mupnn2
