@@ -1,11 +1,11 @@
 DEFAULT_F2PY_COMPILER=f2py
 DEFAULT_F_COMPILER=gfortran
-MACFLAG=
-DEFAULT_CPP_COMPILER=g++
+MACFLAG=-mmacosx-version-min=10.7
+DEFAULT_CPP_COMPILER=clang
 MG5AMC_VERSION=SpecifiedByMG5aMCAtRunTime
-STDLIB=-lstdc++
+STDLIB=-lc++
 PYTHIA8_PATH=NotInstalled
-STDLIB_FLAG=
+STDLIB_FLAG=-stdlib=libc++
 #end_of_make_opts_variables
 
 BIASLIBDIR=../../../lib/
@@ -49,12 +49,12 @@ endif
 ifeq ($(FC), ftn)
 FFLAGS+= -extend-source # for ifort type of compiler
 else
-VERS="$(shell $(FC) --version | grep ifort -i)"
-ifeq ($(VERS), "")
-FFLAGS+= -ffixed-line-length-132
-else
-FFLAGS+= -extend-source # for ifort type of compiler
-endif
+    VERS="$(shell $(FC) --version | grep ifort -i)"
+    ifeq ($(VERS), "")
+        FFLAGS+= -ffixed-line-length-132
+    else	     
+        FFLAGS+= -extend-source # for ifort type of compiler
+    endif
 endif
 
 
@@ -99,20 +99,20 @@ endif
 # Option lhapdf
 
 ifneq ($(lhapdf),)
-CXXFLAGS += $(shell $(lhapdf) --cppflags)
-alfas_functions=alfas_functions_lhapdf
-llhapdf+= $(shell $(lhapdf) --cflags --libs) -lLHAPDF
+  CXXFLAGS += $(shell $(lhapdf) --cppflags)
+  alfas_functions=alfas_functions_lhapdf
+  llhapdf+= $(shell $(lhapdf) --cflags --libs) -lLHAPDF
 # check if we need to activate c++11 (for lhapdf6.2)
-ifeq ($(origin CXX),default)
-ifeq ($lhapdfversion$lhapdfsubversion,62)
-CXX=$(DEFAULT_CPP_COMPILER) -std=c++11
+  ifeq ($(origin CXX),default)
+    ifeq ($lhapdfversion$lhapdfsubversion,62)
+      CXX=$(DEFAULT_CPP_COMPILER) -std=c++11
+    else
+      CXX=$(DEFAULT_CPP_COMPILER)
+    endif
+  endif	     
 else
-CXX=$(DEFAULT_CPP_COMPILER)
-endif
-endif
-else
-alfas_functions=alfas_functions
-llhapdf=
+  alfas_functions=alfas_functions
+  llhapdf=
 endif
 
 # Helper function to check MG5 version
