@@ -18,8 +18,8 @@ Block ckmblock
 ## INFORMATION FOR FRBLOCK
 ###################################
 Block frblock 
-    1 1.180000e-13 # yl1 
-    2 1.000000e-10 # y2e 
+    1 1.000000e+00 # yl1 
+    2 1.000000e-01 # y2e 
     3 1.000000e-10 # y2m 
     4 1.000000e-10 # y2t 
     5 1.000000e+00 # yNe 
@@ -43,12 +43,12 @@ Block mass
    15 1.777000e+00 # MTA 
    23 9.118760e+01 # MZ 
    25 1.250000e+02 # MH 
-  200000 1.010000e+02 # MPsi 
-  200001 6.130000e+02 # MChi 
+  200000 5.000000e+02 # MPsi 
+  200001 7.000000e+02 # MChi 
   200002 3.000000e+01 # MNN1 
   200003 3.000000e+01 # MNN2 
   200004 3.000000e+01 # MNN3 
-  5000001 7.700000e+01 # Mphi 
+  5000001 2.500000e+02 # Mphi 
 ## Dependent parameters, given by model restrictions.
 ## Those values should be edited following the 
 ## analytical expression. MG5 ignores those values 

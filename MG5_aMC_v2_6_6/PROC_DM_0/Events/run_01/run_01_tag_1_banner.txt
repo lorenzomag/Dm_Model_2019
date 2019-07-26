@@ -72,7 +72,7 @@ define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
 import model DM
-generate p p > ~chi+ ~chi-
+generate p p > phi+ phi-
 launch
 ]]>
 </MG5ProcCard>
@@ -95,7 +95,7 @@ launch
 # Process(es) requested : mg2 input                                  *
 #*********************************************************************
 # Begin PROCESS # This is TAG. Do not modify this line
-p p > ~chi+ ~chi-           #Process
+p p > phi+ phi-           #Process
 # Be carefull the coupling are here in MG5 convention
           
 end_coup           # End the couplings input
@@ -1520,12 +1520,12 @@ module TreeWriter TreeWriter {
 </MGDelphesCard>
 <MGGenerationInfo>
 #  Number of Events        :       100
-#  Integrated weight (pb)  :       0.0008965532
+#  Integrated weight (pb)  :       0.228431201969
 </MGGenerationInfo>
 </header>
 <init>
 2212 2212 7.000000e+03 7.000000e+03 0 0 247000 247000 -4 1
-8.965532e-04 6.430084e-06 8.965532e-04 1
+2.284312e-01 1.392240e-03 2.284312e-01 1
 <generator name='MadGraph5_aMC@NLO' version='2.6.6'>please cite 1405.0301 </generator>
 </init>
 </LesHouchesEvents>

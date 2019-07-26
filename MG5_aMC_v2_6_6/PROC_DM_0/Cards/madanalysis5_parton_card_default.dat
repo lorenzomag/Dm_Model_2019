@@ -19,11 +19,11 @@ plot THT   40 0 500 [logY]
 plot MET   40 0 500 [logY]
 plot SQRTS 40 0 500 [logY]
 # PT and ETA distributions of all particles
-plot  PT(~chi-[1]) 40 0  500 [logY]
-plot ETA(~chi-[1]) 40 -10 10 [logY]
-plot  PT(~chi+[1]) 40 0  500 [logY]
-plot ETA(~chi+[1]) 40 -10 10 [logY]
+plot  PT(phi-[1]) 40 0  500 [logY]
+plot ETA(phi-[1]) 40 -10 10 [logY]
+plot  PT(phi+[1]) 40 0  500 [logY]
+plot ETA(phi+[1]) 40 -10 10 [logY]
 # Invariant-mass distributions
-plot M(~chi-[1] ~chi+[1]) 40 0  500 [logY ]
+plot M(phi-[1] phi+[1]) 40 0  500 [logY ]
 # Angular distance distributions
-plot DELTAR(~chi-[1],~chi+[1]) 40 0 10 [logY ]
+plot DELTAR(phi-[1],phi+[1]) 40 0 10 [logY ]
