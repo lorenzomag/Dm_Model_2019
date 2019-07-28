@@ -35,7 +35,7 @@ define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
-generate p p > c c~
+generate p p > t t~
 launch
 Traceback (most recent call last):
   File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/extended_cmd.py", line 1514, in onecmd
