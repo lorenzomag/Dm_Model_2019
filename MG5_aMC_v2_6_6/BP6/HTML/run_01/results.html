@@ -1,0 +1,242 @@
+
+<head>
+    <title>Process results</title>
+    <script type="text/javascript" src="../sortable.js"></script>
+    <link rel=stylesheet href="../mgstyle.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript">
+function UrlExists(url) {
+  var http = new XMLHttpRequest();
+  http.open('HEAD', url, false);
+  try{
+     http.send()
+     }
+  catch(err){
+   return 1==2;
+  }
+  return http.status!=404;
+}
+function check_link(url,alt, id){
+    var obj = document.getElementById(id);
+    if ( ! UrlExists(url)){
+        if ( ! UrlExists(alt)){
+         obj.href = alt;
+         return true;
+        }
+       obj.href = alt;
+       return false;
+    }
+    obj.href = url;
+    return 1==1;
+}
+</script>
+  
+
+ <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>s= 0.0078577 &#177 1.54e-05 (pb)</b><br><br>
+<table class="sortable" id='tablesort'>
+<tr><th>Graph</th>
+    <th> Cross-Section</th>
+    <th>Error</th>
+    <th>Events (K)</th>
+    <th>Unwgt</th>
+    <th>Luminosity</th>
+</tr>
+
+<tr><td align=right>/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim</td>
+    <td align=right><a id="#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim" href=#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim onClick="check_link('#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim','#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim','#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim')"> 0.006252 </a> </td>
+    <td align=right>  1.5e-05</td>
+    <td align=right>  183.873</td>
+    <td align=right>  10819.0</td>
+    <td align=right>  0</td>
+</tr>
+
+<tr><td align=right>/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim</td>
+    <td align=right><a id="#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim" href=#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim onClick="check_link('#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim','#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim','#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim')"> 0.0002952 </a> </td>
+    <td align=right>  2.37e-06</td>
+    <td align=right>  21.097</td>
+    <td align=right>  1125.0</td>
+    <td align=right>  0</td>
+</tr>
+
+<tr><td align=right>/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim</td>
+    <td align=right><a id="#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim" href=#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim onClick="check_link('#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim','#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim','#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim')"> 0.001181 </a> </td>
+    <td align=right>  2.32e-06</td>
+    <td align=right>  76.087</td>
+    <td align=right>  4041.0</td>
+    <td align=right>  0</td>
+</tr>
+
+<tr><td align=right>/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim</td>
+    <td align=right><a id="#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim" href=#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim onClick="check_link('#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim','#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim','#/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim')"> 0.0001289 </a> </td>
+    <td align=right>  1.27e-06</td>
+    <td align=right>  21.107</td>
+    <td align=right>  1138.0</td>
+    <td align=right>  0</td>
+</tr>
+
+</table>
+</center>
+<br><br><br>
+ <dl>  
+
+ <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>s= 0.0062522 &#177 1.5e-05 (pb)</b><br><br>
+<table class="sortable" id='tablesort'>
+<tr><th>Graph</th>
+    <th> Cross-Section</th>
+    <th>Error</th>
+    <th>Events (K)</th>
+    <th>Unwgt</th>
+    <th>Luminosity</th>
+</tr>
+
+<tr><td align=right>G1.2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G1.2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G1.2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G1.2/run1_app.log','../../SubProcesses/P1_uux_phipphim/G1.2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G1.2/run1_app.log')"> 4.824e-13 </a> </td>
+    <td align=right>  7.78e-15</td>
+    <td align=right>  7.031</td>
+    <td align=right>  737.0</td>
+    <td align=right>  1.53e+15</td>
+</tr>
+
+<tr><td align=right>G2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G2/run1_app.log','../../SubProcesses/P1_uux_phipphim/G2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G2/run1_app.log')"> 0.00487 </a> </td>
+    <td align=right>  1.24e-05</td>
+    <td align=right>  135.427</td>
+    <td align=right>  7756.0</td>
+    <td align=right>  1.59e+06</td>
+</tr>
+
+<tr><td align=right>G3.2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G3.2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G3.2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G3.2/run1_app.log','../../SubProcesses/P1_uux_phipphim/G3.2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_uux_phipphim/../../SubProcesses/P1_uux_phipphim/G3.2/run1_app.log')"> 0.001383 </a> </td>
+    <td align=right>  8.39e-06</td>
+    <td align=right>  41.415</td>
+    <td align=right>  2326.0</td>
+    <td align=right>  1.68e+06</td>
+</tr>
+
+</table>
+</center>
+<br><br><br>
+  
+
+ <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>s= 0.0002952 &#177 2.37e-06 (pb)</b><br><br>
+<table class="sortable" id='tablesort'>
+<tr><th>Graph</th>
+    <th> Cross-Section</th>
+    <th>Error</th>
+    <th>Events (K)</th>
+    <th>Unwgt</th>
+    <th>Luminosity</th>
+</tr>
+
+<tr><td align=right>G1.2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G1.2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G1.2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G1.2/run1_app.log','../../SubProcesses/P1_ccx_phipphim/G1.2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G1.2/run1_app.log')"> 1.358e-08 </a> </td>
+    <td align=right>  2.13e-10</td>
+    <td align=right>  7.032</td>
+    <td align=right>  360.0</td>
+    <td align=right>  2.65e+10</td>
+</tr>
+
+<tr><td align=right>G2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G2/run1_app.log','../../SubProcesses/P1_ccx_phipphim/G2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G2/run1_app.log')"> 0.0002299 </a> </td>
+    <td align=right>  2.28e-06</td>
+    <td align=right>  7.033</td>
+    <td align=right>  393.0</td>
+    <td align=right>  1.71e+06</td>
+</tr>
+
+<tr><td align=right>G3.2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G3.2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G3.2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G3.2/run1_app.log','../../SubProcesses/P1_ccx_phipphim/G3.2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ccx_phipphim/../../SubProcesses/P1_ccx_phipphim/G3.2/run1_app.log')"> 6.526e-05 </a> </td>
+    <td align=right>  6.56e-07</td>
+    <td align=right>  7.032</td>
+    <td align=right>  372.0</td>
+    <td align=right>  5.7e+06</td>
+</tr>
+
+</table>
+</center>
+<br><br><br>
+  
+
+ <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>s= 0.0011815 &#177 2.32e-06 (pb)</b><br><br>
+<table class="sortable" id='tablesort'>
+<tr><th>Graph</th>
+    <th> Cross-Section</th>
+    <th>Error</th>
+    <th>Events (K)</th>
+    <th>Unwgt</th>
+    <th>Luminosity</th>
+</tr>
+
+<tr><td align=right>G1.2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G1.2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G1.2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G1.2/run1_app.log','../../SubProcesses/P1_ddx_phipphim/G1.2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G1.2/run1_app.log')"> 1.567e-12 </a> </td>
+    <td align=right>  1.61e-14</td>
+    <td align=right>  7.032</td>
+    <td align=right>  368.0</td>
+    <td align=right>  2.35e+14</td>
+</tr>
+
+<tr><td align=right>G2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G2/run1_app.log','../../SubProcesses/P1_ddx_phipphim/G2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G2/run1_app.log')"> 0.0004755 </a> </td>
+    <td align=right>  1.32e-06</td>
+    <td align=right>  27.196</td>
+    <td align=right>  1460.0</td>
+    <td align=right>  3.07e+06</td>
+</tr>
+
+<tr><td align=right>G3.2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G3.2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G3.2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G3.2/run1_app.log','../../SubProcesses/P1_ddx_phipphim/G3.2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ddx_phipphim/../../SubProcesses/P1_ddx_phipphim/G3.2/run1_app.log')"> 0.0007059 </a> </td>
+    <td align=right>  1.91e-06</td>
+    <td align=right>  41.859</td>
+    <td align=right>  2213.0</td>
+    <td align=right>  3.13e+06</td>
+</tr>
+
+</table>
+</center>
+<br><br><br>
+  
+
+ <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>s= 0.00012888 &#177 1.27e-06 (pb)</b><br><br>
+<table class="sortable" id='tablesort'>
+<tr><th>Graph</th>
+    <th> Cross-Section</th>
+    <th>Error</th>
+    <th>Events (K)</th>
+    <th>Unwgt</th>
+    <th>Luminosity</th>
+</tr>
+
+<tr><td align=right>G1.2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G1.2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G1.2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G1.2/run1_app.log','../../SubProcesses/P1_ssx_phipphim/G1.2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G1.2/run1_app.log')"> 7.589e-11 </a> </td>
+    <td align=right>  1.06e-12</td>
+    <td align=right>  7.039</td>
+    <td align=right>  364.0</td>
+    <td align=right>  4.8e+12</td>
+</tr>
+
+<tr><td align=right>G2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G2/run1_app.log','../../SubProcesses/P1_ssx_phipphim/G2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G2/run1_app.log')"> 5.202e-05 </a> </td>
+    <td align=right>  5.06e-07</td>
+    <td align=right>  7.036</td>
+    <td align=right>  394.0</td>
+    <td align=right>  7.57e+06</td>
+</tr>
+
+<tr><td align=right>G3.2</td>
+    <td align=right><a id="/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G3.2/run1_app.log" href=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G3.2/run1_app.log onClick="check_link('/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G3.2/run1_app.log','../../SubProcesses/P1_ssx_phipphim/G3.2/log.txt','/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/BP6/SubProcesses/P1_ssx_phipphim/../../SubProcesses/P1_ssx_phipphim/G3.2/run1_app.log')"> 7.686e-05 </a> </td>
+    <td align=right>  1.16e-06</td>
+    <td align=right>  7.032</td>
+    <td align=right>  380.0</td>
+    <td align=right>  4.94e+06</td>
+</tr>
+
+</table>
+</center>
+<br><br><br>
+ </dl></body>
