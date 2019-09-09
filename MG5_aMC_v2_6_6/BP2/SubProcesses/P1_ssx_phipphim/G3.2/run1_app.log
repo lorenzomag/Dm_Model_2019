@@ -229,8 +229,8 @@ Setting grid   1    0.12100E-03   1
    3   1   2   3   4
  Masses: 0.101E+00 0.101E+00 0.770E+02 0.770E+02
 Using random seed offsets     3 :      4
-  with seed                   33
- Ranmar initialization seeds       11951        9411
+  with seed                   24
+ Ranmar initialization seeds       31061        9401
  
  ********************************************
  * You are using the DiscreteSampler module *
@@ -247,65 +247,65 @@ d R # 3  >    -0.0     0.0
 s min # 3>     0.0     0.0
 xqcutij # 3>     0.0     0.0
  Excluding BW           -1           1
- alpha_s for scale    157.02471137913304       is   0.11920973425694213     
- Added good helicity            1   1.9502200976237845       in event            1 local:           1
- Added good helicity            2   4.9666303664328403E-003  in event            1 local:           1
- Added good helicity            3   4.9666303664328403E-003  in event            1 local:           1
- Added good helicity            4   2.0398466416433498       in event            1 local:           1
- Added good helicity            1   1.9502200976237845       in event            1 local:           1
- Added good helicity            2   4.9666303664328403E-003  in event            1 local:           1
- Added good helicity            3   4.9666303664328403E-003  in event            1 local:           1
- Added good helicity            4   2.0398466416433498       in event            1 local:           1
+ alpha_s for scale    217.98109562976475       is   0.11353972095734062     
+ Added good helicity            1   2.6036788093461491       in event            1 local:           1
+ Added good helicity            2   1.2874229889369740E-005  in event            1 local:           1
+ Added good helicity            3   1.2874229889369740E-005  in event            1 local:           1
+ Added good helicity            4   1.3962954421940723       in event            1 local:           1
+ Added good helicity            1   2.6036788093461491       in event            1 local:           1
+ Added good helicity            2   1.2874229889369740E-005  in event            1 local:           1
+ Added good helicity            3   1.2874229889369740E-005  in event            1 local:           1
+ Added good helicity            4   1.3962954421940723       in event            1 local:           1
  RESET CUMULATIVE VARIABLE
  RESET CUMULATIVE VARIABLE
  RESET CUMULATIVE VARIABLE
- Iteration  1   Mean: 0.4313E-02 Abs mean: 0.4313E-02   Fluctuation:  0.473E-03   0.130E+00   100.0%
-  1    0.4313E-02 0.4313E-02 +- 0.4732E-03      3.47
- Writing out events   8.6250000024412263E-007   3.4699199928554676     
+ Iteration  1   Mean: 0.3859E-02 Abs mean: 0.3859E-02   Fluctuation:  0.408E-03   0.124E+00   100.0%
+  1    0.3859E-02 0.3859E-02 +- 0.4078E-03      3.34
+ Writing out events   7.7186730649323465E-007   3.3414509340394014     
  Relative summed weights:
-  0.4121E+00  0.5879E+00
+  0.4682E+00  0.5318E+00
  Relative number of events:
-  0.4875E+00  0.5125E+00
+  0.4908E+00  0.5092E+00
  Events:
-         505         531
- Iteration  2   Mean: 0.4705E-02 Abs mean: 0.4705E-02   Fluctuation:  0.136E-03   0.357E-01   100.0%
-  2    0.4705E-02 0.4705E-02 +- 0.1360E-03      1.29
+         506         525
+ Iteration  2   Mean: 0.4771E-02 Abs mean: 0.4771E-02   Fluctuation:  0.138E-03   0.500E-01   100.0%
+  2    0.4771E-02 0.4771E-02 +- 0.1379E-03      1.29
  Relative summed weights:
-  0.4888E+00  0.5112E+00
+  0.5005E+00  0.4995E+00
  Relative number of events:
-  0.4770E+00  0.5230E+00
+  0.5075E+00  0.4925E+00
  Events:
-         954        1046
- Iteration  3   Mean: 0.4790E-02 Abs mean: 0.4790E-02   Fluctuation:  0.519E-04   0.162E-01   100.0%
-  3    0.4790E-02 0.4790E-02 +- 0.5186E-04      0.68
+        1015         985
+ Iteration  3   Mean: 0.4803E-02 Abs mean: 0.4803E-02   Fluctuation:  0.551E-04   0.184E-01   100.0%
+  3    0.4803E-02 0.4803E-02 +- 0.5507E-04      0.73
  Relative summed weights:
-  0.4856E+00  0.5144E+00
+  0.4953E+00  0.5047E+00
  Relative number of events:
-  0.4880E+00  0.5120E+00
+  0.4993E+00  0.5008E+00
  Events:
-        1952        2048
- Accuracy:    0.008   0.100   0.010   0.560
- Finished due to accuracy    7.5577646489141245E-003  0.10000000000000001     
+        1997        2003
+ Accuracy:    0.014   0.100   0.011   1.728
+ Finished due to accuracy    1.3939150930604504E-002  0.10000000000000001     
 
  -------------------------------------------------------------------------------
- Accumulated results:   Integral =  0.4776E-02
-                        Std dev  =  0.4822E-04
-                       Cross sec =  0.4776E-02
-             Chi**2 per DoF.     =      0.5604
+ Accumulated results:   Integral =  0.4789E-02
+                        Std dev  =  0.5078E-04
+                       Cross sec =  0.4789E-02
+             Chi**2 per DoF.     =      1.7280
  -------------------------------------------------------------------------------
- Found          395  events.
- Wrote          392  events.
- Actual xsec    4.7758738628725502E-003
- Correct abs xsec    4.7758738628725502E-003
- Event xsec    4.7758738628725424E-003
+ Found          379  events.
+ Wrote          376  events.
+ Actual xsec    4.7889552773085877E-003
+ Correct abs xsec    4.7889552773085877E-003
+ Event xsec    4.7889552773086024E-003
  Events wgts > 1:            0
  % Cross section > 1:    0.0000000000000000        0.0000000000000000     
 -------------------------------------------------
 ---------------------------
- Results Last   3 iters: Integral =   0.4776E-02
-                     Abs integral =   0.4776E-02
-                          Std dev =   0.4822E-04
-                  Chi**2 per DoF. =      0.6526
+ Results Last   3 iters: Integral =   0.4789E-02
+                     Abs integral =   0.4789E-02
+                          Std dev =   0.5078E-04
+                  Chi**2 per DoF. =      2.6387
 -------------------------------------------------
 ---------------------------
  Status  0.10000000000000001                4           5
@@ -315,5 +315,4 @@ events.lhe
 ftn26
 input_app.txt
 results.dat
-run_01_log.txt
 run1_app.log

@@ -1,5 +1,0 @@
-# You are in a Vim editor instance.
-# Write your script in this file.
-#
-# Follow https://answers.launchpad.net/mg5amcnlo/+faq/2186
-# to learn how to write a script for MadGraph5

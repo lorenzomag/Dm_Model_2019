@@ -35,24 +35,34 @@ define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
-import model DM
-help display
-display interactions
-display processes
+generate p p > t t~
+launch
 Traceback (most recent call last):
   File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/extended_cmd.py", line 1514, in onecmd
     return self.onecmd_orig(line, **opt)
   File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/extended_cmd.py", line 1463, in onecmd_orig
     return func(arg, **opt)
-  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/master_interface.py", line 458, in do_display
-    return self.cmd.do_display(self, *args, **opts)
-  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/madgraph_interface.py", line 3251, in do_display
-    self.check_display(args)
-  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/master_interface.py", line 349, in check_display
-    return self.cmd.check_display(self, *args, **opts)
-  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/madgraph_interface.py", line 856, in check_display
-    if (args[0] in ['processes', 'diagrams'] and not self._curr_amps and not self._fks_multi_proc):
-AttributeError: 'MasterCmd' object has no attribute '_fks_multi_proc'
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/master_interface.py", line 494, in do_launch
+    return self.cmd.do_launch(self, line, *argss, **opts)
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/madgraph_interface.py", line 6859, in do_launch
+    self.check_launch(args, options)
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/master_interface.py", line 373, in check_launch
+    return self.cmd.check_launch(self, *args, **opts)
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/madgraph_interface.py", line 1229, in check_launch
+    self.do_output('')
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/master_interface.py", line 296, in do_output
+    self.cmd.do_output(self, line, *args, **opts)
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/madgraph_interface.py", line 7681, in do_output
+    self.finalize(nojpeg, flaglist=flaglist)
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/interface/madgraph_interface.py", line 8002, in finalize
+    flaglist)
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/iolibs/export_v4.py", line 5463, in finalize
+    super(ProcessExporterFortranMEGroup, self).finalize(*args, **opts)
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/iolibs/export_v4.py", line 3889, in finalize
+    self.set_compiler(compiler)
+  File "/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/madgraph/iolibs/export_v4.py", line 1751, in set_fortran_compiler
+    raise MadGraph5Error, 'No Fortran Compiler detected! Please install one'
+MadGraph5Error: No Fortran Compiler detected! Please install one
                           MadGraph5_aMC@NLO Options    
                           ----------------    
         complex_mass_scheme 	:	False

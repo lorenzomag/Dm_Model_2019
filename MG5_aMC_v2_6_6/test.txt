@@ -1,19 +1,11 @@
-import model DM
-generate p p > t t~
+PAPA cidsa
 
-launch
-analysis=off
-0
-set nevents 1
-0
 
-# You are in a Vim editor instance.
-# Write your script in this file.
-#
-# Follow https://answers.launchpad.net/mg5amcnlo/+faq/2186
-# to learn how to write a script for MadGraph5
-# You are in a Vim editor instance.
-# Write your script in this file.
-#
-# Follow https://answers.launchpad.net/mg5amcnlo/+faq/2186
-# to learn how to write a script for MadGraph5
+dssa
+ 1
+ciaonissimo
+ABC  asd dsa ciaonissimo ciaonissimo ciaonissimo
+
+
+abba 2
+q
