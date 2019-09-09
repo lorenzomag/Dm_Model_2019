@@ -286,6 +286,8 @@ run(){
 
 	./bin/mg5_aMC $script_name
 
+	notify-send "$out_dir simulation has ended"
+
 	if [ $script_name == "tmp_script.txt" ]; then
 		rm tmp_script.txt
 	fi
