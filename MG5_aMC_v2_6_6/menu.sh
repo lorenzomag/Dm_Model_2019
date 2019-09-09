@@ -238,55 +238,54 @@ run(){
 	elif [ $1 == "new" ]; then
 		read -p "Input script file name to create: " script_name
 
-		cat >> $script_name  <<- EOF
+		cat > $PROJECT_DIR/$script_name  <<- EOF
 			# You are in a Vim editor instance.
 			# Write your script in this file.
 			#
 			# Follow https://answers.launchpad.net/mg5amcnlo/+faq/2186
 			# to learn how to write a script for MadGraph5
 			# An outline is provided below
-
 			import model DM
 			define nn = nn1 nn2 nn3
 			define nn~ = nn1~ nn2~ nn3~
-
 			# generate p p > ~chi+ ~chi- (example, input here process to be generated)
 			# add process p p > phi+ phi- (example, add multiple processes with this command)
-
 			#output <name of output dir> (leave name blank or omit command for MG5 default)
-
 			# !!! WARNING
 			# If an output directory that already exists is specified, MG5 will ask
 			# whether to recreate it. If 'yes' is provided, the directory WILL BE
 			# DESTROYED and recreated. If 'no' is provided, the program will be aborted.
 			# The 'yes'/'no' answer has to be provided between the 'output' command and
 			# the 'launch' program
-
 			launch
-
 			#shower=pythia or shower=off
 			#detector=delphes or detector=off (delphes implies shower=pythia)
-			madanalysis=off
-
+			analysis=off
 			0
-
 			# CARDS (modify cards content here)
-
 			set nevents 1000
 			set ebeam1 7000
 			set ebeam2 7000
-
 			0
-
 		EOF
 
-		vim $script_name
+		vim $PROJECT_DIR/$script_name
 
   fi
 
-	./bin/mg5_aMC $script_name
+	if [ -z $out_dir ]; then
+		time=`date +%H_%M_%S`
+		run_id="Default_$time"
+	else
+		run_id=$out_dir
+	fi
 
-	notify-send "$out_dir simulation has ended"
+	notify-send "$run_id simulation has started"
+
+	./bin/mg5_aMC $PROJECT_DIR/$script_name
+
+
+	notify-send "$run_id simulation has ended"
 
 	if [ $script_name == "tmp_script.txt" ]; then
 		rm tmp_script.txt
