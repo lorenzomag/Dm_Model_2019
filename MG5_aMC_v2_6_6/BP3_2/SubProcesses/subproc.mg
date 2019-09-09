@@ -1,4 +1,0 @@
-P1_uux_phipphim
-P1_ccx_phipphim
-P1_ddx_phipphim
-P1_ssx_phipphim
