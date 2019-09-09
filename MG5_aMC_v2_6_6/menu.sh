@@ -94,7 +94,7 @@ check_dir(){
 
 					until [[ "$answer2" =~ ^[Yy](es)?$|^[Nn](o)?$  ]]
 					do
-						read -p "Do you want to recreate the directory $1?" answer2
+						read -p "Do you want to recreate the directory $1? " answer2
 					done
 
 					if [[ "$answer2" =~ ^[Yy](es)?$ ]];
@@ -286,6 +286,10 @@ run(){
 
 	./bin/mg5_aMC $script_name
 
+	if [ $script_name == "tmp_script.txt" ]; then
+		rm tmp_script.txt
+	fi
+
   enter
 }
 
@@ -298,7 +302,7 @@ clear
 echo -en "Select action:
 1) Change benchmark parameters;
 2) Run a default process (see './menu.sh -h' for details);
-3) Run from script;
+3) Run from existing script;
 4) Write script and run;
 5) Generate process from an existing directory;
 
