@@ -44,3 +44,7 @@ tmp_script.txt
 # Test files #
 ##############
 test*
+
+# Debug files #
+###############
+MG5_debug
