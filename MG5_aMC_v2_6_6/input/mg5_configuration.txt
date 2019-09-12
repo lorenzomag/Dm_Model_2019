@@ -148,7 +148,8 @@ mg5amc_py8_interface_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_
 
 #! MadAnalysis5 python-based Package [For advanced analysis]
 #!  relative path start from main directory
-madanalysis5_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5 #  
+madanalysis5_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5 #   
+ 
 
 #! ExRootAnalysis Package
 #!  relative path start from main directory
@@ -221,6 +222,9 @@ lhapdf = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf
 # amcfast = amcfast-config
 
 
+
+# MG5 MAIN DIRECTORY
+mg5_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6
 
 # MG5 MAIN DIRECTORY
 mg5_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6

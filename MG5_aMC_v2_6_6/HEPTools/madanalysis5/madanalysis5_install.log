@@ -1,5 +1,5 @@
 >> Attempting to start MA5 and check the availability of its dependencies...
-[0mMA5: Platform: Linux 3.10.0-862.14.4.el7.x86_64 [32m[Linux mode][0m[0m
+[0mMA5: Platform: Linux 3.10.0-957.5.1.el7.x86_64 [32m[Linux mode][0m[0m
 [0mMA5: Reading user settings ...[0m
 [36mMA5-DEBUG: Opening the file: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/madanalysis/input/installation_options.dat[0m
 [36mMA5-DEBUG: Lines to interpret: [0m
@@ -55,7 +55,7 @@
 [36mMA5-DEBUG: Try to detect automatically the package ...[0m
 [36mMA5-DEBUG: Search for header & libraries possible paths...[0m
 [36mMA5-DEBUG: ->header  paths=['.', '/usr/include', '/usr/local/include'][0m
-[36mMA5-DEBUG: ->library paths=['.', '/usr/lib', '/usr/libexec', '/usr/lib64', '/usr/local/libexec', '/usr/local/lib', '/usr/local/lib64'][0m
+[36mMA5-DEBUG: ->library paths=['.', '/usr/lib', '/usr/libexec', '/usr/lib64', '/usr/local/libexec', '/usr/local/lib64', '/usr/local/lib'][0m
 [36mMA5-DEBUG: Look for the header file zlib.h ...[0m
 [36mMA5-DEBUG: look for pattern zlib.h ...[0m
 [36mMA5-DEBUG: -> no file found[0m
@@ -103,7 +103,7 @@
 [36mMA5-DEBUG: Extract more informations related to the package ...[0m
 [36mMA5-DEBUG: Trying to get library and header paths ...[0m
 [36mMA5-DEBUG: -> root-config found[0m
-[36mMA5-DEBUG: -> root version: 6.12.06[0m
+[36mMA5-DEBUG: -> root version: 6.18.00[0m
 [36mMA5-DEBUG: -> root header  folder: /usr/include/root[0m
 [36mMA5-DEBUG: -> root library folder: /usr/lib64/root[0m
 [36mMA5-DEBUG: Try to find /usr/lib64/root/libCore.so ...[0m
@@ -127,17 +127,17 @@
 [36mMA5-DEBUG: Creating symbolic link from /usr/lib64/libz.so.1.2.7[0m
 [36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.so.1.2.7 ...[0m
 [36mMA5-DEBUG: -------- BEGIN: set environment variables --------[0m
-[36mMA5-DEBUG: before PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin[0m
+[36mMA5-DEBUG: before PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/opt/rw05-3:/opt/qtiplot-1.0.0-rc9:/usr/bin:/home/s1412595/.local/bin:/home/s1412595/bin:/opt/rw05-3:/opt/qtiplot-1.0.0-rc9:/usr/bin[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: after PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin:[0m
+[36mMA5-DEBUG: after PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/opt/rw05-3:/opt/qtiplot-1.0.0-rc9:/usr/bin:/home/s1412595/.local/bin:/home/s1412595/bin:/opt/rw05-3:/opt/qtiplot-1.0.0-rc9:/usr/bin:[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: before LD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: before LD_LIBRARY_PATH=:/usr/lib:/usr/lib[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: after LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib:[0m
+[36mMA5-DEBUG: after LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib:/usr/lib:[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: before DYLD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: before DYLD_LIBRARY_PATH=:/usr/lib:/usr/lib[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: after DYLD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: after DYLD_LIBRARY_PATH=:/usr/lib:/usr/lib[0m
 [36mMA5-DEBUG: --------[0m
 [36mMA5-DEBUG: -------- END: set environment variables --------[0m
 [0mMA5: Checking optional packages devoted to reinterpretation:[0m
@@ -341,15 +341,17 @@
 [36mMA5-DEBUG:   which-all:     [0m
 [36mMA5-DEBUG:     - /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin/root-config[0m
 [36mMA5-DEBUG:     - /usr/bin/root-config[0m
+[36mMA5-DEBUG:     - /bin/root-config[0m
+[36mMA5-DEBUG:     - /usr/bin/root-config[0m
 [36mMA5-DEBUG: Extract more informations related to the package ...[0m
 [36mMA5-DEBUG: Trying to get library and header paths ...[0m
 [36mMA5-DEBUG: -> root-config found[0m
-[36mMA5-DEBUG: -> root version: 6.12.06[0m
+[36mMA5-DEBUG: -> root version: 6.18.00[0m
 [36mMA5-DEBUG: -> root header  folder: /usr/include/root[0m
 [36mMA5-DEBUG: -> root library folder: /usr/lib64/root[0m
 [36mMA5-DEBUG: Try to find /usr/lib64/root/libCore.so ...[0m
 [36mMA5-DEBUG: Try to find /usr/include/root/TH1F.h ...[0m
-[36mMA5-DEBUG:   features:      ['asimage', 'astiff', 'bonjour', 'builtin_llvm', 'cling', 'cxx11', 'davix', 'dcache', 'exceptions', 'explicitlink', 'fftw3', 'fitsio', 'fortran', 'gdml', 'genvector', 'geocad', 'gfal', 'globus', 'gnuinstall', 'gsl_shared', 'gviz', 'http', 'krb5', 'ldap', 'mathmore', 'memstat', 'minuit2', 'mysql', 'odbc', 'opengl', 'pch', 'pgsql', 'pythia8', 'python', 'qt', 'qtgsi', 'r', 'rfio', 'roofit', 'shadowpw', 'shared', 'soversion', 'sqlite', 'ssl', 'table', 'thread', 'tmva', 'unuran', 'x11', 'xft', 'xml', 'xrootd'][0m
+[36mMA5-DEBUG:   features:      ['asimage', 'astiff', 'builtin_clang', 'builtin_llvm', 'cling', 'cxx11', 'davix', 'dcache', 'exceptions', 'explicitlink', 'fftw3', 'fitsio', 'fortran', 'gdml', 'gfal', 'gnuinstall', 'gsl_shared', 'gviz', 'http', 'mathmore', 'memstat', 'minuit2', 'mysql', 'odbc', 'opengl', 'pch', 'pgsql', 'pythia8', 'python', 'r', 'roofit', 'shadowpw', 'shared', 'soversion', 'sqlite', 'ssl', 'thread', 'tmva', 'tmva-pymva', 'tmva-rmva', 'unuran', 'vmc', 'x11', 'xml', 'xrootd'][0m
 [36mMA5-DEBUG:   C++ compiler:      c++[0m
 [36mMA5-DEBUG: Saving informations ...[0m
 [0mMA5:      - Root                     [32m[OK][0m[0m
@@ -368,8 +370,8 @@
 [0mMA5:    Detecting a previous installation ...[0m
 [36mMA5-DEBUG: The folder /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet' is not found[0m
 [0mMA5:    => not found. OK[0m
-[0mMA5:    How many cores would you like to use for the compilation ? default = max = 24[0m
-[0mMA5:    => Number of cores used for the compilation = 24[0m
+[0mMA5:    How many cores would you like to use for the compilation ? default = max = 4[0m
+[0mMA5:    => Number of cores used for the compilation = 4[0m
 [0mMA5:    **********************************************************[0m
 [0mMA5:    Creating a devoted folder ...[0m
 [36mMA5-DEBUG:    The installation folder 'tools' is already created.[0m
@@ -385,26 +387,26 @@
 [36mMA5-DEBUG: Testing the access to MadAnalysis 5 website: http://madanalysis.irmp.ucl.ac.be ...[0m
 [36mMA5-DEBUG: Attempt 1/3 to access the url[0m
 [36mMA5-DEBUG: Info about the url: --------------------------------------------------------[0m
-[36mMA5-DEBUG: Info about the url: Date: Sun, 30 Jun 2019 16:28:10 GMT[0m
+[36mMA5-DEBUG: Info about the url: Date: Thu, 12 Sep 2019 17:07:22 GMT[0m
 [36mMA5-DEBUG: Info about the url: Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 PHP/7.1.26[0m
 [36mMA5-DEBUG: Info about the url: Cache-Control: max-age=0, no-store[0m
 [36mMA5-DEBUG: Info about the url: Expires: Fri, 01 Jan 1999 00:00:00 GMT[0m
-[36mMA5-DEBUG: Info about the url: Content-Length: 19281[0m
-[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_form_token=fd718743c43d0ecd8af6eae1; httponly; Path=/[0m
-[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_session=c2032031f01c0b4434eb75be; expires=Sat, 28 Sep 2019 16:28:10 GMT; httponly; Path=/[0m
+[36mMA5-DEBUG: Info about the url: Content-Length: 19283[0m
+[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_form_token=0d6f1bc81cedd556888aba4b; httponly; Path=/[0m
+[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_session=1d3b5fc7d4c6894e56452139; expires=Wed, 11 Dec 2019 17:07:22 GMT; httponly; Path=/[0m
 [36mMA5-DEBUG: Info about the url: Connection: close[0m
 [36mMA5-DEBUG: Info about the url: Content-Type: text/html;charset=utf-8[0m
 [36mMA5-DEBUG: Info about the url: --------------------------------------------------------[0m
 [0mMA5:     - 1/1 http://madanalysis.irmp.ucl.ac.be/raw-attachment/wiki/WikiStart/fastjet-3.3.2.tar.gz ...[0m
 [36mMA5-DEBUG: Attempt 1/3 to access the url[0m
 [36mMA5-DEBUG: Info about the url: --------------------------------------------------------[0m
-[36mMA5-DEBUG: Info about the url: Date: Sun, 30 Jun 2019 16:28:11 GMT[0m
+[36mMA5-DEBUG: Info about the url: Date: Thu, 12 Sep 2019 17:07:22 GMT[0m
 [36mMA5-DEBUG: Info about the url: Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 PHP/7.1.26[0m
 [36mMA5-DEBUG: Info about the url: ETag: W/"anonymous/Wed, 21 Nov 2018 03:40:04 GMT/False"[0m
 [36mMA5-DEBUG: Info about the url: Content-Disposition: attachment[0m
 [36mMA5-DEBUG: Info about the url: Content-Length: 2913848[0m
 [36mMA5-DEBUG: Info about the url: Last-Modified: Wed, 21 Nov 2018 03:40:04 GMT[0m
-[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_session=298e1514de19ac2bd2ce5a90; expires=Sat, 28 Sep 2019 16:28:11 GMT; httponly; Path=/[0m
+[36mMA5-DEBUG: Info about the url: Set-Cookie: trac_session=89835d910c625e0e762b7cc2; expires=Wed, 11 Dec 2019 17:07:22 GMT; httponly; Path=/[0m
 [36mMA5-DEBUG: Info about the url: Cache-Control: max-age=0, no-store[0m
 [36mMA5-DEBUG: Info about the url: Connection: close[0m
 [36mMA5-DEBUG: Info about the url: Content-Type: application/x-tar; charset=utf-8[0m
@@ -424,17 +426,17 @@
 [0mMA5:    Configuring the package ...[0m
 [36mMA5-DEBUG: shell command: ./configure --prefix=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet[0m
 [0mMA5:    Building the package ...[0m
-[36mMA5-DEBUG: shell command: make -j24[0m
+[36mMA5-DEBUG: shell command: make -j4[0m
 [0mMA5:    Transfering the data from the temporary to the definitive folder ...[0m
 [36mMA5-DEBUG: shell command: make install[0m
 [0mMA5:    Checking the installation ...[0m
 [0mMA5:    Installation complete.[0m
-[0mMA5:    Elapsed time = 1 minute 11 seconds[0m
+[0mMA5:    Elapsed time = 1 minute 0 second[0m
 [0mMA5:    => Status: [32m[OK][0m[0m
 [0mMA5:    **********************************************************[0m
 [0mMA5: [0m
 [0mMA5: DelphesMA5tune installation has been vetoed. Skipping it.[0m
-[0mMA5: Platform: Linux 3.10.0-862.14.4.el7.x86_64 [32m[Linux mode][0m[0m
+[0mMA5: Platform: Linux 3.10.0-957.5.1.el7.x86_64 [32m[Linux mode][0m[0m
 [0mMA5: Reading user settings ...[0m
 [36mMA5-DEBUG: Opening the file: /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/madanalysis/input/installation_options.dat[0m
 [36mMA5-DEBUG: Lines to interpret: [0m
@@ -523,7 +525,7 @@
 [36mMA5-DEBUG: Extract more informations related to the package ...[0m
 [36mMA5-DEBUG: Trying to get library and header paths ...[0m
 [36mMA5-DEBUG: -> root-config found[0m
-[36mMA5-DEBUG: -> root version: 6.12.06[0m
+[36mMA5-DEBUG: -> root version: 6.18.00[0m
 [36mMA5-DEBUG: -> root header  folder: /usr/include/root[0m
 [36mMA5-DEBUG: -> root library folder: /usr/lib64/root[0m
 [36mMA5-DEBUG: Try to find /usr/lib64/root/libCore.so ...[0m
@@ -551,17 +553,17 @@
 [36mMA5-DEBUG: Creating symbolic link from /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/zlib/lib/libz.so.1.2.10[0m
 [36mMA5-DEBUG:                        to   /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib/libz.so.1.2.10 ...[0m
 [36mMA5-DEBUG: -------- BEGIN: set environment variables --------[0m
-[36mMA5-DEBUG: before PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin:[0m
+[36mMA5-DEBUG: before PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/opt/rw05-3:/opt/qtiplot-1.0.0-rc9:/usr/bin:/home/s1412595/.local/bin:/home/s1412595/bin:/opt/rw05-3:/opt/qtiplot-1.0.0-rc9:/usr/bin:[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: after PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/pgi/linux86-64/16.10/bin:/opt/rw05-3:/usr/bin::[0m
+[36mMA5-DEBUG: after PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Bin:/usr/bin:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/bin:/opt/sge/bin:/opt/sge/bin/lx-amd64:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/lib64/qt-3.3/bin:/opt/matlab-R2018a/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/opt/rw05-3:/opt/qtiplot-1.0.0-rc9:/usr/bin:/home/s1412595/.local/bin:/home/s1412595/bin:/opt/rw05-3:/opt/qtiplot-1.0.0-rc9:/usr/bin::[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: before LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib:[0m
+[36mMA5-DEBUG: before LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib:/usr/lib:[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: after LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib::[0m
+[36mMA5-DEBUG: after LD_LIBRARY_PATH=/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/fastjet/lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/Lib:/home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/madanalysis5/madanalysis5/tools/SampleAnalyzer/ExternalSymLink/Lib:/usr/lib64/root::/usr/lib:/usr/lib::[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: before DYLD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: before DYLD_LIBRARY_PATH=:/usr/lib:/usr/lib[0m
 [36mMA5-DEBUG: --------[0m
-[36mMA5-DEBUG: after DYLD_LIBRARY_PATH=:/usr/lib[0m
+[36mMA5-DEBUG: after DYLD_LIBRARY_PATH=:/usr/lib:/usr/lib[0m
 [36mMA5-DEBUG: --------[0m
 [36mMA5-DEBUG: -------- END: set environment variables --------[0m
 [0mMA5: Checking the MadAnalysis 5 core library:[0m
@@ -573,8 +575,8 @@
 [0mMA5:    **********************************************************[0m
 [0mMA5:                 Building SampleAnalyzer libraries     [0m
 [0mMA5:    **********************************************************[0m
-[0mMA5:    How many cores for the compiling? default = max = 24[0m
-[0mMA5:    => Number of cores used for the compilation = 24[0m
+[0mMA5:    How many cores for the compiling? default = max = 4[0m
+[0mMA5:    => Number of cores used for the compilation = 4[0m
 [0mMA5:    Writing the setup files ...[0m
 [0mMA5:    Writing all the Makefiles ...[0m
 [0mMA5:    **********************************************************[0m
@@ -742,7 +744,7 @@
 [36mMA5-DEBUG: Analyzing output file: OK -> End Stamp[0m
 [0mMA5:       => Status: [32m[OK][0m[0m
 [0mMA5:    **********************************************************[0m
-[0mMA5:    Elapsed time = 19.33 seconds[0m
+[0mMA5:    Elapsed time = 19.58 seconds[0m
 [0mMA5:    **********************************************************[0m
 [0mMA5: [0m
 [0mMA5: Checking the MadAnalysis 5 core library:[0m
