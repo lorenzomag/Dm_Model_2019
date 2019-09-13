@@ -1,5 +1,6 @@
 #######################################
 # Order of execution of various modules
+# ATLAS
 #######################################
 
 set ExecutionPath {
@@ -28,6 +29,11 @@ set ExecutionPath {
   ElectronFilter
   ElectronEfficiency
   ElectronIsolation
+  
+  PhisFilter
+  ChisFilter
+  PsisFilter
+  NNsFilter
 
   ChargedHadronFilter
 
@@ -39,7 +45,7 @@ set ExecutionPath {
   NeutrinoFilter
   GenJetFinder
   GenMissingET
-  
+
   FastJetFinder
   FatJetFinder
 
@@ -68,6 +74,11 @@ module ParticlePropagator ParticlePropagator {
   set ChargedHadronOutputArray chargedHadrons
   set ElectronOutputArray electrons
   set MuonOutputArray muons
+  # LP
+  set PhiDMOutputArray phis
+  set ChiDMOutputArray chis
+  set PsiDMOutputArray psis
+  set NNDMOutputArray NNs
 
   # radius of the magnetic field coverage, in m
   set Radius 1.29
@@ -199,9 +210,13 @@ module Merger TrackMerger {
   add InputArray ChargedHadronMomentumSmearing/chargedHadrons
   add InputArray ElectronMomentumSmearing/electrons
   add InputArray MuonMomentumSmearing/muons
+  add InputArray ParticlePropagator/phis
+  add InputArray ParticlePropagator/psis
+  add InputArray ParticlePropagator/chis
+  add InputArray ParticlePropagator/NNs
+
   set OutputArray tracks
 }
-
 
 
 #############
@@ -291,6 +306,13 @@ module SimpleCalorimeter ECal {
   # energy fractions for K0short and Lambda
   add EnergyFraction {310} {0.3}
   add EnergyFraction {3122} {0.3}
+  # energy fraction for DM model (LP)
+  add EnergyFraction {5000001} {0.0}
+  add EnergyFraction {200000} {0.0}
+  add EnergyFraction {200001} {0.3}
+  add EnergyFraction {200002} {0.0}
+  add EnergyFraction {200003} {0.0}
+  add EnergyFraction {200004} {0.0}
 
   # set ResolutionFormula {resolution formula as a function of eta and energy}
 
@@ -376,6 +398,13 @@ module SimpleCalorimeter HCal {
   # energy fractions for K0short and Lambda
   add EnergyFraction {310} {0.7}
   add EnergyFraction {3122} {0.7}
+  # energy fraction for DM model (LP)
+  add EnergyFraction {5000001} {0.3}
+  add EnergyFraction {200000} {0.0}
+  add EnergyFraction {200001} {0.3}
+  add EnergyFraction {200002} {0.0}
+  add EnergyFraction {200003} {0.0}
+  add EnergyFraction {200004} {0.0}
 
   # set HCalResolutionFormula {resolution formula as a function of eta and energy}
   set ResolutionFormula {                      (abs(eta) <= 3.0) * sqrt(energy^2*0.050^2 + energy*1.50^2) +
@@ -396,6 +425,47 @@ module PdgCodeFilter ElectronFilter {
   add PdgCode {-11}
 }
 
+#################
+# Dark Matter model particle filter
+#################
+
+
+module PdgCodeFilter PhisFilter {
+  set InputArray HCal/eflowTracks
+  set OutputArray phis
+  set Invert true
+  add PdgCode {5000001}
+  add PdgCode {-5000001}
+}
+
+module PdgCodeFilter PsisFilter {
+  set InputArray HCal/eflowTracks
+  set OutputArray psis
+  set Invert true
+  add PdgCode {200000}
+  add PdgCode {-200000}
+}
+
+module PdgCodeFilter ChisFilter {
+  set InputArray HCal/eflowTracks
+  set OutputArray chis
+  set Invert true
+  add PdgCode {200001}
+  add PdgCode {-200001}
+}
+
+module PdgCodeFilter NNsFilter {
+  set InputArray HCal/eflowTracks
+  set OutputArray NNs
+  set Invert true
+  add PdgCode {200002}
+  add PdgCode {-200002}
+  add PdgCode {200003}
+  add PdgCode {-200003}
+  add PdgCode {200004}
+  add PdgCode {-200004}
+}
+
 ######################
 # ChargedHadronFilter
 ######################
@@ -403,12 +473,13 @@ module PdgCodeFilter ElectronFilter {
 module PdgCodeFilter ChargedHadronFilter {
   set InputArray HCal/eflowTracks
   set OutputArray chargedHadrons
-  
+
   add PdgCode {11}
   add PdgCode {-11}
   add PdgCode {13}
   add PdgCode {-13}
 }
+
 
 
 ###################################################
@@ -443,13 +514,12 @@ module Merger EFlowMerger {
 module PdgCodeFilter EFlowFilter {
   set InputArray EFlowMerger/eflow
   set OutputArray eflow
-  
+
   add PdgCode {11}
   add PdgCode {-11}
   add PdgCode {13}
   add PdgCode {-13}
 }
-
 
 ###################
 # Photon efficiency
@@ -516,6 +586,7 @@ module Isolation ElectronIsolation {
   set DeltaRMax 0.5
 
   set PTMin 0.5
+
 
   set PTRatioMax 0.12
 }
@@ -769,6 +840,11 @@ module UniqueObjectFinder UniqueObjectFinder {
   add InputArray ElectronIsolation/electrons electrons
   add InputArray MuonIsolation/muons muons
   add InputArray JetEnergyScale/jets jets
+  add InputArray PhisFilter/phis phis
+  add InputArray ChisFilter/chis chis
+  add InputArray PsisFilter/psis psis
+  add InputArray NNsFilter/NNs NNs
+
 }
 
 ##################
@@ -797,6 +873,10 @@ module TreeWriter TreeWriter {
   add Branch UniqueObjectFinder/electrons Electron Electron
   add Branch UniqueObjectFinder/photons Photon Photon
   add Branch UniqueObjectFinder/muons Muon Muon
+  add Branch UniqueObjectFinder/chis  Chis ChiDM
+  add Branch UniqueObjectFinder/psis  Psis PsiDM
+  add Branch UniqueObjectFinder/phis  Phis PhiDM
+  add Branch UniqueObjectFinder/NNs   NNs  NNDM
 
   add Branch FatJetFinder/jets FatJet Jet
 
