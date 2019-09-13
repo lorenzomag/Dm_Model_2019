@@ -1,4 +1,4 @@
-version=3.2.1
+version=3.3.2
 
 wget http://fastjet.fr/repo/fastjet-${version}.tar.gz
 
@@ -8,7 +8,7 @@ mkdir -p fastjet/internal
 mkdir -p fastjet/tools
 
 cd fastjet-${version}
-./configure --enable-allcxxplugins
+./configure --enable-allcxxplugins --disable-auto-ptr
 cd -
 
 echo ${version} > fastjet/VERSION

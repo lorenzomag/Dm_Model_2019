@@ -45,6 +45,7 @@
 // Do NOT change. Changes will be lost next time file is generated
 
 #define R__DICTIONARY_FILENAME tmpdIexternaldIExRootAnalysisdIExRootAnalysisDict
+#define R__NO_DEPRECATION
 
 /*******************************************************************/
 #include <stddef.h>
@@ -77,7 +78,7 @@
 
 #include "TDataMember.h"
 
-// Since CINT ignores the std namespace, we need to do so in this file.
+// The generated code does not explicitly qualifies STL entities
 namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
@@ -425,7 +426,7 @@ namespace ROOT {
       ::ExRootConfReader *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::ExRootConfReader >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("ExRootConfReader", ::ExRootConfReader::Class_Version(), "ExRootAnalysis/ExRootConfReader.h", 44,
+         instance("ExRootConfReader", ::ExRootConfReader::Class_Version(), "ExRootAnalysis/ExRootConfReader.h", 42,
                   typeid(::ExRootConfReader), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::ExRootConfReader::Dictionary, isa_proxy, 4,
                   sizeof(::ExRootConfReader) );
@@ -877,11 +878,9 @@ class __attribute__((annotate("$clingAutoload$ExRootAnalysis/ExRootTask.h")))  E
     static const char* payloadCode = R"DICTPAYLOAD(
 #line 1 "ExRootAnalysisDict dictionary payload"
 
-#ifndef G__VECTOR_HAS_CLASS_ITERATOR
-  #define G__VECTOR_HAS_CLASS_ITERATOR 1
-#endif
 
 #define _BACKWARD_BACKWARD_WARNING_H
+// Inline headers
 
 /** \class ExRootAnalysisLinkDef
  *
@@ -948,7 +947,7 @@ nullptr};
     if (!isInitialized) {
       TROOT::RegisterModule("ExRootAnalysisDict",
         headers, includePaths, payloadCode, fwdDeclCode,
-        TriggerDictionaryInitialization_ExRootAnalysisDict_Impl, {}, classesHeaders);
+        TriggerDictionaryInitialization_ExRootAnalysisDict_Impl, {}, classesHeaders, /*has no C++ module*/false);
       isInitialized = true;
     }
   }

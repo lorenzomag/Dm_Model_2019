@@ -9,12 +9,11 @@
  *
  */
 
-
 #include "classes/DelphesModule.h"
 
+#include <map>
 #include <string>
 #include <vector>
-#include <map>
 
 class TObjArray;
 class TIterator;
@@ -22,7 +21,6 @@ class TIterator;
 class VertexFinder: public DelphesModule
 {
 public:
-
   VertexFinder();
   ~VertexFinder();
 
@@ -31,12 +29,11 @@ public:
   void Finish();
 
 private:
-
-  void createSeeds ();
-  void growCluster (const UInt_t);
-  Double_t weight (const UInt_t);
-  void addTrackToCluster (const UInt_t, const UInt_t);
-  void removeTrackFromCluster (const UInt_t, const UInt_t);
+  void createSeeds();
+  void growCluster(const UInt_t);
+  Double_t weight(const UInt_t);
+  void addTrackToCluster(const UInt_t, const UInt_t);
+  void removeTrackFromCluster(const UInt_t, const UInt_t);
 
   Double_t fSigma;
   Double_t fMinPT;

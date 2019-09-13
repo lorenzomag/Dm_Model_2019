@@ -38,7 +38,7 @@
 #define ENABLE_PLUGIN_TRACKJET /**/
 
 /* compile the deprecated parts of the interface using auto-ptr */
-#define HAVE_AUTO_PTR_INTERFACE /**/
+/* #undef HAVE_AUTO_PTR_INTERFACE */
 
 /* compiler supports c++14 deprecated keyword */
 /* #undef HAVE_CXX14_DEPRECATED */
@@ -105,7 +105,7 @@
 #define PACKAGE_NAME "FastJet"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "FastJet 3.2.1"
+#define PACKAGE_STRING "FastJet 3.3.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "fastjet"
@@ -114,25 +114,25 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "3.2.1"
+#define PACKAGE_VERSION "3.3.2"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "3.2.1"
+#define VERSION "3.3.2"
 
 /* Major version of this package */
 #define VERSION_MAJOR 3
 
 /* Minor version of this package */
-#define VERSION_MINOR 2
+#define VERSION_MINOR 3
 
 /* Version of the package under the form XYYZZ (instead of X.Y.Z) */
-#define VERSION_NUMBER 30201
+#define VERSION_NUMBER 30302
 
 /* Patch version of this package */
-#define VERSION_PATCHLEVEL 1
+#define VERSION_PATCHLEVEL 2
 
 /* Pre-release version of this package */
 /* #undef VERSION_PRERELEASE */

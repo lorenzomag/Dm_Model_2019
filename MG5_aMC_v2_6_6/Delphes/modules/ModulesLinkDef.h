@@ -38,7 +38,9 @@
 #include "modules/ImpactParameterSmearing.h"
 #include "modules/TimeSmearing.h"
 #include "modules/SimpleCalorimeter.h"
+#include "modules/DenseTrackFilter.h"
 #include "modules/Calorimeter.h"
+#include "modules/DualReadoutCalorimeter.h"
 #include "modules/OldCalorimeter.h"
 #include "modules/Isolation.h"
 #include "modules/EnergyScale.h"
@@ -55,6 +57,7 @@
 #include "modules/TrackPileUpSubtractor.h"
 #include "modules/TaggingParticlesSkimmer.h"
 #include "modules/PileUpJetID.h"
+#include "modules/PhotonID.h"
 #include "modules/ConstituentFilter.h"
 #include "modules/StatusPidFilter.h"
 #include "modules/PdgCodeFilter.h"
@@ -89,7 +92,9 @@
 #pragma link C++ class ImpactParameterSmearing+;
 #pragma link C++ class TimeSmearing+;
 #pragma link C++ class SimpleCalorimeter+;
+#pragma link C++ class DenseTrackFilter+;
 #pragma link C++ class Calorimeter+;
+#pragma link C++ class DualReadoutCalorimeter+;
 #pragma link C++ class OldCalorimeter+;
 #pragma link C++ class Isolation+;
 #pragma link C++ class EnergyScale+;
@@ -106,6 +111,7 @@
 #pragma link C++ class TrackPileUpSubtractor+;
 #pragma link C++ class TaggingParticlesSkimmer+;
 #pragma link C++ class PileUpJetID+;
+#pragma link C++ class PhotonID+;
 #pragma link C++ class ConstituentFilter+;
 #pragma link C++ class StatusPidFilter+;
 #pragma link C++ class PdgCodeFilter+;

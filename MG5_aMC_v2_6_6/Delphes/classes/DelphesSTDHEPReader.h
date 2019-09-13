@@ -27,15 +27,17 @@
  *
  */
 
+#include <stdint.h>
 #include <stdio.h>
-#include <rpc/types.h>
-#include <rpc/xdr.h>
+
+#include "classes/DelphesXDRReader.h"
 
 class TObjArray;
 class TStopwatch;
 class TDatabasePDG;
 class ExRootTreeBranch;
 class DelphesFactory;
+class DelphesXDRReader;
 
 class DelphesSTDHEPReader
 {
@@ -69,14 +71,13 @@ public:
     TStopwatch *readStopWatch, TStopwatch *procStopWatch);
 
 private:
-
   void AnalyzeParticles(DelphesFactory *factory,
     TObjArray *allParticleOutputArray,
     TObjArray *stableParticleOutputArray,
     TObjArray *partonOutputArray);
 
-  void SkipBytes(u_int size);
-  void SkipArray(u_int elsize);
+  void SkipBytes(int size);
+  void SkipArray(int elsize);
 
   void ReadFileHeader();
   void ReadEventTable();
@@ -87,20 +88,18 @@ private:
 
   FILE *fInputFile;
 
-  XDR *fInputXDR;
+  DelphesXDRReader fReader[7];
 
-  char *fBuffer;
+  uint8_t *fBuffer;
 
   TDatabasePDG *fPDG;
 
-  u_int fEntries;
-  int fBlockType, fEventNumber, fEventSize;
+  uint32_t fEntries;
+  int32_t fBlockType, fEventNumber, fEventSize;
   double fWeight, fAlphaQCD, fAlphaQED;
 
-  u_int fScaleSize;
+  uint32_t fScaleSize;
   double fScale[10];
 };
 
 #endif // DelphesSTDHEPReader_h
-
-

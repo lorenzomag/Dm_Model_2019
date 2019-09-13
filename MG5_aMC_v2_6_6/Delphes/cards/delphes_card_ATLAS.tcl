@@ -1,6 +1,5 @@
 #######################################
 # Order of execution of various modules
-# ATLAS
 #######################################
 
 set ExecutionPath {
@@ -22,7 +21,7 @@ set ExecutionPath {
   Calorimeter
   EFlowMerger
   EFlowFilter
-
+  
   PhotonEfficiency
   PhotonIsolation
 
@@ -389,7 +388,7 @@ module PdgCodeFilter ElectronFilter {
 module PdgCodeFilter ChargedHadronFilter {
   set InputArray HCal/eflowTracks
   set OutputArray chargedHadrons
-
+  
   add PdgCode {11}
   add PdgCode {-11}
   add PdgCode {13}
@@ -406,10 +405,9 @@ module Merger Calorimeter {
 # add InputArray InputArray
   add InputArray ECal/ecalTowers
   add InputArray HCal/hcalTowers
+  add InputArray MuonMomentumSmearing/muons
   set OutputArray towers
 }
-
-
 
 ####################
 # Energy flow merger
@@ -430,7 +428,7 @@ module Merger EFlowMerger {
 module PdgCodeFilter EFlowFilter {
   set InputArray EFlowMerger/eflow
   set OutputArray eflow
-
+  
   add PdgCode {11}
   add PdgCode {-11}
   add PdgCode {13}
@@ -761,3 +759,4 @@ module TreeWriter TreeWriter {
   add Branch MissingET/momentum MissingET MissingET
   add Branch ScalarHT/energy ScalarHT ScalarHT
 }
+

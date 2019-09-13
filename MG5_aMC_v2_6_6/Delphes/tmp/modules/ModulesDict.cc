@@ -38,7 +38,9 @@
 #include "modules/ImpactParameterSmearing.h"
 #include "modules/TimeSmearing.h"
 #include "modules/SimpleCalorimeter.h"
+#include "modules/DenseTrackFilter.h"
 #include "modules/Calorimeter.h"
+#include "modules/DualReadoutCalorimeter.h"
 #include "modules/OldCalorimeter.h"
 #include "modules/Isolation.h"
 #include "modules/EnergyScale.h"
@@ -55,6 +57,7 @@
 #include "modules/TrackPileUpSubtractor.h"
 #include "modules/TaggingParticlesSkimmer.h"
 #include "modules/PileUpJetID.h"
+#include "modules/PhotonID.h"
 #include "modules/ConstituentFilter.h"
 #include "modules/StatusPidFilter.h"
 #include "modules/PdgCodeFilter.h"
@@ -89,7 +92,9 @@
 #pragma link C++ class ImpactParameterSmearing+;
 #pragma link C++ class TimeSmearing+;
 #pragma link C++ class SimpleCalorimeter+;
+#pragma link C++ class DenseTrackFilter+;
 #pragma link C++ class Calorimeter+;
+#pragma link C++ class DualReadoutCalorimeter+;
 #pragma link C++ class OldCalorimeter+;
 #pragma link C++ class Isolation+;
 #pragma link C++ class EnergyScale+;
@@ -106,6 +111,7 @@
 #pragma link C++ class TrackPileUpSubtractor+;
 #pragma link C++ class TaggingParticlesSkimmer+;
 #pragma link C++ class PileUpJetID+;
+#pragma link C++ class PhotonID+;
 #pragma link C++ class ConstituentFilter+;
 #pragma link C++ class StatusPidFilter+;
 #pragma link C++ class PdgCodeFilter+;
@@ -125,6 +131,7 @@
 // Do NOT change. Changes will be lost next time file is generated
 
 #define R__DICTIONARY_FILENAME tmpdImodulesdIModulesDict
+#define R__NO_DEPRECATION
 
 /*******************************************************************/
 #include <stddef.h>
@@ -157,7 +164,7 @@
 
 #include "TDataMember.h"
 
-// Since CINT ignores the std namespace, we need to do so in this file.
+// The generated code does not explicitly qualifies STL entities
 namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
@@ -173,7 +180,9 @@ namespace std {} using namespace std;
 #include "modules/ImpactParameterSmearing.h"
 #include "modules/TimeSmearing.h"
 #include "modules/SimpleCalorimeter.h"
+#include "modules/DenseTrackFilter.h"
 #include "modules/Calorimeter.h"
+#include "modules/DualReadoutCalorimeter.h"
 #include "modules/OldCalorimeter.h"
 #include "modules/Isolation.h"
 #include "modules/EnergyScale.h"
@@ -190,6 +199,7 @@ namespace std {} using namespace std;
 #include "modules/TrackPileUpSubtractor.h"
 #include "modules/TaggingParticlesSkimmer.h"
 #include "modules/PileUpJetID.h"
+#include "modules/PhotonID.h"
 #include "modules/ConstituentFilter.h"
 #include "modules/StatusPidFilter.h"
 #include "modules/PdgCodeFilter.h"
@@ -380,7 +390,7 @@ namespace ROOT {
       ::IdentificationMap *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::IdentificationMap >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("IdentificationMap", ::IdentificationMap::Class_Version(), "modules/IdentificationMap.h", 38,
+         instance("IdentificationMap", ::IdentificationMap::Class_Version(), "modules/IdentificationMap.h", 37,
                   typeid(::IdentificationMap), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::IdentificationMap::Dictionary, isa_proxy, 4,
                   sizeof(::IdentificationMap) );
@@ -592,6 +602,38 @@ namespace ROOT {
 } // end of namespace ROOT
 
 namespace ROOT {
+   static void *new_DenseTrackFilter(void *p = 0);
+   static void *newArray_DenseTrackFilter(Long_t size, void *p);
+   static void delete_DenseTrackFilter(void *p);
+   static void deleteArray_DenseTrackFilter(void *p);
+   static void destruct_DenseTrackFilter(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::DenseTrackFilter*)
+   {
+      ::DenseTrackFilter *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::DenseTrackFilter >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("DenseTrackFilter", ::DenseTrackFilter::Class_Version(), "modules/DenseTrackFilter.h", 40,
+                  typeid(::DenseTrackFilter), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::DenseTrackFilter::Dictionary, isa_proxy, 4,
+                  sizeof(::DenseTrackFilter) );
+      instance.SetNew(&new_DenseTrackFilter);
+      instance.SetNewArray(&newArray_DenseTrackFilter);
+      instance.SetDelete(&delete_DenseTrackFilter);
+      instance.SetDeleteArray(&deleteArray_DenseTrackFilter);
+      instance.SetDestructor(&destruct_DenseTrackFilter);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::DenseTrackFilter*)
+   {
+      return GenerateInitInstanceLocal((::DenseTrackFilter*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::DenseTrackFilter*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
    static void *new_Calorimeter(void *p = 0);
    static void *newArray_Calorimeter(Long_t size, void *p);
    static void delete_Calorimeter(void *p);
@@ -621,6 +663,38 @@ namespace ROOT {
    }
    // Static variable to force the class initialization
    static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::Calorimeter*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_DualReadoutCalorimeter(void *p = 0);
+   static void *newArray_DualReadoutCalorimeter(Long_t size, void *p);
+   static void delete_DualReadoutCalorimeter(void *p);
+   static void deleteArray_DualReadoutCalorimeter(void *p);
+   static void destruct_DualReadoutCalorimeter(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::DualReadoutCalorimeter*)
+   {
+      ::DualReadoutCalorimeter *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::DualReadoutCalorimeter >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("DualReadoutCalorimeter", ::DualReadoutCalorimeter::Class_Version(), "modules/DualReadoutCalorimeter.h", 41,
+                  typeid(::DualReadoutCalorimeter), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::DualReadoutCalorimeter::Dictionary, isa_proxy, 4,
+                  sizeof(::DualReadoutCalorimeter) );
+      instance.SetNew(&new_DualReadoutCalorimeter);
+      instance.SetNewArray(&newArray_DualReadoutCalorimeter);
+      instance.SetDelete(&delete_DualReadoutCalorimeter);
+      instance.SetDeleteArray(&deleteArray_DualReadoutCalorimeter);
+      instance.SetDestructor(&destruct_DualReadoutCalorimeter);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::DualReadoutCalorimeter*)
+   {
+      return GenerateInitInstanceLocal((::DualReadoutCalorimeter*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::DualReadoutCalorimeter*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
 } // end of namespace ROOT
 
 namespace ROOT {
@@ -1116,7 +1190,7 @@ namespace ROOT {
       ::PileUpJetID *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::PileUpJetID >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("PileUpJetID", ::PileUpJetID::Class_Version(), "modules/PileUpJetID.h", 20,
+         instance("PileUpJetID", ::PileUpJetID::Class_Version(), "modules/PileUpJetID.h", 19,
                   typeid(::PileUpJetID), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::PileUpJetID::Dictionary, isa_proxy, 4,
                   sizeof(::PileUpJetID) );
@@ -1133,6 +1207,38 @@ namespace ROOT {
    }
    // Static variable to force the class initialization
    static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::PileUpJetID*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_PhotonID(void *p = 0);
+   static void *newArray_PhotonID(Long_t size, void *p);
+   static void delete_PhotonID(void *p);
+   static void deleteArray_PhotonID(void *p);
+   static void destruct_PhotonID(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::PhotonID*)
+   {
+      ::PhotonID *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::PhotonID >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("PhotonID", ::PhotonID::Class_Version(), "modules/PhotonID.h", 39,
+                  typeid(::PhotonID), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::PhotonID::Dictionary, isa_proxy, 4,
+                  sizeof(::PhotonID) );
+      instance.SetNew(&new_PhotonID);
+      instance.SetNewArray(&newArray_PhotonID);
+      instance.SetDelete(&delete_PhotonID);
+      instance.SetDeleteArray(&deleteArray_PhotonID);
+      instance.SetDestructor(&destruct_PhotonID);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::PhotonID*)
+   {
+      return GenerateInitInstanceLocal((::PhotonID*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::PhotonID*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
 } // end of namespace ROOT
 
 namespace ROOT {
@@ -1436,7 +1542,7 @@ namespace ROOT {
       ::JetFakeParticle *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::JetFakeParticle >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("JetFakeParticle", ::JetFakeParticle::Class_Version(), "modules/JetFakeParticle.h", 38,
+         instance("JetFakeParticle", ::JetFakeParticle::Class_Version(), "modules/JetFakeParticle.h", 37,
                   typeid(::JetFakeParticle), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::JetFakeParticle::Dictionary, isa_proxy, 4,
                   sizeof(::JetFakeParticle) );
@@ -1500,7 +1606,7 @@ namespace ROOT {
       ::VertexFinder *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::VertexFinder >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("VertexFinder", ::VertexFinder::Class_Version(), "modules/VertexFinder.h", 22,
+         instance("VertexFinder", ::VertexFinder::Class_Version(), "modules/VertexFinder.h", 21,
                   typeid(::VertexFinder), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::VertexFinder::Dictionary, isa_proxy, 4,
                   sizeof(::VertexFinder) );
@@ -1532,7 +1638,7 @@ namespace ROOT {
       ::VertexFinderDA4D *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::VertexFinderDA4D >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("VertexFinderDA4D", ::VertexFinderDA4D::Class_Version(), "modules/VertexFinderDA4D.h", 21,
+         instance("VertexFinderDA4D", ::VertexFinderDA4D::Class_Version(), "modules/VertexFinderDA4D.h", 20,
                   typeid(::VertexFinderDA4D), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::VertexFinderDA4D::Dictionary, isa_proxy, 4,
                   sizeof(::VertexFinderDA4D) );
@@ -2004,6 +2110,41 @@ TClass *SimpleCalorimeter::Class()
 }
 
 //______________________________________________________________________________
+atomic_TClass_ptr DenseTrackFilter::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *DenseTrackFilter::Class_Name()
+{
+   return "DenseTrackFilter";
+}
+
+//______________________________________________________________________________
+const char *DenseTrackFilter::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::DenseTrackFilter*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int DenseTrackFilter::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::DenseTrackFilter*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *DenseTrackFilter::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::DenseTrackFilter*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *DenseTrackFilter::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::DenseTrackFilter*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
 atomic_TClass_ptr Calorimeter::fgIsA(0);  // static to hold class pointer
 
 //______________________________________________________________________________
@@ -2035,6 +2176,41 @@ TClass *Calorimeter::Dictionary()
 TClass *Calorimeter::Class()
 {
    if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::Calorimeter*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr DualReadoutCalorimeter::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *DualReadoutCalorimeter::Class_Name()
+{
+   return "DualReadoutCalorimeter";
+}
+
+//______________________________________________________________________________
+const char *DualReadoutCalorimeter::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::DualReadoutCalorimeter*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int DualReadoutCalorimeter::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::DualReadoutCalorimeter*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *DualReadoutCalorimeter::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::DualReadoutCalorimeter*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *DualReadoutCalorimeter::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::DualReadoutCalorimeter*)0x0)->GetClass(); }
    return fgIsA;
 }
 
@@ -2595,6 +2771,41 @@ TClass *PileUpJetID::Dictionary()
 TClass *PileUpJetID::Class()
 {
    if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PileUpJetID*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr PhotonID::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *PhotonID::Class_Name()
+{
+   return "PhotonID";
+}
+
+//______________________________________________________________________________
+const char *PhotonID::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::PhotonID*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int PhotonID::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::PhotonID*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *PhotonID::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PhotonID*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *PhotonID::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PhotonID*)0x0)->GetClass(); }
    return fgIsA;
 }
 
@@ -3485,6 +3696,39 @@ namespace ROOT {
 } // end of namespace ROOT for class ::SimpleCalorimeter
 
 //______________________________________________________________________________
+void DenseTrackFilter::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class DenseTrackFilter.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(DenseTrackFilter::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(DenseTrackFilter::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_DenseTrackFilter(void *p) {
+      return  p ? new(p) ::DenseTrackFilter : new ::DenseTrackFilter;
+   }
+   static void *newArray_DenseTrackFilter(Long_t nElements, void *p) {
+      return p ? new(p) ::DenseTrackFilter[nElements] : new ::DenseTrackFilter[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_DenseTrackFilter(void *p) {
+      delete ((::DenseTrackFilter*)p);
+   }
+   static void deleteArray_DenseTrackFilter(void *p) {
+      delete [] ((::DenseTrackFilter*)p);
+   }
+   static void destruct_DenseTrackFilter(void *p) {
+      typedef ::DenseTrackFilter current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::DenseTrackFilter
+
+//______________________________________________________________________________
 void Calorimeter::Streamer(TBuffer &R__b)
 {
    // Stream an object of class Calorimeter.
@@ -3516,6 +3760,39 @@ namespace ROOT {
       ((current_t*)p)->~current_t();
    }
 } // end of namespace ROOT for class ::Calorimeter
+
+//______________________________________________________________________________
+void DualReadoutCalorimeter::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class DualReadoutCalorimeter.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(DualReadoutCalorimeter::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(DualReadoutCalorimeter::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_DualReadoutCalorimeter(void *p) {
+      return  p ? new(p) ::DualReadoutCalorimeter : new ::DualReadoutCalorimeter;
+   }
+   static void *newArray_DualReadoutCalorimeter(Long_t nElements, void *p) {
+      return p ? new(p) ::DualReadoutCalorimeter[nElements] : new ::DualReadoutCalorimeter[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_DualReadoutCalorimeter(void *p) {
+      delete ((::DualReadoutCalorimeter*)p);
+   }
+   static void deleteArray_DualReadoutCalorimeter(void *p) {
+      delete [] ((::DualReadoutCalorimeter*)p);
+   }
+   static void destruct_DualReadoutCalorimeter(void *p) {
+      typedef ::DualReadoutCalorimeter current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::DualReadoutCalorimeter
 
 //______________________________________________________________________________
 void OldCalorimeter::Streamer(TBuffer &R__b)
@@ -4044,6 +4321,39 @@ namespace ROOT {
       ((current_t*)p)->~current_t();
    }
 } // end of namespace ROOT for class ::PileUpJetID
+
+//______________________________________________________________________________
+void PhotonID::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class PhotonID.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(PhotonID::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(PhotonID::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_PhotonID(void *p) {
+      return  p ? new(p) ::PhotonID : new ::PhotonID;
+   }
+   static void *newArray_PhotonID(Long_t nElements, void *p) {
+      return p ? new(p) ::PhotonID[nElements] : new ::PhotonID[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_PhotonID(void *p) {
+      delete ((::PhotonID*)p);
+   }
+   static void deleteArray_PhotonID(void *p) {
+      delete [] ((::PhotonID*)p);
+   }
+   static void destruct_PhotonID(void *p) {
+      typedef ::PhotonID current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::PhotonID
 
 //______________________________________________________________________________
 void ConstituentFilter::Streamer(TBuffer &R__b)
@@ -5292,7 +5602,9 @@ class __attribute__((annotate("$clingAutoload$modules/TrackSmearing.h")))  Track
 class __attribute__((annotate("$clingAutoload$modules/ImpactParameterSmearing.h")))  ImpactParameterSmearing;
 class __attribute__((annotate("$clingAutoload$modules/TimeSmearing.h")))  TimeSmearing;
 class __attribute__((annotate("$clingAutoload$modules/SimpleCalorimeter.h")))  SimpleCalorimeter;
+class __attribute__((annotate("$clingAutoload$modules/DenseTrackFilter.h")))  DenseTrackFilter;
 class __attribute__((annotate("$clingAutoload$modules/Calorimeter.h")))  Calorimeter;
+class __attribute__((annotate("$clingAutoload$modules/DualReadoutCalorimeter.h")))  DualReadoutCalorimeter;
 class __attribute__((annotate("$clingAutoload$modules/OldCalorimeter.h")))  OldCalorimeter;
 class __attribute__((annotate("$clingAutoload$modules/Isolation.h")))  Isolation;
 class __attribute__((annotate("$clingAutoload$modules/EnergyScale.h")))  EnergyScale;
@@ -5309,6 +5621,7 @@ class __attribute__((annotate("$clingAutoload$modules/JetPileUpSubtractor.h"))) 
 class __attribute__((annotate("$clingAutoload$modules/TrackPileUpSubtractor.h")))  TrackPileUpSubtractor;
 class __attribute__((annotate("$clingAutoload$modules/TaggingParticlesSkimmer.h")))  TaggingParticlesSkimmer;
 class __attribute__((annotate("$clingAutoload$modules/PileUpJetID.h")))  PileUpJetID;
+class __attribute__((annotate("$clingAutoload$modules/PhotonID.h")))  PhotonID;
 class __attribute__((annotate("$clingAutoload$modules/ConstituentFilter.h")))  ConstituentFilter;
 class __attribute__((annotate("$clingAutoload$modules/StatusPidFilter.h")))  StatusPidFilter;
 class __attribute__((annotate("$clingAutoload$modules/PdgCodeFilter.h")))  PdgCodeFilter;
@@ -5327,11 +5640,9 @@ class __attribute__((annotate("$clingAutoload$modules/ExampleModule.h")))  Examp
     static const char* payloadCode = R"DICTPAYLOAD(
 #line 1 "ModulesDict dictionary payload"
 
-#ifndef G__VECTOR_HAS_CLASS_ITERATOR
-  #define G__VECTOR_HAS_CLASS_ITERATOR 1
-#endif
 
 #define _BACKWARD_BACKWARD_WARNING_H
+// Inline headers
 /*
  *  Delphes: a framework for fast simulation of a generic collider experiment
  *  Copyright (C) 2012-2014  Universite catholique de Louvain (UCL), Belgium
@@ -5372,7 +5683,9 @@ class __attribute__((annotate("$clingAutoload$modules/ExampleModule.h")))  Examp
 #include "modules/ImpactParameterSmearing.h"
 #include "modules/TimeSmearing.h"
 #include "modules/SimpleCalorimeter.h"
+#include "modules/DenseTrackFilter.h"
 #include "modules/Calorimeter.h"
+#include "modules/DualReadoutCalorimeter.h"
 #include "modules/OldCalorimeter.h"
 #include "modules/Isolation.h"
 #include "modules/EnergyScale.h"
@@ -5389,6 +5702,7 @@ class __attribute__((annotate("$clingAutoload$modules/ExampleModule.h")))  Examp
 #include "modules/TrackPileUpSubtractor.h"
 #include "modules/TaggingParticlesSkimmer.h"
 #include "modules/PileUpJetID.h"
+#include "modules/PhotonID.h"
 #include "modules/ConstituentFilter.h"
 #include "modules/StatusPidFilter.h"
 #include "modules/PdgCodeFilter.h"
@@ -5423,7 +5737,9 @@ class __attribute__((annotate("$clingAutoload$modules/ExampleModule.h")))  Examp
 #pragma link C++ class ImpactParameterSmearing+;
 #pragma link C++ class TimeSmearing+;
 #pragma link C++ class SimpleCalorimeter+;
+#pragma link C++ class DenseTrackFilter+;
 #pragma link C++ class Calorimeter+;
+#pragma link C++ class DualReadoutCalorimeter+;
 #pragma link C++ class OldCalorimeter+;
 #pragma link C++ class Isolation+;
 #pragma link C++ class EnergyScale+;
@@ -5440,6 +5756,7 @@ class __attribute__((annotate("$clingAutoload$modules/ExampleModule.h")))  Examp
 #pragma link C++ class TrackPileUpSubtractor+;
 #pragma link C++ class TaggingParticlesSkimmer+;
 #pragma link C++ class PileUpJetID+;
+#pragma link C++ class PhotonID+;
 #pragma link C++ class ConstituentFilter+;
 #pragma link C++ class StatusPidFilter+;
 #pragma link C++ class PdgCodeFilter+;
@@ -5467,6 +5784,8 @@ class __attribute__((annotate("$clingAutoload$modules/ExampleModule.h")))  Examp
 "Cloner", payloadCode, "@",
 "ConstituentFilter", payloadCode, "@",
 "Delphes", payloadCode, "@",
+"DenseTrackFilter", payloadCode, "@",
+"DualReadoutCalorimeter", payloadCode, "@",
 "Efficiency", payloadCode, "@",
 "EnergyScale", payloadCode, "@",
 "EnergySmearing", payloadCode, "@",
@@ -5485,6 +5804,7 @@ class __attribute__((annotate("$clingAutoload$modules/ExampleModule.h")))  Examp
 "ParticlePropagator", payloadCode, "@",
 "PdgCodeFilter", payloadCode, "@",
 "PhotonConversions", payloadCode, "@",
+"PhotonID", payloadCode, "@",
 "PileUpJetID", payloadCode, "@",
 "PileUpMerger", payloadCode, "@",
 "RecoPuFilter", payloadCode, "@",
@@ -5509,7 +5829,7 @@ nullptr};
     if (!isInitialized) {
       TROOT::RegisterModule("ModulesDict",
         headers, includePaths, payloadCode, fwdDeclCode,
-        TriggerDictionaryInitialization_ModulesDict_Impl, {}, classesHeaders);
+        TriggerDictionaryInitialization_ModulesDict_Impl, {}, classesHeaders, /*has no C++ module*/false);
       isInitialized = true;
     }
   }

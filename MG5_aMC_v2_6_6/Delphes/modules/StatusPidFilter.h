@@ -38,7 +38,6 @@ class TObjArray;
 class StatusPidFilter: public DelphesModule
 {
 public:
-
   StatusPidFilter();
   ~StatusPidFilter();
 
@@ -47,8 +46,9 @@ public:
   void Finish();
 
 private:
-
   Double_t fPTMin; //!
+
+  Bool_t fRequireNotPileup; //!
 
   TIterator *fItInputArray; //!
 

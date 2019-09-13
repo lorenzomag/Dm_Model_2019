@@ -41,7 +41,6 @@ class DelphesFactory;
 class DelphesHepMCReader
 {
 public:
-
   DelphesHepMCReader();
   ~DelphesHepMCReader();
 
@@ -58,8 +57,9 @@ public:
   void AnalyzeEvent(ExRootTreeBranch *branch, long long eventNumber,
     TStopwatch *readStopWatch, TStopwatch *procStopWatch);
 
-private:
+  void AnalyzeWeight(ExRootTreeBranch *branch);
 
+private:
   void AnalyzeParticle(DelphesFactory *factory,
     TObjArray *allParticleOutputArray,
     TObjArray *stableParticleOutputArray,
@@ -79,10 +79,12 @@ private:
   double fMomentumCoefficient, fPositionCoefficient;
 
   int fStateSize;
-  std::vector< int > fState;
+  std::vector<int> fState;
 
   int fWeightSize;
-  std::vector< double > fWeight;
+  std::vector<double> fWeight;
+
+  double fCrossSection, fCrossSectionError;
 
   int fID1, fID2;
   double fX1, fX2, fScalePDF, fPDF1, fPDF2;
@@ -95,10 +97,8 @@ private:
 
   int fParticleCounter;
 
-  std::map< int, std::pair < int, int > > fMotherMap;
-  std::map< int, std::pair < int, int > > fDaughterMap;
+  std::map<int, std::pair<int, int> > fMotherMap;
+  std::map<int, std::pair<int, int> > fDaughterMap;
 };
 
 #endif // DelphesHepMCReader_h
-
-

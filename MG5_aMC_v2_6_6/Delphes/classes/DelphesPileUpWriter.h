@@ -27,19 +27,19 @@
  *
  */
 
+#include <stdint.h>
 #include <stdio.h>
-#include <rpc/types.h>
-#include <rpc/xdr.h>
+
+class DelphesXDRWriter;
 
 class DelphesPileUpWriter
 {
 public:
-
   DelphesPileUpWriter(const char *fileName);
 
   ~DelphesPileUpWriter();
 
-  void WriteParticle(int pid,
+  void WriteParticle(int32_t pid,
     float x, float y, float z, float t,
     float px, float py, float pz, float e);
 
@@ -48,20 +48,17 @@ public:
   void WriteIndex();
 
 private:
-
-  quad_t fEntries;
-  int fEntrySize;
-  quad_t fOffset;
+  int64_t fEntries;
+  int32_t fEntrySize;
+  int64_t fOffset;
 
   FILE *fPileUpFile;
-  char *fIndex;
-  char *fBuffer;
+  uint8_t *fIndex;
+  uint8_t *fBuffer;
 
-  XDR *fOutputXDR;
-  XDR *fIndexXDR;
-  XDR *fBufferXDR;
+  DelphesXDRWriter *fOutputWriter;
+  DelphesXDRWriter *fIndexWriter;
+  DelphesXDRWriter *fBufferWriter;
 };
 
 #endif // DelphesPileUpWriter_h
-
-

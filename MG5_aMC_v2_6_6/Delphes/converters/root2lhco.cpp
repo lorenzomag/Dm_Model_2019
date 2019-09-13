@@ -16,26 +16,26 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <stdexcept>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <sstream>
+#include <stdexcept>
 #include <string>
 
-#include <stdlib.h>
 #include <signal.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-#include "TROOT.h"
 #include "TApplication.h"
+#include "TROOT.h"
 
-#include "TFile.h"
 #include "TClonesArray.h"
+#include "TFile.h"
 
 #include "classes/DelphesClasses.h"
 
-#include "ExRootAnalysis/ExRootTreeReader.h"
 #include "ExRootAnalysis/ExRootProgressBar.h"
+#include "ExRootAnalysis/ExRootTreeReader.h"
 
 using namespace std;
 
@@ -55,13 +55,12 @@ LHC Olympics format discription from http://www.jthaler.net/olympicswiki/doku.ph
 class LHCOWriter
 {
 public:
-  LHCOWriter(ExRootTreeReader *treeReader, FILE *outputFile);
+  LHCOWriter(ExRootTreeReader *treeReader, FILE *outputFile, string JetBranchName);
   ~LHCOWriter();
 
   void ProcessEvent();
 
 private:
-
   void Reset();
   void Write();
 
@@ -75,7 +74,11 @@ private:
 
   void AnalyseMissingET();
 
-  enum {kIntParamSize = 2, kDblParamSize = 9};
+  enum
+  {
+    kIntParamSize = 2,
+    kDblParamSize = 9
+  };
   Int_t fIntParam[kIntParamSize];
   Double_t fDblParam[kDblParamSize];
 
@@ -106,7 +109,7 @@ private:
 
 //------------------------------------------------------------------------------
 
-LHCOWriter::LHCOWriter(ExRootTreeReader *treeReader, FILE *outputFile) :
+LHCOWriter::LHCOWriter(ExRootTreeReader *treeReader, FILE *outputFile, string jetBranchName) :
   fTriggerWord(0), fEventNumber(1), fTreeReader(0), fOutputFile(0),
   fBranchEvent(0), fBranchTrack(0), fBranchTower(0), fBranchPhoton(0),
   fBranchElectron(0), fBranchMuon(0), fBranchJet(0), fBranchMissingET(0)
@@ -127,12 +130,11 @@ LHCOWriter::LHCOWriter(ExRootTreeReader *treeReader, FILE *outputFile) :
   // reconstructed muons
   fBranchMuon = fTreeReader->UseBranch("Muon");
   // reconstructed jets
-  fBranchJet = fTreeReader->UseBranch("Jet");
+  fBranchJet = fTreeReader->UseBranch(jetBranchName.c_str());
   // missing transverse energy
   fBranchMissingET = fTreeReader->UseBranch("MissingET");
 
-  if(!fBranchEvent || !fBranchTrack || !fBranchTower || !fBranchPhoton ||
-     !fBranchElectron || !fBranchMuon || !fBranchJet || !fBranchMissingET)
+  if(!fBranchEvent || !fBranchTrack || !fBranchTower || !fBranchPhoton || !fBranchElectron || !fBranchMuon || !fBranchJet || !fBranchMissingET)
   {
     throw runtime_error("ROOT file doesn't contain all required branches");
   }
@@ -201,7 +203,7 @@ void LHCOWriter::AnalyseEvent()
 {
   Event *element;
 
-  element = static_cast<Event*>(fBranchEvent->At(0));
+  element = static_cast<Event *>(fBranchEvent->At(0));
 
   fprintf(fOutputFile, "%4d %13lld %8d\n", 0, element->Number, 0);
 
@@ -215,7 +217,7 @@ void LHCOWriter::AnalysePhotons()
   Photon *element;
 
   fItPhoton->Reset();
-  while((element = static_cast<Photon*>(fItPhoton->Next())))
+  while((element = static_cast<Photon *>(fItPhoton->Next())))
   {
     Reset();
 
@@ -238,7 +240,7 @@ void LHCOWriter::AnalyseElectrons()
   Electron *element;
 
   fItElectron->Reset();
-  while((element = static_cast<Electron*>(fItElectron->Next())))
+  while((element = static_cast<Electron *>(fItElectron->Next())))
   {
     Reset();
 
@@ -269,20 +271,20 @@ void LHCOWriter::AnalyseMuons()
 
   muonCounter = 0;
   fItMuon->Reset();
-  while((element = static_cast<Muon*>(fItMuon->Next())))
+  while((element = static_cast<Muon *>(fItMuon->Next())))
   {
     Reset();
 
     sumPT = 0.0;
     fItTrack->Reset();
-    while((track = static_cast<Track*>(fItTrack->Next())))
+    while((track = static_cast<Track *>(fItTrack->Next())))
     {
       if(element->P4().DeltaR(track->P4()) < 0.5) sumPT += track->PT;
     }
 
     sumET = 0.0;
     fItTower->Reset();
-    while((tower = static_cast<Tower*>(fItTower->Next())))
+    while((tower = static_cast<Tower *>(fItTower->Next())))
     {
       if(element->P4().DeltaR(tower->P4()) < 0.5) sumET += tower->ET;
     }
@@ -292,7 +294,7 @@ void LHCOWriter::AnalyseMuons()
     minIndex = -1;
     minDR = 1.0E9;
     fItJet->Reset();
-    while((jet = static_cast<Jet*>(fItJet->Next())))
+    while((jet = static_cast<Jet *>(fItJet->Next())))
     {
       if(jet->TauTag != 0)
       {
@@ -324,7 +326,7 @@ void LHCOWriter::AnalyseMuons()
       fDblParam[5] = fIntParam[0] + fBranchMuon->GetEntriesFast() - muonCounter + tauCounter + minIndex;
     }
 
-    ratET = sumET/element->PT;
+    ratET = sumET / element->PT;
     fDblParam[6] = Float_t(TMath::Nint(sumPT)) + (ratET < 1.0 ? ratET : 0.99);
 
     Write();
@@ -341,15 +343,15 @@ void LHCOWriter::AnalyseTauJets()
   Int_t counter;
 
   fItJet->Reset();
-  while((element = static_cast<Jet*>(fItJet->Next())))
+  while((element = static_cast<Jet *>(fItJet->Next())))
   {
     if(element->TauTag == 0) continue;
 
     Reset();
 
     counter = 1;
-   
-   /*
+
+    /*
     fItTrack->Reset();
     while((track = static_cast<Track*>(fItTrack->Next())))
     {
@@ -379,7 +381,7 @@ void LHCOWriter::AnalyseJets()
   Int_t counter;
 
   fItJet->Reset();
-  while((element = static_cast<Jet*>(fItJet->Next())))
+  while((element = static_cast<Jet *>(fItJet->Next())))
   {
     if(element->TauTag != 0) continue;
 
@@ -387,7 +389,7 @@ void LHCOWriter::AnalyseJets()
 
     counter = 0;
     fItTrack->Reset();
-    while((track = static_cast<Track*>(fItTrack->Next())))
+    while((track = static_cast<Track *>(fItTrack->Next())))
     {
       if(element->P4().DeltaR(track->P4()) < 0.5) ++counter;
     }
@@ -412,7 +414,7 @@ void LHCOWriter::AnalyseMissingET()
 {
   MissingET *element;
 
-  element = static_cast<MissingET*>(fBranchMissingET->At(0));
+  element = static_cast<MissingET *>(fBranchMissingET->At(0));
 
   Reset();
 
@@ -435,8 +437,29 @@ void SignalHandler(int sig)
 
 //---------------------------------------------------------------------------
 
+vector<string> ArgSplitter(char *arg)
+{
+  string s = arg;
+  string delimiter = "=";
+  vector<string> result;
+  size_t first = 0, last = 0;
+
+  while((last = s.find(delimiter, first)) != string::npos)
+  {
+    result.push_back(s.substr(first, last - first));
+    first = last + delimiter.length();
+  }
+
+  result.push_back(s.substr(first, last));
+
+  return result;
+}
+
+//---------------------------------------------------------------------------
+
 int main(int argc, char *argv[])
 {
+  int i, j;
   char appName[] = "root2lhco";
   stringstream message;
   FILE *outputFile = 0;
@@ -444,15 +467,36 @@ int main(int argc, char *argv[])
   LHCOWriter *writer = 0;
   ExRootTreeReader *treeReader = 0;
   Long64_t entry, allEntries;
+  string jetBranchName = "Jet";
+  vector<string> result;
 
-  if(argc < 2 || argc > 3)
+  if(argc < 2 || argc > 4)
   {
-    cerr << " Usage: " << appName << " input_file" << " [output_file]" << endl;
+    cerr << " Usage: " << appName << " input_file"
+         << " [output_file] [--jet-branch=Jet]" << endl;
     cerr << " input_file - input file in ROOT format," << endl;
     cerr << " output_file - output file in LHCO format," << endl;
     cerr << " with no output_file, or when output_file is -, write to standard output." << endl;
     return 1;
   }
+
+  i = 2;
+  while(i < argc)
+  {
+    result = ArgSplitter(argv[i]);
+
+    if(result.size() == 2 && result[0] == "--jet-branch")
+    {
+      jetBranchName = result[1];
+      for(j = i + 1; j < argc; ++j) argv[j - 1] = argv[j];
+      --argc;
+    }
+    else
+    {
+      ++i;
+    }
+  }
+  cerr << "** Using the jet branch named " << jetBranchName << endl;
 
   signal(SIGINT, SignalHandler);
 
@@ -493,7 +537,7 @@ int main(int argc, char *argv[])
     if(allEntries > 0)
     {
       // Create LHC Olympics converter:
-      writer = new LHCOWriter(treeReader, outputFile);
+      writer = new LHCOWriter(treeReader, outputFile, jetBranchName);
 
       ExRootProgressBar progressBar(allEntries - 1);
       // Loop over all events
@@ -530,5 +574,3 @@ int main(int argc, char *argv[])
     return 1;
   }
 }
-
-

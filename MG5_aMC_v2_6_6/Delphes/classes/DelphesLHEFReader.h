@@ -29,8 +29,8 @@
 
 #include <stdio.h>
 
-#include <vector>
 #include <utility>
+#include <vector>
 
 class TObjArray;
 class TStopwatch;
@@ -41,7 +41,6 @@ class DelphesFactory;
 class DelphesLHEFReader
 {
 public:
-
   DelphesLHEFReader();
   ~DelphesLHEFReader();
 
@@ -61,7 +60,6 @@ public:
   void AnalyzeWeight(ExRootTreeBranch *branch);
 
 private:
-
   void AnalyzeParticle(DelphesFactory *factory,
     TObjArray *allParticleOutputArray,
     TObjArray *stableParticleOutputArray,
@@ -78,14 +76,12 @@ private:
   int fEventCounter;
 
   int fParticleCounter, fProcessID;
-  double fWeight, fScalePDF, fAlphaQCD, fAlphaQED;
+  double fCrossSection, fWeight, fScalePDF, fAlphaQCD, fAlphaQED;
 
   int fPID, fStatus, fM1, fM2, fC1, fC2;
   double fPx, fPy, fPz, fE, fMass;
-  
-  std::vector< std::pair< int, double > > fWeightList;
+
+  std::vector<std::pair<int, double> > fWeightList;
 };
 
 #endif // DelphesLHEFReader_h
-
-

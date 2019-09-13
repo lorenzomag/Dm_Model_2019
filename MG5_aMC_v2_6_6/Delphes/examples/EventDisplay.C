@@ -10,8 +10,8 @@ R__LOAD_LIBRARY(libDelphesDisplay)
 #include "display/Delphes3DGeometry.h"
 #endif
 
-void EventDisplay(const char *datafile = "delphes_output.root",
-                  const char *configfile = "examples/delphes_card_ATLAS.tcl",
+void EventDisplay(const char *configfile = "delphes_card_CMS.tcl",
+                  const char *datafile = "delphes_output.root",
                   const char *ParticlePropagator = "ParticlePropagator",
                   const char *TrackingEfficiency = "ChargedHadronTrackingEfficiency",
                   const char *MuonEfficiency = "MuonEfficiency",
@@ -31,7 +31,7 @@ void EventDisplay(const char *datafile = "delphes_output.root",
 
     // display
     det3D_geom.getDetector()->Draw("ogl");
-  }
+  } 
   else
   {
     // create the detector representation
@@ -42,3 +42,4 @@ void EventDisplay(const char *datafile = "delphes_output.root",
     DelphesEventDisplay *display = new DelphesEventDisplay(configfile, datafile, det3D);
   }
 }
+

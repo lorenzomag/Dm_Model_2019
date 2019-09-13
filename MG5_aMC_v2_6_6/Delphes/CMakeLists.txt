@@ -25,9 +25,17 @@ IF(SET_RPATH)
   ENDIF(${isSystemDir} EQUAL -1)
 ENDIF(SET_RPATH)
     
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
+
 # Declare ROOT dependency
 find_package(ROOT COMPONENTS EG Eve Geom Gui GuiHtml GenVector Hist Physics Matrix Graf RIO Tree Gpad RGL MathCore)
 include(${ROOT_USE_FILE})
+
+# Declare Pythia8 dependancy
+find_package(Pythia8)
+if(PYTHIA8_FOUND)
+  include_directories(${PYTHIA8_INCLUDE_DIRS})
+endif()
 
 if(NOT DEFINED CMAKE_INSTALL_LIBDIR)
   set(CMAKE_INSTALL_LIBDIR "lib")
@@ -76,5 +84,10 @@ add_library(DelphesDisplay SHARED
 
 target_link_Libraries(Delphes ${ROOT_LIBRARIES} ${ROOT_COMPONENT_LIBRARIES})
 target_link_Libraries(DelphesDisplay ${ROOT_LIBRARIES} ${ROOT_COMPONENT_LIBRARIES})
+
+if(PYTHIA8_FOUND)
+  target_link_libraries(Delphes ${PYTHIA8_LIBRARIES} ${CMAKE_DL_LIBS})
+  target_link_libraries(DelphesDisplay ${PYTHIA8_LIBRARIES} ${CMAKE_DL_LIBS})
+endif()
 
 install(TARGETS Delphes DelphesDisplay DESTINATION lib)

@@ -43,6 +43,7 @@
 // Do NOT change. Changes will be lost next time file is generated
 
 #define R__DICTIONARY_FILENAME tmpdImodulesdIFastJetDict
+#define R__NO_DEPRECATION
 
 /*******************************************************************/
 #include <stddef.h>
@@ -75,7 +76,7 @@
 
 #include "TDataMember.h"
 
-// Since CINT ignores the std namespace, we need to do so in this file.
+// The generated code does not explicitly qualifies STL entities
 namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
@@ -98,7 +99,7 @@ namespace ROOT {
       ::FastJetFinder *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::FastJetFinder >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("FastJetFinder", ::FastJetFinder::Class_Version(), "modules/FastJetFinder.h", 48,
+         instance("FastJetFinder", ::FastJetFinder::Class_Version(), "modules/FastJetFinder.h", 51,
                   typeid(::FastJetFinder), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::FastJetFinder::Dictionary, isa_proxy, 4,
                   sizeof(::FastJetFinder) );
@@ -598,11 +599,9 @@ class __attribute__((annotate("$clingAutoload$modules/RunPUPPI.h")))  RunPUPPI;
     static const char* payloadCode = R"DICTPAYLOAD(
 #line 1 "FastJetDict dictionary payload"
 
-#ifndef G__VECTOR_HAS_CLASS_ITERATOR
-  #define G__VECTOR_HAS_CLASS_ITERATOR 1
-#endif
 
 #define _BACKWARD_BACKWARD_WARNING_H
+// Inline headers
 /*
  *  Delphes: a framework for fast simulation of a generic collider experiment
  *  Copyright (C) 2012-2014  Universite catholique de Louvain (UCL), Belgium
@@ -658,7 +657,7 @@ nullptr};
     if (!isInitialized) {
       TROOT::RegisterModule("FastJetDict",
         headers, includePaths, payloadCode, fwdDeclCode,
-        TriggerDictionaryInitialization_FastJetDict_Impl, {}, classesHeaders);
+        TriggerDictionaryInitialization_FastJetDict_Impl, {}, classesHeaders, /*has no C++ module*/false);
       isInitialized = true;
     }
   }

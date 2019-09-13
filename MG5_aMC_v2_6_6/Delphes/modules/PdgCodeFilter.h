@@ -38,7 +38,6 @@ class TObjArray;
 class PdgCodeFilter: public DelphesModule
 {
 public:
-
   PdgCodeFilter();
   ~PdgCodeFilter();
 
@@ -47,14 +46,13 @@ public:
   void Finish();
 
 private:
-
   Double_t fPTMin; //!
   Bool_t fInvert; //!
   Bool_t fRequireStatus; //!
   Int_t fStatus; //!
   Bool_t fRequireCharge; //!
   Int_t fCharge; //!
-
+  Bool_t fRequireNotPileup; //!
 
   std::vector<Int_t> fPdgCodes;
 

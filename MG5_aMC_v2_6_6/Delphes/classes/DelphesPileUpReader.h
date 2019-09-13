@@ -27,42 +27,39 @@
  *
  */
 
+#include <stdint.h>
 #include <stdio.h>
-#include <rpc/types.h>
-#include <rpc/xdr.h>
+
+class DelphesXDRReader;
 
 class DelphesPileUpReader
 {
 public:
-
   DelphesPileUpReader(const char *fileName);
 
   ~DelphesPileUpReader();
 
-  bool ReadParticle(int &pid,
+  bool ReadParticle(int32_t &pid,
     float &x, float &y, float &z, float &t,
     float &px, float &py, float &pz, float &e);
 
-  bool ReadEntry(quad_t entry);
+  bool ReadEntry(int64_t entry);
 
-  quad_t GetEntries() const { return fEntries; }
+  int64_t GetEntries() const { return fEntries; }
 
 private:
+  int64_t fEntries;
 
-  quad_t fEntries;
-
-  int fEntrySize;
-  int fCounter;
+  int32_t fEntrySize;
+  int32_t fCounter;
 
   FILE *fPileUpFile;
-  char *fIndex;
-  char *fBuffer;
+  uint8_t *fIndex;
+  uint8_t *fBuffer;
 
-  XDR *fInputXDR;
-  XDR *fIndexXDR;
-  XDR *fBufferXDR;
+  DelphesXDRReader *fInputReader;
+  DelphesXDRReader *fIndexReader;
+  DelphesXDRReader *fBufferReader;
 };
 
 #endif // DelphesPileUpReader_h
-
-

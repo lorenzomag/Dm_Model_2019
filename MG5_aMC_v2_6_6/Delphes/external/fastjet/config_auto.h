@@ -64,9 +64,7 @@
 #endif
 
 /* compile the deprecated parts of the interface using auto-ptr */
-#ifndef FASTJET_HAVE_AUTO_PTR_INTERFACE 
-#define FASTJET_HAVE_AUTO_PTR_INTERFACE  /**/ 
-#endif
+/* #undef HAVE_AUTO_PTR_INTERFACE */
 
 /* compiler supports c++14 deprecated keyword */
 /* #undef HAVE_CXX14_DEPRECATED */
@@ -168,7 +166,7 @@
 
 /* Define to the full name and version of this package. */
 #ifndef FASTJET_PACKAGE_STRING 
-#define FASTJET_PACKAGE_STRING  "FastJet 3.2.1" 
+#define FASTJET_PACKAGE_STRING  "FastJet 3.3.2" 
 #endif
 
 /* Define to the one symbol short name of this package. */
@@ -183,7 +181,7 @@
 
 /* Define to the version of this package. */
 #ifndef FASTJET_PACKAGE_VERSION 
-#define FASTJET_PACKAGE_VERSION  "3.2.1" 
+#define FASTJET_PACKAGE_VERSION  "3.3.2" 
 #endif
 
 /* Define to 1 if you have the ANSI C header files. */
@@ -193,7 +191,7 @@
 
 /* Version number of package */
 #ifndef FASTJET_VERSION 
-#define FASTJET_VERSION  "3.2.1" 
+#define FASTJET_VERSION  "3.3.2" 
 #endif
 
 /* Major version of this package */
@@ -203,17 +201,17 @@
 
 /* Minor version of this package */
 #ifndef FASTJET_VERSION_MINOR 
-#define FASTJET_VERSION_MINOR  2 
+#define FASTJET_VERSION_MINOR  3 
 #endif
 
 /* Version of the package under the form XYYZZ (instead of X.Y.Z) */
 #ifndef FASTJET_VERSION_NUMBER 
-#define FASTJET_VERSION_NUMBER  30201 
+#define FASTJET_VERSION_NUMBER  30302 
 #endif
 
 /* Patch version of this package */
 #ifndef FASTJET_VERSION_PATCHLEVEL 
-#define FASTJET_VERSION_PATCHLEVEL  1 
+#define FASTJET_VERSION_PATCHLEVEL  2 
 #endif
 
 /* Pre-release version of this package */

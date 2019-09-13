@@ -22,7 +22,7 @@
 /** \class ParticlePropagator
  *
  *  Propagates charged and neutral particles
- *  from a given vertex to a cylinder defined by its radius,
+ *  from a given vertex to a cylinder defined by its radius, 
  *  its half-length, centered at (0,0,0) and with its axis
  *  oriented along the z-axis.
  *
@@ -39,7 +39,6 @@ class TLorentzVector;
 class ParticlePropagator: public DelphesModule
 {
 public:
-
   ParticlePropagator();
   ~ParticlePropagator();
 
@@ -48,7 +47,6 @@ public:
   void Finish();
 
 private:
-
   Double_t fRadius, fRadius2, fRadiusMax, fHalfLength, fHalfLengthMax;
   Double_t fBz;
 
@@ -58,13 +56,10 @@ private:
   const TObjArray *fBeamSpotInputArray; //!
 
   TObjArray *fOutputArray; //!
+  TObjArray *fNeutralOutputArray; //!
   TObjArray *fChargedHadronOutputArray; //!
   TObjArray *fElectronOutputArray; //!
   TObjArray *fMuonOutputArray; //!
-  TObjArray *fPhiDMOutputArray; //!
-  TObjArray *fChiDMOutputArray; //!
-  TObjArray *fPsiDMOutputArray; //!
-  TObjArray *fNNDMOutputArray; //!
 
   ClassDef(ParticlePropagator, 1)
 };

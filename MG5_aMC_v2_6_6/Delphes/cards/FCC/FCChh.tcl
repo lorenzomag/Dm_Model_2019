@@ -3,7 +3,7 @@
 #
 #  Main authors:  Michele Selvaggi (CERN)
 #
-#  Released on: Apr. 6th, 2017
+#  Released on: Dec. 1st, 2017
 #
 #  Configuration: FCC-hh baseline detector
 #
@@ -12,8 +12,13 @@
 #######################################
 
 set ExecutionPath {
-
+  
   ParticlePropagator
+  TrackMergerProp
+
+  DenseProp
+  DenseMergeTracks
+  DenseTrackFilter
 
   ChargedHadronTrackingEfficiency
   ElectronTrackingEfficiency
@@ -47,9 +52,25 @@ set ExecutionPath {
   MissingET
   GenMissingET
 
-  GenJetFinder
-  FastJetFinder
-  FatJetFinder
+  GenJetFinder02
+  GenJetFinder04
+  GenJetFinder08
+  GenJetFinder15
+
+  FastJetFinder02
+  FastJetFinder04
+  FastJetFinder08
+  FastJetFinder15
+
+  CaloJetFinder02
+  CaloJetFinder04
+  CaloJetFinder08
+  CaloJetFinder15
+
+  TrackJetFinder02
+  TrackJetFinder04
+  TrackJetFinder08
+  TrackJetFinder15
 
   JetEnergyScale
 
@@ -66,13 +87,12 @@ set ExecutionPath {
   TreeWriter
 }
 
-#################################
-# Propagate particles in cylinder
-#################################
+#####################################
+# Track propagation to calorimeters
+#####################################
 
 module ParticlePropagator ParticlePropagator {
   set InputArray Delphes/stableParticles
-
   set OutputArray stableParticles
   set ChargedHadronOutputArray chargedHadrons
   set ElectronOutputArray electrons
@@ -87,12 +107,93 @@ module ParticlePropagator ParticlePropagator {
   set Bz 4.0
 }
 
+
+##############
+# Track merger
+##############
+
+module Merger TrackMergerProp {
+# add InputArray InputArray
+  add InputArray ParticlePropagator/chargedHadrons
+  add InputArray ParticlePropagator/electrons
+  add InputArray ParticlePropagator/muons
+  set OutputArray tracks
+}
+
+
+####################################
+# Track propagation to pseudo-pixel
+####################################
+
+module ParticlePropagator DenseProp {
+
+  set InputArray TrackMergerProp/tracks
+
+  # radius of the magnetic field coverage, in m
+  set Radius 0.45
+  set RadiusMax 1.5
+  # half-length of the magnetic field coverage, in m
+  set HalfLength 0.8
+  set HalfLengthMax 5
+
+  # magnetic field
+  set Bz 4.0
+}
+
+#####################
+# Dense Track merger
+#####################
+
+module Merger DenseMergeTracks {
+# add InputArray InputArray
+  add InputArray DenseProp/chargedHadrons
+  add InputArray DenseProp/electrons
+  add InputArray DenseProp/muons
+  set OutputArray tracks
+}
+
+
+######################
+#   Dense Track Filter
+######################
+
+module DenseTrackFilter DenseTrackFilter {
+
+  set TrackInputArray DenseMergeTracks/tracks
+
+  set TrackOutputArray tracks
+  set ChargedHadronOutputArray chargedHadrons
+  set ElectronOutputArray electrons
+  set MuonOutputArray muons
+
+  set EtaPhiRes 0.001
+  set EtaMax 6.0
+
+  set pi [expr {acos(-1)}]
+
+  set nbins_phi [expr {$pi/$EtaPhiRes} ]
+  set nbins_phi [expr {int($nbins_phi)} ]
+
+  set PhiBins {}
+  for {set i -$nbins_phi} {$i <= $nbins_phi} {incr i} {
+    add PhiBins [expr {$i * $pi/$nbins_phi}]
+  }
+
+  set nbins_eta [expr {$EtaMax/$EtaPhiRes} ]
+  set nbins_eta [expr {int($nbins_eta)} ]
+
+  for {set i -$nbins_eta} {$i <= $nbins_eta} {incr i} {
+    set eta [expr {$i * $EtaPhiRes}]
+    add EtaPhiBins $eta $PhiBins
+  }
+}
+
 ####################################
 # Charged hadron tracking efficiency
 ####################################
 
 module Efficiency ChargedHadronTrackingEfficiency {
-  set InputArray ParticlePropagator/chargedHadrons
+  set InputArray DenseTrackFilter/chargedHadrons
   set OutputArray chargedHadrons
 
  # TBC (which eta_max ? which pT min?)
@@ -115,7 +216,7 @@ module Efficiency ChargedHadronTrackingEfficiency {
 ##############################
 
 module Efficiency ElectronTrackingEfficiency {
-  set InputArray ParticlePropagator/electrons
+  set InputArray DenseTrackFilter/electrons
   set OutputArray electrons
 
 # TBC (which eta_max ?)
@@ -131,12 +232,13 @@ module Efficiency ElectronTrackingEfficiency {
   (abs(eta) > 6.0) * (0.00)}
 
 }
+
 ##########################
 # Muon tracking efficiency
 ##########################
 
 module Efficiency MuonTrackingEfficiency {
-  set InputArray ParticlePropagator/muons
+  set InputArray DenseTrackFilter/muons
   set OutputArray muons
 
 # TBC (which eta_max ? why eff = 0 for 4 < eta < 6 ? for now put the same as central)
@@ -197,6 +299,7 @@ module Merger TrackMerger {
   add InputArray MuonMomentumSmearing/muons
   set OutputArray tracks
 }
+
 
 #############
 #   ECAL
@@ -399,6 +502,7 @@ module Merger Calorimeter {
 # add InputArray InputArray
   add InputArray ECal/ecalTowers
   add InputArray HCal/hcalTowers
+  add InputArray MuonMomentumSmearing/muons
   set OutputArray towers
 }
 
@@ -472,25 +576,6 @@ module PdgCodeFilter NeutrinoFilter {
 }
 
 
-#####################
-# MC truth jet finder
-#####################
-
-# TBC: is jet radius fine?
-
-module FastJetFinder GenJetFinder {
-#  set InputArray NeutrinoFilter/filteredParticles
-  set InputArray Delphes/stableParticles
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.4
-
-  set JetPTMin 5.0
-}
-
 #########################
 # Gen Missing ET merger
 ########################
@@ -504,33 +589,171 @@ module Merger GenMissingET {
 
 
 
-############
-# Jet finder
-############
+#####################
+# MC truth jet finder
+#####################
 
-# TBC need to include jet substructure variables
-# TBC is jet radius fine?
+# TBC: is jet radius fine?
 
-module FastJetFinder FastJetFinder {
-#  set InputArray Calorimeter/towers
+module FastJetFinder GenJetFinder02 {
+  set InputArray NeutrinoFilter/filteredParticles
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.2
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.2
+
+  set JetPTMin 25.0
+}
+
+
+#####################
+# MC truth jet finder
+#####################
+
+# TBC: is jet radius fine?
+
+module FastJetFinder GenJetFinder04 {
+  set InputArray NeutrinoFilter/filteredParticles
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.4
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.4
+
+  set JetPTMin 25.0
+}
+#####################
+# MC truth jet finder
+#####################
+
+# TBC: is jet radius fine?
+
+module FastJetFinder GenJetFinder08 {
+  set InputArray NeutrinoFilter/filteredParticles
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.8
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.8
+
+  set JetPTMin 25.0
+}
+
+#####################
+# MC truth jet finder
+#####################
+
+# TBC: is jet radius fine?
+
+module FastJetFinder GenJetFinder15 {
+  set InputArray NeutrinoFilter/filteredParticles
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 1.5
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 1.5
+
+  set JetPTMin 25.0
+}
+
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder FastJetFinder02 {
   set InputArray EFlowMerger/eflow
 
   set OutputArray jets
 
   # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  # 7: anti-kt with winner-take-all axis (for N-subjettiness), 8 N-jettiness
-
   set JetAlgorithm 6
-  set ParameterR 0.4
+  set ParameterR 0.2
 
-  set JetPTMin 30.0
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.2
+
+  set JetPTMin 25.0
 }
 
 ##################
-# Fat Jet finder
+# Fast Jet finder
 ##################
 
-module FastJetFinder FatJetFinder {
+module FastJetFinder FastJetFinder04 {
+  set InputArray EFlowMerger/eflow
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.4
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.4
+
+  set JetPTMin 25.0
+}
+
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder FastJetFinder08 {
   set InputArray EFlowMerger/eflow
 
   set OutputArray jets
@@ -543,23 +766,242 @@ module FastJetFinder FatJetFinder {
   set Beta 1.0
   set AxisMode 4
 
-  set ComputeTrimming 1
-  set RTrim 0.2
-  set PtFracTrim 0.05
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.8
 
-  set ComputePruning 1
-  set ZcutPrun 0.1
-  set RcutPrun 0.5
-  set RPrun 0.8
+  set JetPTMin 25.0
+}
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder FastJetFinder15 {
+  set InputArray EFlowMerger/eflow
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 1.5
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 1.5
+
+  set JetPTMin 25.0
+}
+
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder CaloJetFinder02 {
+  set InputArray Calorimeter/towers
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.2
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.2
+
+  set JetPTMin 25.0
+}
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder CaloJetFinder04 {
+  set InputArray Calorimeter/towers
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.4
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.4
+
+  set JetPTMin 25.0
+}
+
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder CaloJetFinder08 {
+  set InputArray Calorimeter/towers
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.8
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
 
   set ComputeSoftDrop 1
   set BetaSoftDrop 0.0
   set SymmetryCutSoftDrop 0.1
   set R0SoftDrop 0.8
 
-  set JetPTMin 200.0
+  set JetPTMin 25.0
 }
 
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder CaloJetFinder15 {
+  set InputArray Calorimeter/towers
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 1.5
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 1.5
+
+  set JetPTMin 25.0
+}
+
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder TrackJetFinder02 {
+  set InputArray TrackMerger/tracks
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.2
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.2
+
+  set JetPTMin 25.0
+}
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder TrackJetFinder04 {
+  set InputArray TrackMerger/tracks
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.4
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.4
+
+  set JetPTMin 25.0
+}
+
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder TrackJetFinder08 {
+  set InputArray TrackMerger/tracks
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 0.8
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 0.8
+
+  set JetPTMin 25.0
+}
+
+##################
+# Fast Jet finder
+##################
+
+module FastJetFinder TrackJetFinder15 {
+  set InputArray TrackMerger/tracks
+
+  set OutputArray jets
+
+  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
+  set JetAlgorithm 6
+  set ParameterR 1.5
+
+  set ComputeNsubjettiness 1
+  set Beta 1.0
+  set AxisMode 4
+
+  set ComputeSoftDrop 1
+  set BetaSoftDrop 0.0
+  set SymmetryCutSoftDrop 0.1
+  set R0SoftDrop 1.5
+
+  set JetPTMin 25.0
+}
 
 
 ##################
@@ -567,7 +1009,7 @@ module FastJetFinder FatJetFinder {
 ##################
 
 module EnergyScale JetEnergyScale {
-  set InputArray FastJetFinder/jets
+  set InputArray FastJetFinder04/jets
   set OutputArray jets
 
  # scale formula for jets
@@ -679,6 +1121,7 @@ module Isolation MuonIsolation {
 }
 
 
+
 ###########
 # b-tagging
 ###########
@@ -691,34 +1134,34 @@ module BTagging BTagging {
   add EfficiencyFormula {0} {
 
   (pt <= 10.0)                       * (0.00) +
-  (abs(eta) < 2.5)                   * (pt > 10.0 && pt < 500)      * (0.001) + \
-  (abs(eta) < 2.5)                   * (pt > 500.0 && pt < 20000.0) * (0.001)*(1.0 - pt/20000.) + \
-  (abs(eta) < 2.5)                   * (pt > 20000.0)               * (0.000) + \
-  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 10.0 && pt < 500)      * (0.00075) + \
-  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 500.0 && pt < 20000.0) * (0.00075)*(1.0 - pt/20000.) + \
-  (abs(eta) < 2.5 && abs(eta) < 4.0) * (pt > 20000.0)               * (0.000) + \
+  (abs(eta) < 2.5)                   * (pt > 10.0 && pt < 500)      * (0.01) + \
+  (abs(eta) < 2.5)                   * (pt > 500.0 && pt < 15000.0) * (0.01)*(1.0 - pt/15000.) + \
+  (abs(eta) < 2.5)                   * (pt > 15000.0)               * (0.00) + \
+  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 10.0 && pt < 500)      * (0.0075) + \
+  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 500.0 && pt < 15000.0) * (0.0075)*(1.0 - pt/15000.) + \
+  (abs(eta) < 2.5 && abs(eta) < 4.0) * (pt > 15000.0)               * (0.000) + \
   (abs(eta) > 4.0) * (0.00)}
 
   add EfficiencyFormula {4} {
 
   (pt <= 10.0)                       * (0.00) +
-  (abs(eta) < 2.5)                   * (pt > 10.0 && pt < 500)      * (0.04) + \
-  (abs(eta) < 2.5)                   * (pt > 500.0 && pt < 20000.0) * (0.04)*(1.0 - pt/20000.) + \
-  (abs(eta) < 2.5)                   * (pt > 20000.0)               * (0.000) + \
+  (abs(eta) < 2.5)                   * (pt > 10.0 && pt < 500)      * (0.05) + \
+  (abs(eta) < 2.5)                   * (pt > 500.0 && pt < 15000.0) * (0.05)*(1.0 - pt/15000.) + \
+  (abs(eta) < 2.5)                   * (pt > 15000.0)               * (0.000) + \
   (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 10.0 && pt < 500)      * (0.03) + \
-  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 500.0 && pt < 20000.0) * (0.03)*(1.0 - pt/20000.) + \
-  (abs(eta) < 2.5 && abs(eta) < 4.0) * (pt > 20000.0)               * (0.000) + \
+  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 500.0 && pt < 15000.0) * (0.03)*(1.0 - pt/15000.) + \
+  (abs(eta) < 2.5 && abs(eta) < 4.0) * (pt > 15000.0)               * (0.000) + \
   (abs(eta) > 4.0) * (0.00)}
 
   add EfficiencyFormula {5} {
 
   (pt <= 10.0)                                                       * (0.00) +
   (abs(eta) < 2.5)                    * (pt > 10.0 && pt < 500)      * (0.85) + 
-  (abs(eta) < 2.5)                    * (pt > 500.0 && pt < 20000.0) * (0.85)*(1.0 - pt/20000.) + 
-  (abs(eta) < 2.5)                    * (pt > 20000.0)               * (0.000) + 
+  (abs(eta) < 2.5)                    * (pt > 500.0 && pt < 15000.0) * (0.85)*(1.0 - pt/15000.) + 
+  (abs(eta) < 2.5)                    * (pt > 15000.0)               * (0.000) + 
   (abs(eta) >= 2.5 && abs(eta) < 4.0) * (pt > 10.0 && pt < 500)      * (0.64) + 
-  (abs(eta) >= 2.5 && abs(eta) < 4.0) * (pt > 500.0 && pt < 20000.0) * (0.64)*(1.0 - pt/20000.) + 
-  (abs(eta) <= 2.5 && abs(eta) < 4.0) * (pt > 20000.0)               * (0.000) + 
+  (abs(eta) >= 2.5 && abs(eta) < 4.0) * (pt > 500.0 && pt < 15000.0) * (0.64)*(1.0 - pt/15000.) + 
+  (abs(eta) <= 2.5 && abs(eta) < 4.0) * (pt > 15000.0)               * (0.000) + 
   (abs(eta) >= 4.0) * (0.00)}
 
 }
@@ -741,13 +1184,13 @@ module BTagging CTagging {
   add EfficiencyFormula {4} {
 
   (pt <= 10.0)     * (0.00) +
-  (abs(eta) < 4.0) * (pt > 10.0) * (0.10) + \
+  (abs(eta) < 4.0) * (pt > 10.0) * (0.25) + \
   (abs(eta) > 4.0) * (pt > 10.0) * (0.00)}
 
   add EfficiencyFormula {5} {
 
   (pt <= 10.0)     * (0.00) +
-  (abs(eta) < 4.0) * (pt > 10.0) * (0.25) + \
+  (abs(eta) < 4.0) * (pt > 10.0) * (0.03) + \
   (abs(eta) > 4.0) * (pt > 10.0) * (0.00)}
 
 }
@@ -795,11 +1238,11 @@ module TauTagging TauTagging {
   add EfficiencyFormula {15} {
 
   (pt <= 10.0)                                                       * (0.00) +
-  (abs(eta) < 2.5) * (pt > 10.0 && pt < 5000.0)                      * (0.6)                      + \
-  (abs(eta) < 2.5) * (pt > 5000.0 && pt < 34000.0)                   * (0.6) *(8./9. - pt/30000.) + \
+  (abs(eta) < 2.5) * (pt > 10.0 && pt < 5000.0)                      * (0.8)                      + \
+  (abs(eta) < 2.5) * (pt > 5000.0 && pt < 34000.0)                   * (0.8) *(8./9. - pt/30000.) + \
   (abs(eta) < 2.5)                   * (pt > 34000.0)                * (0.000) + \
-  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 10.0 && pt < 5000.0)    * (0.45) + \
-  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 5000.0 && pt < 34000.0) * (0.45)*(8./9. - pt/30000.) + \
+  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 10.0 && pt < 5000.0)    * (0.65) + \
+  (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 5000.0 && pt < 34000.0) * (0.65)*(8./9. - pt/30000.) + \
   (abs(eta) > 2.5 && abs(eta) < 4.0) * (pt > 34000.0)                * (0.00) + \
   (abs(eta) > 4.0)                                                   * (0.00)}
 
@@ -828,8 +1271,8 @@ module TreeWriter TreeWriter {
 # add Branch InputArray BranchName BranchClass
   add Branch Delphes/allParticles Particle GenParticle
 
-  add Branch GenJetFinder/jets GenJet Jet
   add Branch GenMissingET/momentum GenMissingET MissingET
+  add Branch GenJetFinder02/jets GenJet Jet
 
   add Branch TrackMerger/tracks Track Track
   add Branch Calorimeter/towers Tower Tower
@@ -843,7 +1286,25 @@ module TreeWriter TreeWriter {
   add Branch UniqueObjectFinder/muons Muon Muon
   add Branch UniqueObjectFinder/jets Jet Jet
 
-  add Branch FatJetFinder/jets FatJet Jet
+  add Branch GenJetFinder02/jets GenJet02 Jet
+  add Branch GenJetFinder04/jets GenJet04 Jet
+  add Branch GenJetFinder08/jets GenJet08 Jet
+  add Branch GenJetFinder15/jets GenJet15 Jet
+
+  add Branch FastJetFinder02/jets ParticleFlowJet02 Jet
+  add Branch FastJetFinder04/jets ParticleFlowJet04 Jet
+  add Branch FastJetFinder08/jets ParticleFlowJet08 Jet
+  add Branch FastJetFinder15/jets ParticleFlowJet15 Jet
+
+  add Branch CaloJetFinder02/jets CaloJet02 Jet
+  add Branch CaloJetFinder04/jets CaloJet04 Jet
+  add Branch CaloJetFinder08/jets CaloJet08 Jet
+  add Branch CaloJetFinder15/jets CaloJet15 Jet
+
+  add Branch TrackJetFinder02/jets TrackJet02 Jet
+  add Branch TrackJetFinder04/jets TrackJet04 Jet
+  add Branch TrackJetFinder08/jets TrackJet08 Jet
+  add Branch TrackJetFinder15/jets TrackJet15 Jet
 
   add Branch MissingET/momentum MissingET MissingET
   add Branch ScalarHT/energy ScalarHT ScalarHT

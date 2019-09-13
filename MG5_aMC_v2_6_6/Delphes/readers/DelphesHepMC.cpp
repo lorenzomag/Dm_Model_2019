@@ -16,30 +16,30 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <stdexcept>
 #include <iostream>
 #include <sstream>
+#include <stdexcept>
 
 #include <signal.h>
 
-#include "TROOT.h"
 #include "TApplication.h"
+#include "TROOT.h"
 
-#include "TFile.h"
-#include "TObjArray.h"
-#include "TStopwatch.h"
 #include "TDatabasePDG.h"
-#include "TParticlePDG.h"
+#include "TFile.h"
 #include "TLorentzVector.h"
+#include "TObjArray.h"
+#include "TParticlePDG.h"
+#include "TStopwatch.h"
 
-#include "modules/Delphes.h"
 #include "classes/DelphesClasses.h"
 #include "classes/DelphesFactory.h"
 #include "classes/DelphesHepMCReader.h"
+#include "modules/Delphes.h"
 
-#include "ExRootAnalysis/ExRootTreeWriter.h"
-#include "ExRootAnalysis/ExRootTreeBranch.h"
 #include "ExRootAnalysis/ExRootProgressBar.h"
+#include "ExRootAnalysis/ExRootTreeBranch.h"
+#include "ExRootAnalysis/ExRootTreeWriter.h"
 
 using namespace std;
 
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
   TFile *outputFile = 0;
   TStopwatch readStopWatch, procStopWatch;
   ExRootTreeWriter *treeWriter = 0;
-  ExRootTreeBranch *branchEvent = 0;
+  ExRootTreeBranch *branchEvent = 0, *branchWeight = 0;
   ExRootConfReader *confReader = 0;
   Delphes *modularDelphes = 0;
   DelphesFactory *factory = 0;
@@ -70,10 +70,12 @@ int main(int argc, char *argv[])
   DelphesHepMCReader *reader = 0;
   Int_t i, maxEvents, skipEvents;
   Long64_t length, eventCounter;
-  
+
   if(argc < 3)
   {
-    cout << " Usage: " << appName << " config_file" << " output_file" << " [input_file(s)]" << endl;
+    cout << " Usage: " << appName << " config_file"
+         << " output_file"
+         << " [input_file(s)]" << endl;
     cout << " config_file - configuration file in Tcl format," << endl;
     cout << " output_file - output file in ROOT format," << endl;
     cout << " input_file(s) - input file(s) in HepMC format," << endl;
@@ -102,6 +104,7 @@ int main(int argc, char *argv[])
     treeWriter = new ExRootTreeWriter(outputFile, "Delphes");
 
     branchEvent = treeWriter->NewBranch("Event", HepMCEvent::Class());
+    branchWeight = treeWriter->NewBranch("Weight", Weight::Class());
 
     confReader = new ExRootConfReader;
     confReader->ReadFile(argv[1]);
@@ -176,9 +179,7 @@ int main(int argc, char *argv[])
       modularDelphes->Clear();
       reader->Clear();
       readStopWatch.Start();
-      while((maxEvents <= 0 || eventCounter - skipEvents < maxEvents) &&
-        reader->ReadBlock(factory, allParticleOutputArray,
-        stableParticleOutputArray, partonOutputArray) && !interrupted)
+      while((maxEvents <= 0 || eventCounter - skipEvents < maxEvents) && reader->ReadBlock(factory, allParticleOutputArray, stableParticleOutputArray, partonOutputArray) && !interrupted)
       {
         if(reader->EventReady())
         {
@@ -193,6 +194,7 @@ int main(int argc, char *argv[])
             procStopWatch.Stop();
 
             reader->AnalyzeEvent(branchEvent, eventCounter, &readStopWatch, &procStopWatch);
+            reader->AnalyzeWeight(branchWeight);
 
             treeWriter->Fill();
 
@@ -214,8 +216,7 @@ int main(int argc, char *argv[])
       if(inputFile != stdin) fclose(inputFile);
 
       ++i;
-    }
-    while(i < argc);
+    } while(i < argc);
 
     modularDelphes->FinishTask();
     treeWriter->Write();
