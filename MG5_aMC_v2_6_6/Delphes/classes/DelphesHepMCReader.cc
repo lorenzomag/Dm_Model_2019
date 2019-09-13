@@ -61,6 +61,76 @@ DelphesHepMCReader::DelphesHepMCReader() :
   fBuffer = new char[kBufferSize];
 
   fPDG = TDatabasePDG::Instance();
+
+
+  // LP: Adding Dark Matter model candidate particles phi/S, psi, and NNs
+  // masses will be modified later in AnalyzeParticle method
+  // to be checked: stable boolean and width value for all 
+  fPDG->AddParticle("~phi+","~phi+",
+                    0,        // mass
+                    1,        // stable (bool)
+                    0,        // width (meaningless if stable==1)
+                    3,        // Charge in units of |e|/3
+                    "scalar", // Particle classes
+                    5000001  // PDGcode
+                  );
+
+  fPDG->AddAntiParticle("~phi-",-5000001);
+
+  fPDG->AddParticle("~chi+","~chi+",
+                    0,        // mass
+                    1,        // stable (bool)
+                    0,        // width (meaningless if stable==1)
+                    3,        // Charge in units of |e|/3
+                    "vector-like gauge singlet", // Particle classes
+                    200001  // PDGcode
+                  );
+
+  fPDG->AddAntiParticle("~chi-",-200001);
+
+  fPDG->AddParticle("~psi","~psi",
+                    0,        // mass
+                    1,        // stable (bool)
+                    0,        // width (meaningless if stable==1)
+                    0,        // Charge in units of |e|/3
+                    "Dark matter candidate", // Particle classes
+                    200001  // PDGcode
+                  );
+
+  fPDG->AddAntiParticle("~psi",-200001);
+
+  fPDG->AddParticle("NN1","NN1",
+                    0,        // mass
+                    1,        // stable (bool)
+                    0,        // width (meaningless if stable==1)
+                    0,        // Charge in units of |e|/3
+                    "Heavy Neutrino", // Particle classes
+                    200002  // PDGcode
+                  );
+
+  fPDG->AddAntiParticle("NN1~",-200002);
+
+  fPDG->AddParticle("NN2","NN2",
+                    0,        // mass
+                    1,        // stable (bool)
+                    0,        // width (meaningless if stable==1)
+                    0,        // Charge in units of |e|/3
+                    "Heavy Neutrino", // Particle classes
+                    200003  // PDGcode
+                  );
+  fPDG->AddAntiParticle("NN2~",-200003);
+
+
+  fPDG->AddParticle("NN3","NN3",
+                    0,        // mass
+                    1,        // stable (bool)
+                    0,        // width (meaningless if stable==1)
+                    0,        // Charge in units of |e|/3
+                    "Heavy Neutrino", // Particle classes
+                    200004  // PDGcode
+                  );
+  fPDG->AddAntiParticle("NN3~",-200004);
+
 }
 
 //---------------------------------------------------------------------------

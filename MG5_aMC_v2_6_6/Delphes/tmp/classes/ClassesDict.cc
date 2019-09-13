@@ -56,6 +56,10 @@
 #pragma link C++ class Photon+;
 #pragma link C++ class Electron+;
 #pragma link C++ class Muon+;
+#pragma link C++ class PhiDM+;
+#pragma link C++ class ChiDM+;
+#pragma link C++ class PsiDM+;
+#pragma link C++ class NNDM+;
 #pragma link C++ class Jet+;
 #pragma link C++ class Track+;
 #pragma link C++ class Tower+;
@@ -64,7 +68,6 @@
 #pragma link C++ class Candidate+;
 
 #endif
-
 // Do NOT change. Changes will be lost next time file is generated
 
 #define R__DICTIONARY_FILENAME tmpdIclassesdIClassesDict
@@ -653,6 +656,134 @@ namespace ROOT {
 } // end of namespace ROOT
 
 namespace ROOT {
+   static void *new_PhiDM(void *p = 0);
+   static void *newArray_PhiDM(Long_t size, void *p);
+   static void delete_PhiDM(void *p);
+   static void deleteArray_PhiDM(void *p);
+   static void destruct_PhiDM(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::PhiDM*)
+   {
+      ::PhiDM *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::PhiDM >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("PhiDM", ::PhiDM::Class_Version(), "classes/DelphesClasses.h", 359,
+                  typeid(::PhiDM), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::PhiDM::Dictionary, isa_proxy, 4,
+                  sizeof(::PhiDM) );
+      instance.SetNew(&new_PhiDM);
+      instance.SetNewArray(&newArray_PhiDM);
+      instance.SetDelete(&delete_PhiDM);
+      instance.SetDeleteArray(&deleteArray_PhiDM);
+      instance.SetDestructor(&destruct_PhiDM);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::PhiDM*)
+   {
+      return GenerateInitInstanceLocal((::PhiDM*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::PhiDM*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_ChiDM(void *p = 0);
+   static void *newArray_ChiDM(Long_t size, void *p);
+   static void delete_ChiDM(void *p);
+   static void deleteArray_ChiDM(void *p);
+   static void destruct_ChiDM(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::ChiDM*)
+   {
+      ::ChiDM *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::ChiDM >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("ChiDM", ::ChiDM::Class_Version(), "classes/DelphesClasses.h", 395,
+                  typeid(::ChiDM), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::ChiDM::Dictionary, isa_proxy, 4,
+                  sizeof(::ChiDM) );
+      instance.SetNew(&new_ChiDM);
+      instance.SetNewArray(&newArray_ChiDM);
+      instance.SetDelete(&delete_ChiDM);
+      instance.SetDeleteArray(&deleteArray_ChiDM);
+      instance.SetDestructor(&destruct_ChiDM);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::ChiDM*)
+   {
+      return GenerateInitInstanceLocal((::ChiDM*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::ChiDM*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_PsiDM(void *p = 0);
+   static void *newArray_PsiDM(Long_t size, void *p);
+   static void delete_PsiDM(void *p);
+   static void deleteArray_PsiDM(void *p);
+   static void destruct_PsiDM(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::PsiDM*)
+   {
+      ::PsiDM *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::PsiDM >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("PsiDM", ::PsiDM::Class_Version(), "classes/DelphesClasses.h", 431,
+                  typeid(::PsiDM), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::PsiDM::Dictionary, isa_proxy, 4,
+                  sizeof(::PsiDM) );
+      instance.SetNew(&new_PsiDM);
+      instance.SetNewArray(&newArray_PsiDM);
+      instance.SetDelete(&delete_PsiDM);
+      instance.SetDeleteArray(&deleteArray_PsiDM);
+      instance.SetDestructor(&destruct_PsiDM);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::PsiDM*)
+   {
+      return GenerateInitInstanceLocal((::PsiDM*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::PsiDM*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
+   static void *new_NNDM(void *p = 0);
+   static void *newArray_NNDM(Long_t size, void *p);
+   static void delete_NNDM(void *p);
+   static void deleteArray_NNDM(void *p);
+   static void destruct_NNDM(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::NNDM*)
+   {
+      ::NNDM *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::NNDM >(0);
+      static ::ROOT::TGenericClassInfo 
+         instance("NNDM", ::NNDM::Class_Version(), "classes/DelphesClasses.h", 467,
+                  typeid(::NNDM), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &::NNDM::Dictionary, isa_proxy, 4,
+                  sizeof(::NNDM) );
+      instance.SetNew(&new_NNDM);
+      instance.SetNewArray(&newArray_NNDM);
+      instance.SetDelete(&delete_NNDM);
+      instance.SetDeleteArray(&deleteArray_NNDM);
+      instance.SetDestructor(&destruct_NNDM);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::NNDM*)
+   {
+      return GenerateInitInstanceLocal((::NNDM*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::NNDM*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+} // end of namespace ROOT
+
+namespace ROOT {
    static void *new_Jet(void *p = 0);
    static void *newArray_Jet(Long_t size, void *p);
    static void delete_Jet(void *p);
@@ -665,7 +796,7 @@ namespace ROOT {
       ::Jet *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::Jet >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("Jet", ::Jet::Class_Version(), "classes/DelphesClasses.h", 358,
+         instance("Jet", ::Jet::Class_Version(), "classes/DelphesClasses.h", 502,
                   typeid(::Jet), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::Jet::Dictionary, isa_proxy, 4,
                   sizeof(::Jet) );
@@ -697,7 +828,7 @@ namespace ROOT {
       ::Track *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::Track >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("Track", ::Track::Class_Version(), "classes/DelphesClasses.h", 428,
+         instance("Track", ::Track::Class_Version(), "classes/DelphesClasses.h", 572,
                   typeid(::Track), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::Track::Dictionary, isa_proxy, 4,
                   sizeof(::Track) );
@@ -729,7 +860,7 @@ namespace ROOT {
       ::Tower *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::Tower >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("Tower", ::Tower::Class_Version(), "classes/DelphesClasses.h", 485,
+         instance("Tower", ::Tower::Class_Version(), "classes/DelphesClasses.h", 629,
                   typeid(::Tower), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::Tower::Dictionary, isa_proxy, 4,
                   sizeof(::Tower) );
@@ -761,7 +892,7 @@ namespace ROOT {
       ::HectorHit *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::HectorHit >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("HectorHit", ::HectorHit::Class_Version(), "classes/DelphesClasses.h", 514,
+         instance("HectorHit", ::HectorHit::Class_Version(), "classes/DelphesClasses.h", 658,
                   typeid(::HectorHit), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::HectorHit::Dictionary, isa_proxy, 4,
                   sizeof(::HectorHit) );
@@ -793,7 +924,7 @@ namespace ROOT {
       ::Candidate *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::Candidate >(0);
       static ::ROOT::TGenericClassInfo 
-         instance("Candidate", ::Candidate::Class_Version(), "classes/DelphesClasses.h", 538,
+         instance("Candidate", ::Candidate::Class_Version(), "classes/DelphesClasses.h", 682,
                   typeid(::Candidate), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::Candidate::Dictionary, isa_proxy, 4,
                   sizeof(::Candidate) );
@@ -1404,6 +1535,146 @@ TClass *Muon::Dictionary()
 TClass *Muon::Class()
 {
    if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::Muon*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr PhiDM::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *PhiDM::Class_Name()
+{
+   return "PhiDM";
+}
+
+//______________________________________________________________________________
+const char *PhiDM::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::PhiDM*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int PhiDM::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::PhiDM*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *PhiDM::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PhiDM*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *PhiDM::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PhiDM*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr ChiDM::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *ChiDM::Class_Name()
+{
+   return "ChiDM";
+}
+
+//______________________________________________________________________________
+const char *ChiDM::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::ChiDM*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int ChiDM::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::ChiDM*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *ChiDM::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::ChiDM*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *ChiDM::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::ChiDM*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr PsiDM::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *PsiDM::Class_Name()
+{
+   return "PsiDM";
+}
+
+//______________________________________________________________________________
+const char *PsiDM::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::PsiDM*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int PsiDM::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::PsiDM*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *PsiDM::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PsiDM*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *PsiDM::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::PsiDM*)0x0)->GetClass(); }
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+atomic_TClass_ptr NNDM::fgIsA(0);  // static to hold class pointer
+
+//______________________________________________________________________________
+const char *NNDM::Class_Name()
+{
+   return "NNDM";
+}
+
+//______________________________________________________________________________
+const char *NNDM::ImplFileName()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::NNDM*)0x0)->GetImplFileName();
+}
+
+//______________________________________________________________________________
+int NNDM::ImplFileLine()
+{
+   return ::ROOT::GenerateInitInstanceLocal((const ::NNDM*)0x0)->GetImplFileLine();
+}
+
+//______________________________________________________________________________
+TClass *NNDM::Dictionary()
+{
+   fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::NNDM*)0x0)->GetClass();
+   return fgIsA;
+}
+
+//______________________________________________________________________________
+TClass *NNDM::Class()
+{
+   if (!fgIsA.load()) { R__LOCKGUARD(gInterpreterMutex); fgIsA = ::ROOT::GenerateInitInstanceLocal((const ::NNDM*)0x0)->GetClass(); }
    return fgIsA;
 }
 
@@ -2137,6 +2408,138 @@ namespace ROOT {
 } // end of namespace ROOT for class ::Muon
 
 //______________________________________________________________________________
+void PhiDM::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class PhiDM.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(PhiDM::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(PhiDM::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_PhiDM(void *p) {
+      return  p ? new(p) ::PhiDM : new ::PhiDM;
+   }
+   static void *newArray_PhiDM(Long_t nElements, void *p) {
+      return p ? new(p) ::PhiDM[nElements] : new ::PhiDM[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_PhiDM(void *p) {
+      delete ((::PhiDM*)p);
+   }
+   static void deleteArray_PhiDM(void *p) {
+      delete [] ((::PhiDM*)p);
+   }
+   static void destruct_PhiDM(void *p) {
+      typedef ::PhiDM current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::PhiDM
+
+//______________________________________________________________________________
+void ChiDM::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class ChiDM.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(ChiDM::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(ChiDM::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_ChiDM(void *p) {
+      return  p ? new(p) ::ChiDM : new ::ChiDM;
+   }
+   static void *newArray_ChiDM(Long_t nElements, void *p) {
+      return p ? new(p) ::ChiDM[nElements] : new ::ChiDM[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_ChiDM(void *p) {
+      delete ((::ChiDM*)p);
+   }
+   static void deleteArray_ChiDM(void *p) {
+      delete [] ((::ChiDM*)p);
+   }
+   static void destruct_ChiDM(void *p) {
+      typedef ::ChiDM current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::ChiDM
+
+//______________________________________________________________________________
+void PsiDM::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class PsiDM.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(PsiDM::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(PsiDM::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_PsiDM(void *p) {
+      return  p ? new(p) ::PsiDM : new ::PsiDM;
+   }
+   static void *newArray_PsiDM(Long_t nElements, void *p) {
+      return p ? new(p) ::PsiDM[nElements] : new ::PsiDM[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_PsiDM(void *p) {
+      delete ((::PsiDM*)p);
+   }
+   static void deleteArray_PsiDM(void *p) {
+      delete [] ((::PsiDM*)p);
+   }
+   static void destruct_PsiDM(void *p) {
+      typedef ::PsiDM current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::PsiDM
+
+//______________________________________________________________________________
+void NNDM::Streamer(TBuffer &R__b)
+{
+   // Stream an object of class NNDM.
+
+   if (R__b.IsReading()) {
+      R__b.ReadClassBuffer(NNDM::Class(),this);
+   } else {
+      R__b.WriteClassBuffer(NNDM::Class(),this);
+   }
+}
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_NNDM(void *p) {
+      return  p ? new(p) ::NNDM : new ::NNDM;
+   }
+   static void *newArray_NNDM(Long_t nElements, void *p) {
+      return p ? new(p) ::NNDM[nElements] : new ::NNDM[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_NNDM(void *p) {
+      delete ((::NNDM*)p);
+   }
+   static void deleteArray_NNDM(void *p) {
+      delete [] ((::NNDM*)p);
+   }
+   static void destruct_NNDM(void *p) {
+      typedef ::NNDM current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::NNDM
+
+//______________________________________________________________________________
 void Jet::Streamer(TBuffer &R__b)
 {
    // Stream an object of class Jet.
@@ -2398,6 +2801,10 @@ class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Weig
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Photon;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Electron;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Muon;
+class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  PhiDM;
+class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  ChiDM;
+class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  PsiDM;
+class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  NNDM;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Jet;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Track;
 class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Tower;
@@ -2468,6 +2875,10 @@ class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Cand
 #pragma link C++ class Photon+;
 #pragma link C++ class Electron+;
 #pragma link C++ class Muon+;
+#pragma link C++ class PhiDM+;
+#pragma link C++ class ChiDM+;
+#pragma link C++ class PsiDM+;
+#pragma link C++ class NNDM+;
 #pragma link C++ class Jet+;
 #pragma link C++ class Track+;
 #pragma link C++ class Tower+;
@@ -2477,11 +2888,11 @@ class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Cand
 
 #endif
 
-
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
     static const char* classesHeaders[]={
 "Candidate", payloadCode, "@",
+"ChiDM", payloadCode, "@",
 "DelphesFactory", payloadCode, "@",
 "DelphesModule", payloadCode, "@",
 "Electron", payloadCode, "@",
@@ -2495,7 +2906,10 @@ class __attribute__((annotate("$clingAutoload$classes/DelphesClasses.h")))  Cand
 "LHEFWeight", payloadCode, "@",
 "MissingET", payloadCode, "@",
 "Muon", payloadCode, "@",
+"NNDM", payloadCode, "@",
+"PhiDM", payloadCode, "@",
 "Photon", payloadCode, "@",
+"PsiDM", payloadCode, "@",
 "Rho", payloadCode, "@",
 "ScalarHT", payloadCode, "@",
 "SortableObject", payloadCode, "@",

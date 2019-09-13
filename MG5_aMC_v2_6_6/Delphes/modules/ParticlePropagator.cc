@@ -108,6 +108,11 @@ void ParticlePropagator::Init()
   fChargedHadronOutputArray = ExportArray(GetString("ChargedHadronOutputArray", "chargedHadrons"));
   fElectronOutputArray = ExportArray(GetString("ElectronOutputArray", "electrons"));
   fMuonOutputArray = ExportArray(GetString("MuonOutputArray", "muons"));
+  fPhiDMOutputArray = ExportArray(GetString("PhiDMOutputArray","phis"));
+  fChiDMOutputArray = ExportArray(GetString("ChiDMOutputArray","chis"));
+  fPsiDMOutputArray = ExportArray(GetString("PsiDMOutputArray","psis"));
+  fNNDMOutputArray = ExportArray(GetString("NNDMOutputArray","NNs"));
+
 }
 
 //------------------------------------------------------------------------------
@@ -248,14 +253,26 @@ void ParticlePropagator::Process()
       {
         switch(TMath::Abs(candidate->PID))
         {
-        case 11:
-          fElectronOutputArray->Add(candidate);
-          break;
-        case 13:
-          fMuonOutputArray->Add(candidate);
-          break;
-        default:
-          fChargedHadronOutputArray->Add(candidate);
+          case 11:
+            fElectronOutputArray->Add(candidate);
+            break;
+          case 13:
+            fMuonOutputArray->Add(candidate);
+            break;
+          case 5000001:
+            fPhiDMOutputArray->Add(candidate);
+            break;
+          case 200000:
+            fPsiDMOutputArray->Add(candidate);
+            break;
+          case 200001:
+            fChiDMOutputArray->Add(candidate);
+            break;
+          case 200002 ... 200004:
+            fNNDMOutputArray->Add(candidate);
+            break;
+          default:
+            fChargedHadronOutputArray->Add(candidate);
         }
       }
       else
@@ -398,14 +415,26 @@ void ParticlePropagator::Process()
         fOutputArray->Add(candidate);
         switch(TMath::Abs(candidate->PID))
         {
-        case 11:
-          fElectronOutputArray->Add(candidate);
-          break;
-        case 13:
-          fMuonOutputArray->Add(candidate);
-          break;
-        default:
-          fChargedHadronOutputArray->Add(candidate);
+          case 11:
+            fElectronOutputArray->Add(candidate);
+            break;
+          case 13:
+            fMuonOutputArray->Add(candidate);
+            break;
+          case 5000001:
+            fPhiDMOutputArray->Add(candidate);
+            break;
+          case 200000:
+            fPsiDMOutputArray->Add(candidate);
+            break;
+          case 200001:
+            fChiDMOutputArray->Add(candidate);
+            break;
+          case 200002 ... 200004:
+            fNNDMOutputArray->Add(candidate);
+            break;
+          default:
+            fChargedHadronOutputArray->Add(candidate);
         }
       }
     }
