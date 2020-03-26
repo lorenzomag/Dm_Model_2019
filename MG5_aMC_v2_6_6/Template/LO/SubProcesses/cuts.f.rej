@@ -1,0 +1,10 @@
+--- Template/LO/SubProcesses/cuts.f	2018-01-11 16:16:25 +0000
++++ Template/LO/SubProcesses/cuts.f	2019-07-30 13:51:02 +0000
+@@ -1592,6 +1592,7 @@
+       m0d = 0.0
+       m0c = 1.5
+       m0s = 0.0
++      m0b = 4.7 
+       m0t = 172.5
+       m0w = 80.4
+       m0z = 91.188

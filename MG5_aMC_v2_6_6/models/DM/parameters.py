@@ -279,7 +279,7 @@ MChi = Parameter(name = 'MChi',
                  value = 137,
                  texname = '\\text{MChi}',
                  lhablock = 'MASS',
-                 lhacode = [ 200001 ])
+                 lhacode = [ 1000024 ])
 
 MPsi = Parameter(name = 'MPsi',
                  nature = 'external',
@@ -359,7 +359,7 @@ WChi = Parameter(name = 'WChi',
                  value = 1,
                  texname = '\\text{WChi}',
                  lhablock = 'DECAY',
-                 lhacode = [ 200001 ])
+                 lhacode = [ 1000024 ])
 
 WPsi = Parameter(name = 'WPsi',
                  nature = 'external',

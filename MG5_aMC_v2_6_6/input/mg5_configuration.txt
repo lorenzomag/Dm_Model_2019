@@ -66,7 +66,8 @@ pythia8_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/
 #!  steer the Pythia8 shower.
 #!  Can be installed directly from within MG5_aMC with the following command:
 #!     MG5_aMC> install mg5amc_py8_interface
-mg5amc_py8_interface_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/MG5aMC_PY8_interface #  
+mg5amc_py8_interface_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/MG5aMC_PY8_interface #   
+ 
 
 #! Herwig++/Herwig7 paths
 #!  specify here the paths also to HepMC ant ThePEG
@@ -222,6 +223,9 @@ lhapdf = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6/HEPTools/lhapdf
 # amcfast = amcfast-config
 
 
+
+# MG5 MAIN DIRECTORY
+mg5_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6
 
 # MG5 MAIN DIRECTORY
 mg5_path = /home/s1412595/Desktop/SummerProject2019/MG5_aMC_v2_6_6

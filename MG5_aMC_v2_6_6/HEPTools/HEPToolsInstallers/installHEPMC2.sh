@@ -67,6 +67,12 @@ run () {
   echo " Finished HEPMC installation"
   cd ..
 
+  cd $INSTALLD
+  if [ -d lib ]; then
+      echo "test passed"
+  else
+      ln -s lib64 lib
+  fi
 }
 
 set_environment "$@"

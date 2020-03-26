@@ -1,0 +1,11 @@
+--- madgraph/interface/madevent_interface.py	2019-06-14 19:54:28 +0000
++++ madgraph/interface/madevent_interface.py	2019-07-17 19:42:05 +0000
+@@ -2567,7 +2567,7 @@
+                 if self.run_card['time_of_flight']>=0:
+                     self.exec_cmd("add_time_of_flight --threshold=%s" % self.run_card['time_of_flight'] ,postcmd=False)
+ 
+-                if switch_mode['analysis'] == 'EXROOTANALYSIS':
++                if switch_mode['analysis'] == 'ExRoot':
+                     input = pjoin(self.me_dir, 'Events', self.run_name,'unweighted_events.lhe.gz')
+                     output = pjoin(self.me_dir, 'Events', self.run_name, 'unweighted_events.root')
+                     self.create_root_file(input , output)

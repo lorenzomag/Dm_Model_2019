@@ -339,7 +339,7 @@ b = Particle(pdg_code = 5,
 
 b__tilde__ = b.anti()
 
-P__tilde__Chi__plus__ = Particle(pdg_code = 200001,
+P__tilde__Chi__plus__ = Particle(pdg_code = 1000024,
                                  name = '~Chi+',
                                  antiname = '~Chi-',
                                  spin = 2,
