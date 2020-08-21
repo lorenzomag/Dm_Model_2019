@@ -4,7 +4,7 @@
 
 ## Generation
 
-* [Untitled](generation/untitled.md)
+* [Generatuon aexal](generation/untitled.md)
 
 ## Simulation
 
@@ -12,8 +12,8 @@
 
 ## Analysis
 
-* [Untitled](analysis/untitled-1.md)
-* [Untitled](analysis/untitled.md)
+* [Untitleasd d](analysis/untitled-1.md)
+* [Untitledasd](analysis/untitled.md)
 
 ## Remote jobs
 
